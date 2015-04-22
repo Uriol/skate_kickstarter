@@ -7,7 +7,8 @@ function drawLines(){
 	var blueLine = new THREE.Color("rgb(0, 200, 255)");
 	var blueLineMaterial = new THREE.LineBasicMaterial({ color: blueLine, linewidth: 1.5 });
 
-
+	var redLine = new THREE.Color("rgb(255, 0, 0)");
+	var redLineMaterial = new THREE.LineBasicMaterial({ color: redLine, linewidth: 1.5 });
 	
 
 	// Center right top line
@@ -187,5 +188,45 @@ function drawLines(){
 	var concave_nose_left_bottom_line = new THREE.Line(concave_nose_left_bottom_line_Geometry, blueLineMaterial);
 	concave_nose_left_bottom_line.position.z = -10;
 	scene.add(concave_nose_left_bottom_line);
+
+
+	// ------------------------------------------------------
+
+	// Center right bottom line
+	var tail_top_right_edge_line_Geometry = new THREE.Geometry();
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif,  yPos_tail_top_dif , zPos_right_dif));
+	//tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-0.25,  yPos_tail_top_dif , zPos_right_dif));
+
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-0.25,  yPos_tail_top_dif , zPos_right_dif));
+	//tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-0.87,  yPos_tail_top_dif , zPos_right_dif));
+
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-0.87,  yPos_tail_top_dif , zPos_right_dif));
+	//tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-2.87,  yPos_tail_top_dif , zPos_right_dif - 0.12));
+
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-2.87,  yPos_tail_top_dif , zPos_right_dif - 0.12));
+	//tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-4,  yPos_tail_top_dif , zPos_right_dif - 0.25));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-4,  yPos_tail_top_dif , zPos_right_dif - 0.25));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-4.75,  yPos_tail_top_dif , zPos_right_dif - 0.37));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-5.37,  yPos_tail_top_dif , zPos_right_dif - 0.5));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-6,  yPos_tail_top_dif , zPos_right_dif - 0.62));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-6.5,  yPos_tail_top_dif , zPos_right_dif - 0.75));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-8,  yPos_tail_top_dif , zPos_right_dif - 1.25));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-8.62,  yPos_tail_top_dif , zPos_right_dif - 1.5));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-9.37,  yPos_tail_top_dif , zPos_right_dif - 1.87));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-10.37,  yPos_tail_top_dif , zPos_right_dif - 2.5));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-10.87,  yPos_tail_top_dif , zPos_right_dif - 2.87));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-12.12,  yPos_tail_top_dif , zPos_right_dif - 4.12));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-12.5,  yPos_tail_top_dif , zPos_right_dif - 4.62));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-12.75,  yPos_tail_top_dif , zPos_right_dif - 5));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-13.25,  yPos_tail_top_dif , zPos_right_dif - 6));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-13.5,  yPos_tail_top_dif , zPos_right_dif - 6.62));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-13.75,  yPos_tail_top_dif , zPos_right_dif - 7.5));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-13.87,  yPos_tail_top_dif , zPos_right_dif - 8.25));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-14,  yPos_tail_top_dif , zPos_right_dif - 9.62));
+	tail_top_right_edge_line_Geometry.vertices.push(new THREE.Vector3(x_pos_tail_dif-14,  yPos_tail_top_dif , zPos_right_dif - 10));
+	var tail_top_right_edge_line = new THREE.Line(tail_top_right_edge_line_Geometry, yellowLineMaterial);
+	// center_right_bottom_line.position.y = -0.5;
+	// center_right_bottom_line.position.z = 10;
+	scene.add(tail_top_right_edge_line)
 
 }

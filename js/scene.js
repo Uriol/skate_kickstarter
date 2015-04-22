@@ -21,7 +21,7 @@ function init(){
 
 	// scene background color
 	//var backgroundColor = new THREE.Color("rgb(20,20,20)");
-	var backgroundColor = new THREE.Color("rgb(60,60,60)");
+	var backgroundColor = new THREE.Color("rgb(40,40,40)");
 	renderer.setClearColor( backgroundColor );
 
 	// Resize window
@@ -57,11 +57,11 @@ function drawSkateboard(){
 
 	// draw floor
 	var floorGeometry = new THREE.PlaneBufferGeometry(500, 400);
-	var floor = new THREE.Mesh(floorGeometry, darkGreyMaterial);
+	var floor = new THREE.Mesh(floorGeometry, blackMaterial);
 	floor.rotation.x = -Math.PI / 2;
 	floor.position.y = -3.5;
 	floor.material.side = THREE.DoubleSide;
-	//scene.add(floor);
+	scene.add(floor);
 
 	// Top center
 	var topGeometry = new THREE.PlaneBufferGeometry( 40,20 );
@@ -226,6 +226,21 @@ for ( var i = 0; i < tail_top_concave_vertices.length; i++ )
 nose_bottom_concave_geometry.addAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
 var nose_bottom_concave_mesh = new THREE.Mesh( nose_bottom_concave_geometry, blackMaterial );
 scene.add(nose_bottom_concave_mesh);
+
+// ---------------------------------------------
+
+// tail top right edge
+var tail_top_right_edge_geometry = new THREE.BufferGeometry();
+var vertices = new Float32Array( tail_top_right_edge_vertices.length * 3);
+for (var i = 0; i < tail_top_right_edge_vertices.length; i++)
+{
+	vertices[ i*3 + 0 ] = tail_top_right_edge_vertices[i][0];
+	vertices[ i*3 + 1 ] = tail_top_right_edge_vertices[i][1];
+	vertices[ i*3 + 2 ] = tail_top_right_edge_vertices[i][2];
+}
+tail_top_right_edge_geometry.addAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
+var tail_top_right_edge_mesh = new THREE.Mesh( tail_top_right_edge_geometry, yellowMaterial );
+scene.add(tail_top_right_edge_mesh);
 
 
 }
