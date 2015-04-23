@@ -214,191 +214,191 @@ var tail_top_right_edge_vertices = [
 
 	[ x_pos_tail_dif-0.25,  yPos_tail_top_dif-1 , zPos_right_dif],
 	[ x_pos_tail_dif-0.25,  yPos_tail_top_dif , zPos_right_dif],
-	[ x_pos_tail_dif-0.87,  yPos_tail_top_dif , zPos_right_dif],
+	[ x_pos_tail_dif-0.87,  yPos_tail_top_dif+0.0625 , zPos_right_dif],
 
-	[ x_pos_tail_dif-0.87,  yPos_tail_top_dif , zPos_right_dif],
-	[ x_pos_tail_dif-0.87,  yPos_tail_top_dif-1 , zPos_right_dif],
+	[ x_pos_tail_dif-0.87,  yPos_tail_top_dif+0.0625 , zPos_right_dif],
+	[ x_pos_tail_dif-0.87,  yPos_tail_top_dif-1+0.0625 , zPos_right_dif],
 	[ x_pos_tail_dif-0.25,  yPos_tail_top_dif-1 , zPos_right_dif],
 
 
-	[ x_pos_tail_dif-0.87,  yPos_tail_top_dif-1 , zPos_right_dif],
-	[ x_pos_tail_dif-0.87,  yPos_tail_top_dif , zPos_right_dif],
-	[ x_pos_tail_dif-2.87,  yPos_tail_top_dif , zPos_right_dif - 0.12],
+	[ x_pos_tail_dif-0.87,  yPos_tail_top_dif-1+0.0625 , zPos_right_dif],
+	[ x_pos_tail_dif-0.87,  yPos_tail_top_dif+0.0625 , zPos_right_dif],
+	[ x_pos_tail_dif-2.87,  yPos_tail_top_dif+0.453125 , zPos_right_dif - 0.12],
 
-	[ x_pos_tail_dif-2.87,  yPos_tail_top_dif , zPos_right_dif - 0.12],
-	[ x_pos_tail_dif-2.87,  yPos_tail_top_dif-1 , zPos_right_dif - 0.12],
-	[ x_pos_tail_dif-0.87,  yPos_tail_top_dif-1 , zPos_right_dif],
-
-
-	[ x_pos_tail_dif-2.87,  yPos_tail_top_dif-1 , zPos_right_dif - 0.12],
-	[ x_pos_tail_dif-2.87,  yPos_tail_top_dif , zPos_right_dif - 0.12],
-	[ x_pos_tail_dif-4,  yPos_tail_top_dif , zPos_right_dif - 0.25],
-
-	[ x_pos_tail_dif-4,  yPos_tail_top_dif , zPos_right_dif - 0.25],
-	[ x_pos_tail_dif-4,  yPos_tail_top_dif-1 , zPos_right_dif - 0.25],
-	[ x_pos_tail_dif-2.87,  yPos_tail_top_dif-1 , zPos_right_dif - 0.12],
+	[ x_pos_tail_dif-2.87,  yPos_tail_top_dif+0.453125 , zPos_right_dif - 0.12],
+	[ x_pos_tail_dif-2.87,  yPos_tail_top_dif-1+0.453125 , zPos_right_dif - 0.12],
+	[ x_pos_tail_dif-0.87,  yPos_tail_top_dif-1+0.0625 , zPos_right_dif],
 
 
-	[ x_pos_tail_dif-4,  yPos_tail_top_dif-1 , zPos_right_dif - 0.25],
-	[ x_pos_tail_dif-4,  yPos_tail_top_dif , zPos_right_dif - 0.25],
-	[ x_pos_tail_dif-4.75,  yPos_tail_top_dif , zPos_right_dif - 0.37],
+	[ x_pos_tail_dif-2.87,  yPos_tail_top_dif-1+0.453125 , zPos_right_dif - 0.12],
+	[ x_pos_tail_dif-2.87,  yPos_tail_top_dif+0.453125 , zPos_right_dif - 0.12],
+	[ x_pos_tail_dif-4,  yPos_tail_top_dif+0.7578125 , zPos_right_dif - 0.25],
 
-	[ x_pos_tail_dif-4.75,  yPos_tail_top_dif , zPos_right_dif - 0.37],
-	[ x_pos_tail_dif-4.75,  yPos_tail_top_dif-1 , zPos_right_dif - 0.37],
-	[ x_pos_tail_dif-4,  yPos_tail_top_dif-1 , zPos_right_dif - 0.25],
-
-
-	[ x_pos_tail_dif-4.75,  yPos_tail_top_dif-1 , zPos_right_dif - 0.37],
-	[ x_pos_tail_dif-4.75,  yPos_tail_top_dif , zPos_right_dif - 0.37],
-	[ x_pos_tail_dif-5.37,  yPos_tail_top_dif , zPos_right_dif - 0.5],
-
-	[ x_pos_tail_dif-5.37,  yPos_tail_top_dif , zPos_right_dif - 0.5],
-	[ x_pos_tail_dif-5.37,  yPos_tail_top_dif-1 , zPos_right_dif - 0.5],
-	[ x_pos_tail_dif-4.75,  yPos_tail_top_dif-1 , zPos_right_dif - 0.37],
+	[ x_pos_tail_dif-4,  yPos_tail_top_dif+0.7578125 , zPos_right_dif - 0.25],
+	[ x_pos_tail_dif-4,  yPos_tail_top_dif-1+0.7578125 , zPos_right_dif - 0.25],
+	[ x_pos_tail_dif-2.87,  yPos_tail_top_dif-1+0.453125 , zPos_right_dif - 0.12],
 
 
-	[ x_pos_tail_dif-5.37,  yPos_tail_top_dif-1 , zPos_right_dif - 0.5],
-	[ x_pos_tail_dif-5.37,  yPos_tail_top_dif , zPos_right_dif - 0.5],
-	[ x_pos_tail_dif-6,  yPos_tail_top_dif , zPos_right_dif - 0.62],
+	[ x_pos_tail_dif-4,  yPos_tail_top_dif-1+0.7578125 , zPos_right_dif - 0.25],
+	[ x_pos_tail_dif-4,  yPos_tail_top_dif+0.7578125 , zPos_right_dif - 0.25],
+	[ x_pos_tail_dif-4.75,  yPos_tail_top_dif+0.984375 , zPos_right_dif - 0.37],
 
-	[ x_pos_tail_dif-6,  yPos_tail_top_dif , zPos_right_dif - 0.62],
-	[ x_pos_tail_dif-6,  yPos_tail_top_dif-1 , zPos_right_dif - 0.62],
-	[ x_pos_tail_dif-5.37,  yPos_tail_top_dif-1 , zPos_right_dif - 0.5],
-
-
-	[ x_pos_tail_dif-6,  yPos_tail_top_dif-1 , zPos_right_dif - 0.62],
-	[ x_pos_tail_dif-6,  yPos_tail_top_dif , zPos_right_dif - 0.62],
-	[ x_pos_tail_dif-6.5,  yPos_tail_top_dif , zPos_right_dif - 0.75],
-
-	[ x_pos_tail_dif-6.5,  yPos_tail_top_dif , zPos_right_dif - 0.75],
-	[ x_pos_tail_dif-6.5,  yPos_tail_top_dif-1 , zPos_right_dif - 0.75],
-	[ x_pos_tail_dif-6,  yPos_tail_top_dif-1 , zPos_right_dif - 0.62],
+	[ x_pos_tail_dif-4.75,  yPos_tail_top_dif+0.984375 , zPos_right_dif - 0.37],
+	[ x_pos_tail_dif-4.75,  yPos_tail_top_dif-1+0.984375 , zPos_right_dif - 0.37],
+	[ x_pos_tail_dif-4,  yPos_tail_top_dif-1+0.7578125 , zPos_right_dif - 0.25],
 
 
-	[ x_pos_tail_dif-6.5,  yPos_tail_top_dif-1 , zPos_right_dif - 0.75],
-	[ x_pos_tail_dif-6.5,  yPos_tail_top_dif , zPos_right_dif - 0.75],
-	[ x_pos_tail_dif-8,  yPos_tail_top_dif , zPos_right_dif - 1.25],
+	[ x_pos_tail_dif-4.75,  yPos_tail_top_dif-1+0.984375 , zPos_right_dif - 0.37],
+	[ x_pos_tail_dif-4.75,  yPos_tail_top_dif+0.984375 , zPos_right_dif - 0.37],
+	[ x_pos_tail_dif-5.37,  yPos_tail_top_dif+1.1875 , zPos_right_dif - 0.5],
 
-	[ x_pos_tail_dif-8,  yPos_tail_top_dif , zPos_right_dif - 1.25],
-	[ x_pos_tail_dif-8,  yPos_tail_top_dif-1 , zPos_right_dif - 1.25],
-	[ x_pos_tail_dif-6.5,  yPos_tail_top_dif-1 , zPos_right_dif - 0.75],
-
-
-	[ x_pos_tail_dif-8,  yPos_tail_top_dif-1 , zPos_right_dif - 1.25],
-	[ x_pos_tail_dif-8,  yPos_tail_top_dif , zPos_right_dif - 1.25],
-	[ x_pos_tail_dif-8.62,  yPos_tail_top_dif , zPos_right_dif - 1.5],
-
-	[ x_pos_tail_dif-8.62,  yPos_tail_top_dif , zPos_right_dif - 1.5],
-	[ x_pos_tail_dif-8.62,  yPos_tail_top_dif-1 , zPos_right_dif - 1.5],
-	[ x_pos_tail_dif-8,  yPos_tail_top_dif-1 , zPos_right_dif - 1.25],
+	[ x_pos_tail_dif-5.37,  yPos_tail_top_dif+1.1875 , zPos_right_dif - 0.5],
+	[ x_pos_tail_dif-5.37,  yPos_tail_top_dif-1+1.1875 , zPos_right_dif - 0.5],
+	[ x_pos_tail_dif-4.75,  yPos_tail_top_dif-1+0.984375 , zPos_right_dif - 0.37],
 
 
-	[ x_pos_tail_dif-8.62,  yPos_tail_top_dif-1 , zPos_right_dif - 1.5],
-	[ x_pos_tail_dif-8.62,  yPos_tail_top_dif , zPos_right_dif - 1.5],
-	[ x_pos_tail_dif-9.37,  yPos_tail_top_dif , zPos_right_dif - 1.87],
+	[ x_pos_tail_dif-5.37,  yPos_tail_top_dif-1+1.1875 , zPos_right_dif - 0.5],
+	[ x_pos_tail_dif-5.37,  yPos_tail_top_dif+1.1875 , zPos_right_dif - 0.5],
+	[ x_pos_tail_dif-6,  yPos_tail_top_dif+1.390625 , zPos_right_dif - 0.62],
 
-	[ x_pos_tail_dif-9.37,  yPos_tail_top_dif , zPos_right_dif - 1.87],
-	[ x_pos_tail_dif-9.37,  yPos_tail_top_dif-1 , zPos_right_dif - 1.87],
-	[ x_pos_tail_dif-8.62,  yPos_tail_top_dif-1 , zPos_right_dif - 1.5],
-
-
-	[ x_pos_tail_dif-9.37,  yPos_tail_top_dif-1 , zPos_right_dif - 1.87],
-	[ x_pos_tail_dif-9.37,  yPos_tail_top_dif , zPos_right_dif - 1.87],
-	[ x_pos_tail_dif-10.37,  yPos_tail_top_dif , zPos_right_dif - 2.5],
-
-	[ x_pos_tail_dif-10.37,  yPos_tail_top_dif , zPos_right_dif - 2.5],
-	[ x_pos_tail_dif-10.37,  yPos_tail_top_dif-1 , zPos_right_dif - 2.5],
-	[ x_pos_tail_dif-9.37,  yPos_tail_top_dif-1 , zPos_right_dif - 1.87],
+	[ x_pos_tail_dif-6,  yPos_tail_top_dif+1.390625 , zPos_right_dif - 0.62],
+	[ x_pos_tail_dif-6,  yPos_tail_top_dif-1+1.390625 , zPos_right_dif - 0.62],
+	[ x_pos_tail_dif-5.37,  yPos_tail_top_dif-1+1.1875 , zPos_right_dif - 0.5],
 
 
-	[ x_pos_tail_dif-10.37,  yPos_tail_top_dif-1 , zPos_right_dif - 2.5],
-	[ x_pos_tail_dif-10.37,  yPos_tail_top_dif , zPos_right_dif - 2.5],
-	[ x_pos_tail_dif-10.87,  yPos_tail_top_dif , zPos_right_dif - 2.87],
+	[ x_pos_tail_dif-6,  yPos_tail_top_dif-1+1.390625 , zPos_right_dif - 0.62],
+	[ x_pos_tail_dif-6,  yPos_tail_top_dif+1.390625 , zPos_right_dif - 0.62],
+	[ x_pos_tail_dif-6.5,  yPos_tail_top_dif+1.5625 , zPos_right_dif - 0.75],
 
-	[ x_pos_tail_dif-10.87,  yPos_tail_top_dif , zPos_right_dif - 2.87],
-	[ x_pos_tail_dif-10.87,  yPos_tail_top_dif-1 , zPos_right_dif - 2.87],
-	[ x_pos_tail_dif-10.37,  yPos_tail_top_dif-1 , zPos_right_dif - 2.5],
-
-
-	[ x_pos_tail_dif-10.87,  yPos_tail_top_dif-1 , zPos_right_dif - 2.87],
-	[ x_pos_tail_dif-10.87,  yPos_tail_top_dif , zPos_right_dif - 2.87],
-	[ x_pos_tail_dif-12.12,  yPos_tail_top_dif , zPos_right_dif - 4.12],
-
-	[ x_pos_tail_dif-12.12,  yPos_tail_top_dif , zPos_right_dif - 4.12],
-	[ x_pos_tail_dif-12.12,  yPos_tail_top_dif-1 , zPos_right_dif - 4.12],
-	[ x_pos_tail_dif-10.87,  yPos_tail_top_dif-1 , zPos_right_dif - 2.87],
+	[ x_pos_tail_dif-6.5,  yPos_tail_top_dif+1.5625 , zPos_right_dif - 0.75],
+	[ x_pos_tail_dif-6.5,  yPos_tail_top_dif-1+1.5625 , zPos_right_dif - 0.75],
+	[ x_pos_tail_dif-6,  yPos_tail_top_dif-1+1.390625 , zPos_right_dif - 0.62],
 
 
-	[ x_pos_tail_dif-12.12,  yPos_tail_top_dif-1 , zPos_right_dif - 4.12],
-	[ x_pos_tail_dif-12.12,  yPos_tail_top_dif , zPos_right_dif - 4.12],
-	[ x_pos_tail_dif-12.5,  yPos_tail_top_dif , zPos_right_dif - 4.62],
+	[ x_pos_tail_dif-6.5,  yPos_tail_top_dif-1+1.5625 , zPos_right_dif - 0.75],
+	[ x_pos_tail_dif-6.5,  yPos_tail_top_dif+1.5625 , zPos_right_dif - 0.75],
+	[ x_pos_tail_dif-8,  yPos_tail_top_dif+2.09375 , zPos_right_dif - 1.25],
 
-	[ x_pos_tail_dif-12.5,  yPos_tail_top_dif , zPos_right_dif - 4.62],
-	[ x_pos_tail_dif-12.5,  yPos_tail_top_dif-1 , zPos_right_dif - 4.62],
-	[ x_pos_tail_dif-12.12,  yPos_tail_top_dif-1 , zPos_right_dif - 4.12],
-
-
-	[ x_pos_tail_dif-12.5,  yPos_tail_top_dif-1 , zPos_right_dif - 4.62],
-	[ x_pos_tail_dif-12.5,  yPos_tail_top_dif , zPos_right_dif - 4.62],
-	[ x_pos_tail_dif-12.75,  yPos_tail_top_dif , zPos_right_dif - 5],
-
-	[ x_pos_tail_dif-12.75,  yPos_tail_top_dif , zPos_right_dif - 5],
-	[ x_pos_tail_dif-12.75,  yPos_tail_top_dif-1 , zPos_right_dif - 5],
-	[ x_pos_tail_dif-12.5,  yPos_tail_top_dif-1 , zPos_right_dif - 4.62],
+	[ x_pos_tail_dif-8,  yPos_tail_top_dif+2.09375 , zPos_right_dif - 1.25],
+	[ x_pos_tail_dif-8,  yPos_tail_top_dif-1+2.09375 , zPos_right_dif - 1.25],
+	[ x_pos_tail_dif-6.5,  yPos_tail_top_dif-1+1.5625 , zPos_right_dif - 0.75],
 
 
-	[ x_pos_tail_dif-12.75,  yPos_tail_top_dif-1 , zPos_right_dif - 5],
-	[ x_pos_tail_dif-12.75,  yPos_tail_top_dif , zPos_right_dif - 5],
-	[ x_pos_tail_dif-13.25,  yPos_tail_top_dif , zPos_right_dif - 6],
+	[ x_pos_tail_dif-8,  yPos_tail_top_dif-1+2.09375 , zPos_right_dif - 1.25],
+	[ x_pos_tail_dif-8,  yPos_tail_top_dif+2.09375 , zPos_right_dif - 1.25],
+	[ x_pos_tail_dif-8.62,  yPos_tail_top_dif+2.328125 , zPos_right_dif - 1.5],
 
-	[ x_pos_tail_dif-13.25,  yPos_tail_top_dif , zPos_right_dif - 6],
-	[ x_pos_tail_dif-13.25,  yPos_tail_top_dif-1 , zPos_right_dif - 6],
-	[ x_pos_tail_dif-12.75,  yPos_tail_top_dif-1 , zPos_right_dif - 5],
-
-
-	[ x_pos_tail_dif-13.25,  yPos_tail_top_dif-1 , zPos_right_dif - 6],
-	[ x_pos_tail_dif-13.25,  yPos_tail_top_dif , zPos_right_dif - 6],
-	[ x_pos_tail_dif-13.5,  yPos_tail_top_dif , zPos_right_dif - 6.62],
-
-	[ x_pos_tail_dif-13.5,  yPos_tail_top_dif , zPos_right_dif - 6.62],
-	[ x_pos_tail_dif-13.5,  yPos_tail_top_dif-1 , zPos_right_dif - 6.62],
-	[ x_pos_tail_dif-13.25,  yPos_tail_top_dif-1 , zPos_right_dif - 6],
+	[ x_pos_tail_dif-8.62,  yPos_tail_top_dif+2.328125 , zPos_right_dif - 1.5],
+	[ x_pos_tail_dif-8.62,  yPos_tail_top_dif-1+2.328125 , zPos_right_dif - 1.5],
+	[ x_pos_tail_dif-8,  yPos_tail_top_dif-1+2.09375 , zPos_right_dif - 1.25],
 
 
-	[ x_pos_tail_dif-13.5,  yPos_tail_top_dif-1 , zPos_right_dif - 6.62],
-	[ x_pos_tail_dif-13.5,  yPos_tail_top_dif , zPos_right_dif - 6.62],
-	[ x_pos_tail_dif-13.75,  yPos_tail_top_dif , zPos_right_dif - 7.5],
+	[ x_pos_tail_dif-8.62,  yPos_tail_top_dif-1+2.328125 , zPos_right_dif - 1.5],
+	[ x_pos_tail_dif-8.62,  yPos_tail_top_dif+2.328125 , zPos_right_dif - 1.5],
+	[ x_pos_tail_dif-9.37,  yPos_tail_top_dif+2.609375 , zPos_right_dif - 1.87],
 
-	[ x_pos_tail_dif-13.75,  yPos_tail_top_dif , zPos_right_dif - 7.5],
-	[ x_pos_tail_dif-13.75,  yPos_tail_top_dif-1 , zPos_right_dif - 7.5],
-	[ x_pos_tail_dif-13.5,  yPos_tail_top_dif-1 , zPos_right_dif - 6.62],
-
-
-	[ x_pos_tail_dif-13.75,  yPos_tail_top_dif-1 , zPos_right_dif - 7.5],
-	[ x_pos_tail_dif-13.75,  yPos_tail_top_dif , zPos_right_dif - 7.5],
-	[ x_pos_tail_dif-13.87,  yPos_tail_top_dif , zPos_right_dif - 8.25],
-
-	[ x_pos_tail_dif-13.87,  yPos_tail_top_dif , zPos_right_dif - 8.25],
-	[ x_pos_tail_dif-13.87,  yPos_tail_top_dif-1 , zPos_right_dif - 8.25],
-	[ x_pos_tail_dif-13.75,  yPos_tail_top_dif-1 , zPos_right_dif - 7.5],
+	[ x_pos_tail_dif-9.37,  yPos_tail_top_dif+2.609375 , zPos_right_dif - 1.87],
+	[ x_pos_tail_dif-9.37,  yPos_tail_top_dif-1+2.609375 , zPos_right_dif - 1.87],
+	[ x_pos_tail_dif-8.62,  yPos_tail_top_dif-1+2.328125 , zPos_right_dif - 1.5],
 
 
-	[ x_pos_tail_dif-13.87,  yPos_tail_top_dif-1 , zPos_right_dif - 8.25],
-	[ x_pos_tail_dif-13.87,  yPos_tail_top_dif , zPos_right_dif - 8.25],
-	[ x_pos_tail_dif-14,  yPos_tail_top_dif , zPos_right_dif - 9.62],
+	[ x_pos_tail_dif-9.37,  yPos_tail_top_dif-1+2.609375 , zPos_right_dif - 1.87],
+	[ x_pos_tail_dif-9.37,  yPos_tail_top_dif+2.609375 , zPos_right_dif - 1.87],
+	[ x_pos_tail_dif-10.37,  yPos_tail_top_dif+3 , zPos_right_dif - 2.5],
 
-	[ x_pos_tail_dif-14,  yPos_tail_top_dif , zPos_right_dif - 9.62],
-	[ x_pos_tail_dif-14,  yPos_tail_top_dif-1 , zPos_right_dif - 9.62],
-	[ x_pos_tail_dif-13.87,  yPos_tail_top_dif-1 , zPos_right_dif - 8.25],
+	[ x_pos_tail_dif-10.37,  yPos_tail_top_dif+3 , zPos_right_dif - 2.5],
+	[ x_pos_tail_dif-10.37,  yPos_tail_top_dif-1+3 , zPos_right_dif - 2.5],
+	[ x_pos_tail_dif-9.37,  yPos_tail_top_dif-1+2.609375 , zPos_right_dif - 1.87],
 
 
-	[ x_pos_tail_dif-14,  yPos_tail_top_dif-1 , zPos_right_dif - 9.62],
-	[ x_pos_tail_dif-14,  yPos_tail_top_dif , zPos_right_dif - 9.62],
-	[ x_pos_tail_dif-14,  yPos_tail_top_dif , zPos_right_dif - 10],
+	[ x_pos_tail_dif-10.37,  yPos_tail_top_dif-1+3 , zPos_right_dif - 2.5],
+	[ x_pos_tail_dif-10.37,  yPos_tail_top_dif+3 , zPos_right_dif - 2.5],
+	[ x_pos_tail_dif-10.87,  yPos_tail_top_dif+3.1953125 , zPos_right_dif - 2.87],
 
-	[ x_pos_tail_dif-14,  yPos_tail_top_dif , zPos_right_dif - 10],
-	[ x_pos_tail_dif-14,  yPos_tail_top_dif-1 , zPos_right_dif - 10],
-	[ x_pos_tail_dif-14,  yPos_tail_top_dif-1 , zPos_right_dif - 9.62]
+	[ x_pos_tail_dif-10.87,  yPos_tail_top_dif+3.1953125 , zPos_right_dif - 2.87],
+	[ x_pos_tail_dif-10.87,  yPos_tail_top_dif-1+3.1953125 , zPos_right_dif - 2.87],
+	[ x_pos_tail_dif-10.37,  yPos_tail_top_dif-1+3 , zPos_right_dif - 2.5],
+
+
+	[ x_pos_tail_dif-10.87,  yPos_tail_top_dif-1+3.1953125 , zPos_right_dif - 2.87],
+	[ x_pos_tail_dif-10.87,  yPos_tail_top_dif+3.1953125 , zPos_right_dif - 2.87],
+	[ x_pos_tail_dif-12.12,  yPos_tail_top_dif+3.703125 , zPos_right_dif - 4.12],
+
+	[ x_pos_tail_dif-12.12,  yPos_tail_top_dif+3.703125 , zPos_right_dif - 4.12],
+	[ x_pos_tail_dif-12.12,  yPos_tail_top_dif-1+3.703125 , zPos_right_dif - 4.12],
+	[ x_pos_tail_dif-10.87,  yPos_tail_top_dif-1+3.1953125 , zPos_right_dif - 2.87],
+
+
+	[ x_pos_tail_dif-12.12,  yPos_tail_top_dif-1+3.703125 , zPos_right_dif - 4.12],
+	[ x_pos_tail_dif-12.12,  yPos_tail_top_dif+3.703125 , zPos_right_dif - 4.12],
+	[ x_pos_tail_dif-12.5,  yPos_tail_top_dif+3.859375 , zPos_right_dif - 4.62],
+
+	[ x_pos_tail_dif-12.5,  yPos_tail_top_dif+3.859375 , zPos_right_dif - 4.62],
+	[ x_pos_tail_dif-12.5,  yPos_tail_top_dif-1+3.859375 , zPos_right_dif - 4.62],
+	[ x_pos_tail_dif-12.12,  yPos_tail_top_dif-1+3.703125 , zPos_right_dif - 4.12],
+
+
+	[ x_pos_tail_dif-12.5,  yPos_tail_top_dif-1+3.859375 , zPos_right_dif - 4.62],
+	[ x_pos_tail_dif-12.5,  yPos_tail_top_dif+3.859375 , zPos_right_dif - 4.62],
+	[ x_pos_tail_dif-12.75,  yPos_tail_top_dif+3.9765625 , zPos_right_dif - 5],
+
+	[ x_pos_tail_dif-12.75,  yPos_tail_top_dif+3.9765625 , zPos_right_dif - 5],
+	[ x_pos_tail_dif-12.75,  yPos_tail_top_dif-1+3.9765625 , zPos_right_dif - 5],
+	[ x_pos_tail_dif-12.5,  yPos_tail_top_dif-1+3.859375 , zPos_right_dif - 4.62],
+
+
+	[ x_pos_tail_dif-12.75,  yPos_tail_top_dif-1+3.9765625 , zPos_right_dif - 5],
+	[ x_pos_tail_dif-12.75,  yPos_tail_top_dif+3.9765625 , zPos_right_dif - 5],
+	[ x_pos_tail_dif-13.25,  yPos_tail_top_dif+4.171875 , zPos_right_dif - 6],
+	// not good
+	[ x_pos_tail_dif-13.25,  yPos_tail_top_dif+4.171875  , zPos_right_dif - 6],
+	[ x_pos_tail_dif-13.25,  yPos_tail_top_dif-1+4.171875  , zPos_right_dif - 6],
+	[ x_pos_tail_dif-12.75,  yPos_tail_top_dif-1+3.9765625 , zPos_right_dif - 5],
+
+
+	[ x_pos_tail_dif-13.25,  yPos_tail_top_dif-1+4.171875 , zPos_right_dif - 6],
+	[ x_pos_tail_dif-13.25,  yPos_tail_top_dif+4.171875 , zPos_right_dif - 6],
+	[ x_pos_tail_dif-13.5,  yPos_tail_top_dif+4.28125 , zPos_right_dif - 6.62],
+
+	[ x_pos_tail_dif-13.5,  yPos_tail_top_dif+4.28125 , zPos_right_dif - 6.62],
+	[ x_pos_tail_dif-13.5,  yPos_tail_top_dif-1+4.28125 , zPos_right_dif - 6.62],
+	[ x_pos_tail_dif-13.25,  yPos_tail_top_dif-1+4.171875 , zPos_right_dif - 6],
+
+
+	[ x_pos_tail_dif-13.5,  yPos_tail_top_dif-1+4.28125 , zPos_right_dif - 6.62],
+	[ x_pos_tail_dif-13.5,  yPos_tail_top_dif+4.28125 , zPos_right_dif - 6.62],
+	[ x_pos_tail_dif-13.75,  yPos_tail_top_dif+4.390625 , zPos_right_dif - 7.5],
+
+	[ x_pos_tail_dif-13.75,  yPos_tail_top_dif+4.390625 , zPos_right_dif - 7.5],
+	[ x_pos_tail_dif-13.75,  yPos_tail_top_dif-1+4.390625 , zPos_right_dif - 7.5],
+	[ x_pos_tail_dif-13.5,  yPos_tail_top_dif-1+4.28125 , zPos_right_dif - 6.62],
+
+
+	[ x_pos_tail_dif-13.75,  yPos_tail_top_dif-1+4.390625 , zPos_right_dif - 7.5],
+	[ x_pos_tail_dif-13.75,  yPos_tail_top_dif+4.390625 , zPos_right_dif - 7.5],
+	[ x_pos_tail_dif-13.87,  yPos_tail_top_dif+4.4453125 , zPos_right_dif - 8.25],
+
+	[ x_pos_tail_dif-13.87,  yPos_tail_top_dif+4.4453125 , zPos_right_dif - 8.25],
+	[ x_pos_tail_dif-13.87,  yPos_tail_top_dif-1+4.4453125 , zPos_right_dif - 8.25],
+	[ x_pos_tail_dif-13.75,  yPos_tail_top_dif-1+4.390625 , zPos_right_dif - 7.5],
+
+
+	[ x_pos_tail_dif-13.87,  yPos_tail_top_dif-1+4.4453125 , zPos_right_dif - 8.25],
+	[ x_pos_tail_dif-13.87,  yPos_tail_top_dif+4.4453125 , zPos_right_dif - 8.25],
+	[ x_pos_tail_dif-14,  yPos_tail_top_dif+4.5 , zPos_right_dif - 9.62],
+
+	[ x_pos_tail_dif-14,  yPos_tail_top_dif+4.5 , zPos_right_dif - 9.62],
+	[ x_pos_tail_dif-14,  yPos_tail_top_dif-1+4.5 , zPos_right_dif - 9.62],
+	[ x_pos_tail_dif-13.87,  yPos_tail_top_dif-1+4.4453125  , zPos_right_dif - 8.25],
+
+
+	[ x_pos_tail_dif-14,  yPos_tail_top_dif-1+4.5 , zPos_right_dif - 9.62],
+	[ x_pos_tail_dif-14,  yPos_tail_top_dif+4.5 , zPos_right_dif - 9.62],
+	[ x_pos_tail_dif-14,  yPos_tail_top_dif+4.5 , zPos_right_dif - 10],
+
+	[ x_pos_tail_dif-14,  yPos_tail_top_dif+4.5 , zPos_right_dif - 10],
+	[ x_pos_tail_dif-14,  yPos_tail_top_dif-1+4.5 , zPos_right_dif - 10],
+	[ x_pos_tail_dif-14,  yPos_tail_top_dif-1+4.5 , zPos_right_dif - 9.62]
 
 
 
