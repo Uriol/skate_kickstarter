@@ -96,7 +96,7 @@ function drawSkateboard(){
 	// Draw the lines in the skateboard
 	drawLines();
 	// Draw the parts of the skateboard with triangles
-	drawVertices();
+	//drawVertices();
 
 }
 
@@ -288,7 +288,74 @@ var tail_bottom_mesh = new THREE.Mesh( tail_bottom_geometry, blackMaterialBack )
 tail_bottom_mesh.material.side = THREE.BackSide;
 scene.add(tail_bottom_mesh);
 
+
+// nose right edge
+var nose_right_edge_geometry = new THREE.BufferGeometry();
+var vertices = new Float32Array( tail_top_right_edge_vertices.length * 3);
+for (var i = 0; i < tail_top_right_edge_vertices.length; i++)
+{
+	vertices[ i*3 + 0 ] = tail_top_right_edge_vertices[i][0];
+	vertices[ i*3 + 1 ] = tail_top_right_edge_vertices[i][1];
+	vertices[ i*3 + 2 ] = tail_top_right_edge_vertices[i][2];
+	vertices[ i*3 + 0 ] = vertices[ i*3 + 0 ]*-1;
 }
+nose_right_edge_geometry.addAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
+var nose_right_edge_mesh = new THREE.Mesh( nose_right_edge_geometry, yellowMaterialBack );
+scene.add(nose_right_edge_mesh);
+
+
+// nose left edge
+var nose_left_edge_geometry = new THREE.BufferGeometry();
+var vertices = new Float32Array( tail_top_right_edge_vertices.length * 3);
+for (var i = 0; i < tail_top_right_edge_vertices.length; i++)
+{
+	vertices[ i*3 + 0 ] = tail_top_right_edge_vertices[i][0];
+	vertices[ i*3 + 1 ] = tail_top_right_edge_vertices[i][1];
+	vertices[ i*3 + 2 ] = tail_top_right_edge_vertices[i][2];
+	vertices[ i*3 + 2 ] = vertices[ i*3 + 2 ]*-1;
+	vertices[ i*3 + 0 ] = vertices[ i*3 + 0 ]*-1;
+}
+nose_left_edge_geometry.addAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
+var nose_left_edge_mesh = new THREE.Mesh( nose_left_edge_geometry, blueMaterial );
+scene.add(nose_left_edge_mesh);
+
+
+// nose top
+var nose_top_geometry = new THREE.BufferGeometry();
+var vertices = new Float32Array( tail_top_vertices.length * 3);
+for (var i = 0; i < tail_top_vertices.length; i++)
+{
+	vertices[ i*3 + 0 ] = tail_top_vertices[i][0];
+	vertices[ i*3 + 1 ] = tail_top_vertices[i][1];
+	vertices[ i*3 + 2 ] = tail_top_vertices[i][2];
+	vertices[ i*3 + 0 ] = vertices[ i*3 + 0 ]*-1;
+}
+nose_top_geometry.addAttribute( 'position' , new THREE.BufferAttribute( vertices, 3 ));
+var nose_top_mesh = new THREE.Mesh( nose_top_geometry, blackMaterial);
+scene.add(nose_top_mesh);
+
+
+// nose bottom
+var nose_bottom_geometry = new THREE.BufferGeometry();
+var vertices = new Float32Array( tail_top_vertices.length * 3);
+for (var i = 0; i < tail_top_vertices.length; i++)
+{
+	vertices[ i*3 + 0 ] = tail_top_vertices[i][0];
+	vertices[ i*3 + 1 ] = tail_top_vertices[i][1];
+	vertices[ i*3 + 2 ] = tail_top_vertices[i][2];
+	vertices[ i*3 + 1 ] = vertices[ i*3 + 1 ]-1;
+	vertices[ i*3 + 0 ] = vertices[ i*3 + 0 ]*-1;
+}
+nose_bottom_geometry.addAttribute( 'position' , new THREE.BufferAttribute( vertices, 3 ));
+var nose_bottom_mesh = new THREE.Mesh( nose_bottom_geometry, blackMaterial );
+//nose_bottom_mesh.material.side = THREE.BackSide;
+scene.add(nose_bottom_mesh);
+
+
+}
+
+
+
 
 
 // resize
