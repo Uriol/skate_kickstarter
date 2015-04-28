@@ -14,16 +14,16 @@ $('.menuItem').on('click', function(){
 	var obj, i;
 	for ( i = scene.children.length - 1; i >= 0 ; i -- ) {
 	    obj = scene.children[ i ];
-	    if ( obj.name == 'skateboardObject') {
+	    if ( obj.name == 'skateboardContainer') {
 	        scene.remove(obj);
 	    }
 	}
 
 	index = $(this).data('index');
-	console.log(index);
+	//console.log(index);
 	
 	selected_trick = tricks_array[index];
-	console.log(selected_trick);
+	//console.log(selected_trick);
 	drawTrick();
 })
 

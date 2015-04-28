@@ -1,4 +1,3 @@
-
 var scene, camera, renderer;
 var skateboard;
 
@@ -96,4 +95,3 @@ function render() {
 	controls.update();
 	renderer.render(scene, camera);
 };
-

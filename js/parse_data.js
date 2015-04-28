@@ -85,7 +85,7 @@ function parseData( data ){
 	total_time_on_air = airtime*0.02;
 	// Calculate speed in the air
 	airSpeed = 0.5*gravity*total_time_on_air;
-	console.log('airSpeed ' + airSpeed);
+	//console.log('airSpeed ' + airSpeed);
 	// Run
 	
 }

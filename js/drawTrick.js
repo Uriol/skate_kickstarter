@@ -29,36 +29,14 @@ function drawTrick(){
 
 
 
-		// Detect center of rotation
-		if (previous_pitch < $total_pitchs[i]) {
-			//console.log('nose up')
-			noseUp = true;
-			tailUp = false;
-
-			// skateboard.position.x = this_y_position*(pixelMultiplier-centerYposition*-1);
-			// skateboard.position.x = skateboard.position.x+15;
-			// skateboard.rotation.z = $total_pitchs[i];
-			// skateboard.position.x = skateboard.position.x-15;
-
-		} else if (previous_pitch > $total_pitchs[i]) { 
-			 //console.log('tail up')
-			tailUp = true;
-			noseUp = false;
-
-			// skateboard.position.x = this_y_position*(pixelMultiplier-centerYposition*-1);
-			// skateboard.position.x = skateboard.position.x-15;
-			// skateboard.rotation.z = $total_pitchs[i];
-			// skateboard.position.x = skateboard.position.x+15;
-		} else {
-			//console.log('same pitch')
-			noseUp = false;
-			tailUp = false;
-		}
-
+		
+		//console.log(previous_pitch + ' ' +$total_pitchs[i]);
 		// Save previous pitch
-		previous_pitch = $total_pitchs[i];
+		
 
 		// Declare skateboard object
+		var skateboardContainer = new THREE.Object3D();
+		skateboardContainer.name = 'skateboardContainer';
 		skateboard = new THREE.Object3D();
 		skateboard.name = 'skateboardObject';
 		// Quaternion rotation
@@ -68,6 +46,40 @@ function drawTrick(){
 		quaternion.setFromEuler(euler, 'YZX');
 		skateboard.setRotationFromQuaternion(quaternion);
 
+
+		// Detect center of rotation
+		if (previous_pitch > $total_pitchs[i]) {
+			//console.log('tail up')
+			noseUp = true;
+			tailUp = false;
+			//skateboardContainer.rotation.x = +25;
+			// skateboard.position.x = this_y_position*(pixelMultiplier-centerYposition*-1);
+			// skateboard.position.x = skateboard.position.x+15;
+			// skateboard.rotation.z = $total_pitchs[i];
+			// skateboard.position.x = skateboard.position.x-15;
+
+		} else if (previous_pitch < $total_pitchs[i]) { 
+			//console.log('nose up')
+			tailUp = true;
+			noseUp = false;
+			//skateboardContainer.position.x = -25;
+			// skateboard.position.x = this_y_position*(pixelMultiplier-centerYposition*-1);
+			// skateboard.position.x = skateboard.position.x-15;
+			// skateboard.rotation.z = $total_pitchs[i];
+			// skateboard.position.x = skateboard.position.x+15;
+		} else {
+			//console.log('same pitch')
+			//skateboardContainer.position.x = 0;
+			noseUp = false;
+			tailUp = false;
+		}
+
+
+		//skateboardContainer.position.x = -35;
+		previous_pitch = $total_pitchs[i];
+
+
+		
 
 		// Set quaternion in 3 steps: 1: roll, 2: yaws, 3: pitch
 		// var euler =  new THREE.Euler(  $total_rolls[i], 0, 0,'YZX');
@@ -89,7 +101,7 @@ function drawTrick(){
 		//skateboard.rotation.y = $total_yaws[i]*-1;
 		
 
-		
+		console.log(this_z_position);
 		skateboard.position.x = this_y_position*pixelMultiplier-centerYposition*-1; //-2000;
 		skateboard.position.z = this_x_position*pixelMultiplier;
 		skateboard.position.y = this_z_position*pixelMultiplier;
@@ -101,13 +113,16 @@ function drawTrick(){
 		
 		if ($state[i] == 'air'){
 			onGround_bool = false;
-			console.log('air')
+			//console.log('air')
 		} else { 
 			onGround_bool = true;
-			console.log('ground')
+			//console.log('ground')
 		}
 		drawSkateboard();
-		scene.add(skateboard);
+
+		skateboardContainer.add(skateboard);
+
+		scene.add(skateboardContainer);
 
 	}
 	
