@@ -53,20 +53,13 @@ function drawTrick(){
 			noseUp = true;
 			tailUp = false;
 			//skateboardContainer.rotation.x = +25;
-			// skateboard.position.x = this_y_position*(pixelMultiplier-centerYposition*-1);
-			// skateboard.position.x = skateboard.position.x+15;
-			// skateboard.rotation.z = $total_pitchs[i];
-			// skateboard.position.x = skateboard.position.x-15;
 
 		} else if (previous_pitch < $total_pitchs[i]) { 
 			//console.log('nose up')
 			tailUp = true;
 			noseUp = false;
 			//skateboardContainer.position.x = -25;
-			// skateboard.position.x = this_y_position*(pixelMultiplier-centerYposition*-1);
-			// skateboard.position.x = skateboard.position.x-15;
-			// skateboard.rotation.z = $total_pitchs[i];
-			// skateboard.position.x = skateboard.position.x+15;
+
 		} else {
 			//console.log('same pitch')
 			//skateboardContainer.position.x = 0;
@@ -74,41 +67,13 @@ function drawTrick(){
 			tailUp = false;
 		}
 
-
-		//skateboardContainer.position.x = -35;
 		previous_pitch = $total_pitchs[i];
 
-
-		
-
-		// Set quaternion in 3 steps: 1: roll, 2: yaws, 3: pitch
-		// var euler =  new THREE.Euler(  $total_rolls[i], 0, 0,'YZX');
-		// var quaternion = new THREE.Quaternion();
-		// quaternion.setFromEuler(euler, 'YZX');
-		// skateboard.setRotationFromQuaternion(quaternion);
-
-
-		// var euler2 =  new THREE.Euler(  0, $total_yaws[i]*-1, 0,'YZX');
-		// var quaternion2 = new THREE.Quaternion();
-		// quaternion2.setFromEuler(euler2, 'YZX');
-		// skateboard.setRotationFromQuaternion(quaternion2);
-
-
-		// skateboard.position.x = skateboard.position.x-55;
-		// Euler rotation
-		//skateboard.rotation.z = $total_pitchs[i];
-		//skateboard.rotation.x = $total_rolls[i];
-		//skateboard.rotation.y = $total_yaws[i]*-1;
-		
 
 		console.log(this_z_position);
 		skateboard.position.x = this_y_position*pixelMultiplier-centerYposition*-1; //-2000;
 		skateboard.position.z = this_x_position*pixelMultiplier;
-		skateboard.position.y = this_z_position*pixelMultiplier;
-		// skateboard.matrixAutoUpdate = false;
-		// skateboard.updateMatrix();
-
-
+		skateboard.position.y = this_z_position*pixelMultiplier
 
 		
 		if ($state[i] == 'air'){
