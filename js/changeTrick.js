@@ -1,7 +1,7 @@
 
 var selected_trick = trick_one;
 var index;
-var tricks_array = [trick_one, trick_two]
+var tricks_array = [trick_one, trick_two, trick_three]
 
 
 $('.menuItem').on('click', function(){

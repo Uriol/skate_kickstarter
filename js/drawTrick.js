@@ -95,9 +95,9 @@ function drawTrick(){
 
 		// Calculate x pos increment
 		actual_x_position = (this_y_position*pixelMultiplier)-centerYposition*-1;
-		console.log(' actual xpos: ' + actual_x_position);
+		//console.log(' actual xpos: ' + actual_x_position);
 		increment_x_position = actual_x_position - previous_x_position;
-		console.log('increment xpos: ' + increment_x_position);
+		//console.log('increment xpos: ' + increment_x_position);
 		// Caclculate y pos increment
 		actual_y_position = this_z_position*pixelMultiplier;
 		increment_y_position = actual_y_position - previous_y_position;
@@ -107,7 +107,7 @@ function drawTrick(){
 
 		//Detect center of rotation
 		if (previous_pitch > $total_pitchs[i]) {
-			console.log('tail up')
+			//console.log('tail up')
 			drawSkateboard_nose();
 			skateboard = skateboard_nose;
 			skateboard_nose = skateboard_nose_nose_pivot_line;
@@ -115,7 +115,7 @@ function drawTrick(){
 			skateboard_tail = skateboard_nose_tail_pivot_line;
 			
 			final_x_position = prev_skateboard_nose.x + increment_x_position;
-			console.log('final xpos: ' + final_x_position);
+			//console.log('final xpos: ' + final_x_position);
 			skateboard.position.x = final_x_position;
 
 			final_y_position = prev_skateboard_nose.y + increment_y_position;
@@ -125,7 +125,7 @@ function drawTrick(){
 			skateboard.position.z = final_z_position;
 
 		} else if (previous_pitch < $total_pitchs[i]) { 
-			console.log('nose up')
+			//console.log('nose up')
 			drawSkateboard_tail()
 			skateboard = skateboard_tail;
 			skateboard_nose = skateboard_tail_nose_pivot_line;
@@ -133,7 +133,7 @@ function drawTrick(){
 			skateboard_tail = skateboard_tail_tail_pivot_line;
 			
 			final_x_position = prev_skateboard_tail.x + increment_x_position;
-			console.log('final xpos: ' + final_x_position);
+			//console.log('final xpos: ' + final_x_position);
 			skateboard.position.x = final_x_position;
 
 			final_y_position = prev_skateboard_tail.y + increment_y_position;
@@ -143,7 +143,7 @@ function drawTrick(){
 			skateboard.position.z = final_z_position;
 
 		} else {
-			console.log('same pitch')
+			//console.log('same pitch')
 			drawSkateboard_center();
 			skateboard = skateboard_center;
 			skateboard_nose = skateboard_center_nose_pivot_line;
@@ -151,7 +151,7 @@ function drawTrick(){
 			skateboard_tail = skateboard_center_tail_pivot_line;
 			
 			final_x_position = prev_skateboard_center.x + increment_x_position;
-			console.log('final xpos: ' + final_x_position);
+			//console.log('final xpos: ' + final_x_position);
 			skateboard.position.x = final_x_position;
 
 			final_y_position = prev_skateboard_center.y + increment_y_position;
@@ -193,11 +193,11 @@ function drawTrick(){
 
 		position_center = new THREE.Vector3();
 		position_center.setFromMatrixPosition( skateboard_center.matrixWorld )
-		console.log('center world pos x: ' + position_center.x);
+		//console.log('center world pos x: ' + position_center.x);
 
 		position_nose = new THREE.Vector3();
 		position_nose.setFromMatrixPosition( skateboard_nose.matrixWorld )
-		console.log('nose world pos x: ' + position_nose.x);
+		//console.log('nose world pos x: ' + position_nose.x);
 		
 
 
