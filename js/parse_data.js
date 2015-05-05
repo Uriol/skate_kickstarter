@@ -339,6 +339,6 @@ function resetValues(){
 	airtime = 0;
 
 	initialYaw = 0;
-
+	//centerYposition = 0;
 
 }

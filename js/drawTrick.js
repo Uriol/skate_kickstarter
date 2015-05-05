@@ -31,11 +31,34 @@ function drawTrick(){
 	parseData(selected_trick);
 	switchState();
 
+	//Restart values
+	position_tail = new THREE.Vector3();
+	position_center = new THREE.Vector3();
+	position_nose = new THREE.Vector3();
+
+	prev_skateboard_tail = new THREE.Vector3();
+	prev_skateboard_center = new THREE.Vector3();
+	prev_skateboard_nose = new THREE.Vector3();
+	console.log(centerYposition);
+
+	previous_x_position = 0;
+	previous_y_position = 0;
+	previous_z_position = 0;
+
+	console.log('prev_skateboard_tail: ' + prev_skateboard_tail.x + ', ' + prev_skateboard_tail.y + ', ' + prev_skateboard_tail.z);
+	console.log('prev_skateboard_center: ' + prev_skateboard_center.x + ', ' + prev_skateboard_center.y + ', ' + prev_skateboard_center.z);
+	console.log('prev_skateboard_nose: ' + prev_skateboard_nose.x + ', ' + prev_skateboard_nose.y + ', ' + prev_skateboard_nose.z);
 
 	// Loop through all positions lengths
 	for (var i = 0; i < $total_x_positions.length; i++) {
 		
-
+		
+		if (i == 1) {
+			console.log(skateboard.position.x)
+			console.log('prev_skateboard_tail 2: ' + prev_skateboard_tail.x + ', ' + prev_skateboard_tail.y + ', ' + prev_skateboard_tail.z);
+			console.log('prev_skateboard_center 2: ' + prev_skateboard_center.x + ', ' + prev_skateboard_center.y + ', ' + prev_skateboard_center.z);
+			console.log('prev_skateboard_nose 2: ' + prev_skateboard_nose.x + ', ' + prev_skateboard_nose.y + ', ' + prev_skateboard_nose.z);
+		}
 
 		this_x_position = $total_x_positions[i];
 		this_y_position = $total_y_positions[i];
@@ -123,6 +146,8 @@ function drawTrick(){
 
 			final_z_position = prev_skateboard_center.z + increment_z_position;
 			skateboard.position.z = final_z_position;
+			//console.log('prev world x center: ' + prev_skateboard_center.x)
+
 		}
 
 
@@ -140,7 +165,8 @@ function drawTrick(){
 		scene.updateMatrixWorld(true);
 		// Tail
 		position_tail = new THREE.Vector3();
-		position_tail.setFromMatrixPosition( skateboard_tail.matrixWorld )	
+		position_tail.setFromMatrixPosition( skateboard_tail.matrixWorld )
+
 		// Center
 		position_center = new THREE.Vector3();
 		position_center.setFromMatrixPosition( skateboard_center.matrixWorld )
