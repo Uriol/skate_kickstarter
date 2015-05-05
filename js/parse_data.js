@@ -34,7 +34,9 @@ var initialYaw ;
 var total_angle_diff = 0;
 var time = 0.02; // milliseconds to seconds
 var pi = 3.14;
-var pixelMultiplier = 100;
+var pixelMultiplier = 110;
+var pixelMultiplier_z = 80;
+
 
 // Position variables
 var xSpeed, xPosition = 0, xPreviousPosition = 0;
@@ -123,8 +125,8 @@ function onGround(){
   	//console.log(initialYaw);
 
 	// If there have been 180
-	if ( plus180 == true ) { $yaw[k] = $yaw[k] + 180; $roll[k] = $roll[k] *-1; $pitch[k] = $pitch[k] *-1;}
-  	if ( minus180 == true ) { $yaw[k] = $yaw[k] - 180; $roll[k] = $roll[k] *-1; $pitch[k] = $pitch[k] *-1; }
+	if ( plus180 == true ) { $yaw[k] = $yaw[k] + 180; $roll[k] = $roll[k] ; $pitch[k] = $pitch[k] ;}
+  	if ( minus180 == true ) { $yaw[k] = $yaw[k] - 180; $roll[k] = $roll[k] ; $pitch[k] = $pitch[k] ; }
 
   	initialYaw = $yaw[0];
   	total_angle_diff = $yaw[k] - initialYaw;

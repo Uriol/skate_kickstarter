@@ -7,7 +7,7 @@ var skateboard;
 // var blue, blueMaterial, blueMaterialBack;
 // var darkGrey, lightGreyMaterial;
 	// Colors and materials
-	var black = new THREE.Color("rgb(20,20,20)");
+	var black = new THREE.Color("rgb(10,10,10)");
 	var blackMaterial = new THREE.MeshBasicMaterial(  {color: black}  );
 	var blackMaterialBack = new THREE.MeshBasicMaterial(  {color: black}  );
 
@@ -22,7 +22,7 @@ var skateboard;
 	var darkGrey = new THREE.Color("rgb(30, 30, 30)");
 	var darkGreyMaterial = new THREE.MeshBasicMaterial({ color: darkGrey });
 
-	var darkerGrey = new THREE.Color("rgb(20, 20, 20)");
+	var darkerGrey = new THREE.Color("rgb(50, 50, 50)");
 	var floorMaterial = new THREE.MeshBasicMaterial({ color: darkerGrey });
 	// var red = new THREE.Color("rgb(250, 0, 0)");
 	// var redMaterial = new THREE.MeshBasicMaterial({ color: red });
@@ -57,7 +57,7 @@ function init(){
 
 	// scene background color
 	//var backgroundColor = new THREE.Color("rgb(20,20,20)");
-	var backgroundColor = new THREE.Color("rgb(30,30,30)");
+	var backgroundColor = new THREE.Color("rgb(10,10,10)");
 	renderer.setClearColor( backgroundColor );
 
 	// draw floor
@@ -68,10 +68,21 @@ function init(){
 	floor.material.side = THREE.DoubleSide;
 	scene.add(floor);
 
-	
-	
-	drawTrick();
 
+
+	var whiteLine = new THREE.Color("rgb(255, 255, 255)");
+	var whiteLineMaterial = new THREE.LineBasicMaterial({ color: whiteLine, linewidth: 1.5 });
+	// Draw x 0 line
+	var centerLineGeometry = new THREE.Geometry();
+	centerLineGeometry.vertices.push(new THREE.Vector3(0, -5, 0));
+	centerLineGeometry.vertices.push(new THREE.Vector3(0, 5, 0));
+	var centerLine = new THREE.Line(centerLineGeometry, whiteLineMaterial);
+	//scene.add(centerLine);
+	
+	//drawSkateboard_tail();
+	//drawSkateboard_center();
+	//drawSkateboard_nose();
+	drawTrick();
 
 	// Resize window
 	window.addEventListener( 'resize', onWindowResize, false );

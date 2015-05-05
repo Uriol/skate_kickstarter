@@ -1,6 +1,6 @@
 
 // X position from the center of 0
-var xPos_dif = -20;
+var xPos_dif = 4;
 // Top Ypos difference 
 var yPos_top_dif = 0.5;
 var yPos_bottom_dif = -0.2;
