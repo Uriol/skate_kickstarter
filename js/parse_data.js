@@ -15,6 +15,8 @@ var $total_x_positions = [];
 var $total_y_positions = [];
 var $total_z_positions = [];
 
+var $reception = [];
+
 // Booleans for 180
 var plus180 = false;
 var minus180 = false;
@@ -48,6 +50,7 @@ var centerYposition = 0;
 // parseData(trick_data);
 // switchState();
 // resetValues();
+
 
 function parseData( data ){
 
@@ -117,6 +120,7 @@ function switchState(){
 // Calculate position when the skate is on the ground
 function onGround(){
 
+
 	elapsed_time_on_air = 0;
 	air_interval = 0;
 	interval += 1;
@@ -156,7 +160,7 @@ function onGround(){
 	$total_y_positions.push(yPosition);
 	$total_z_positions.push(zPosition);
 
-
+	$reception.push(0);
 	tailUp = false;
 	noseUp = false;
 
@@ -173,6 +177,7 @@ function onAir(){
 	air_interval += 1;
 	elapsed_time_on_air = air_interval*time;
 
+
 	// Detect first moment on jump
 	if (elapsed_time_on_air == time) {
 		initialYawOnJumping = $yaw[k];
@@ -183,9 +188,12 @@ function onAir(){
 	if (elapsed_time_on_air == total_time_on_air) {
 		yawOnLanding = $yaw[k];
 		calculateLanding();
+		
 		final_y_onJumping = yPosition;
 		jumpDistance = final_y_onJumping - initial_y_onJumping;
-		//centerYposition = yPosition*pixelMultiplier*-1;
+		$reception.push(1);
+	} else {
+		$reception.push(0);
 	}
 	//console.log(elapsed_time_on_air)
 	// Calculate z position
@@ -311,6 +319,8 @@ function resetValues(){
 	$total_pitchs = [];
 	$total_rolls = [];
 
+	$reception = [];
+
 	interval = 0;
 	centerPosition = 0;
 	initial_y_onJumping = 0;
@@ -327,4 +337,8 @@ function resetValues(){
 	air_interval = 0;
 	total_time_on_air = 0;
 	airtime = 0;
+
+	initialYaw = 0;
+
+
 }

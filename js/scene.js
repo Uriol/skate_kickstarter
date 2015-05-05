@@ -12,7 +12,7 @@ var particles_1, particles_2, fogs;
 	var blackMaterial = new THREE.MeshBasicMaterial(  {color: black}  );
 	var blackMaterialBack = new THREE.MeshBasicMaterial(  {color: black}  );
 
-	var yellow = new THREE.Color("rgb(184, 228, 20)");
+	var yellow = new THREE.Color("rgb(212, 248, 0)");
 	var yellowMaterial = new THREE.MeshBasicMaterial({ color: yellow });
 	var yellowMaterialBack = new THREE.MeshBasicMaterial({ color: yellow });
 
@@ -23,7 +23,7 @@ var particles_1, particles_2, fogs;
 	var darkGrey = new THREE.Color("rgb(30, 30, 30)");
 	var darkGreyMaterial = new THREE.MeshBasicMaterial({ color: darkGrey });
 
-	var darkerGrey = new THREE.Color("rgb(1, 1, 1)");
+	var darkerGrey = new THREE.Color("rgb(10, 10, 10)");
 	var floorMaterial = new THREE.MeshBasicMaterial({ color: darkerGrey });
 	// var red = new THREE.Color("rgb(250, 0, 0)");
 	// var redMaterial = new THREE.MeshBasicMaterial({ color: red });
@@ -61,9 +61,11 @@ function init(){
 	var backgroundColor = new THREE.Color("rgb(10,10,10)");
 	renderer.setClearColor( backgroundColor );
 
+	var spriteFloor = THREE.ImageUtils.loadTexture('img/floor_texture2.jpg');
+	var floor_material = new THREE.MeshBasicMaterial({ map: spriteFloor });
 	// draw floor
 	var floorGeometry = new THREE.PlaneBufferGeometry(1024, 1024);
-	var floor = new THREE.Mesh(floorGeometry, floorMaterial);
+	var floor = new THREE.Mesh(floorGeometry, floor_material);
 	floor.rotation.x = -Math.PI / 2;
 	floor.position.y = -3.5;
 	floor.material.side = THREE.DoubleSide;
@@ -94,7 +96,7 @@ function init(){
 
 function drawBackground(){
 
-	var spriteBackground = THREE.ImageUtils.loadTexture('img/bg.jpg');
+	var spriteBackground = THREE.ImageUtils.loadTexture('img/bg_bw.jpg');
 	var bgMaterial = new THREE.MeshBasicMaterial({ map: spriteBackground });
 	var bgMaterialBack = new THREE.MeshBasicMaterial({map: spriteBackground});
 
@@ -132,7 +134,7 @@ function drawBackground(){
 
 function drawParticles(){
 
-	var total_particles_1 = 100, total_particles_2 = 100, total_fogs = 1500;
+	var total_particles_1 = 100, total_particles_2 = 100, total_fogs = 2000;
 
 	// Create particles geometries
 	var particle_1_geometry = new THREE.Geometry(),
@@ -163,7 +165,7 @@ function drawParticles(){
 
 		var vertex_particle_2 = new THREE.Vector3();
 		vertex_particle_2.x = (Math.random() * 300 + 0)*pos_negX;
-		vertex_particle_2.y = Math.random() * 160 + 30; // always positive. Bellow the floor.
+		vertex_particle_2.y = Math.random() * 170 + 50; // always positive. Bellow the floor.
 		vertex_particle_2.z = (Math.random() * 300 + 0)*pos_negY;
 
 		if (vertex_particle_2.x < 250 && vertex_particle_2.x > -250 && vertex_particle_2.z < 250 && vertex_particle_2.z > -250) {

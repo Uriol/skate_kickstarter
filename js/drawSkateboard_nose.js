@@ -13,7 +13,8 @@ function drawSkateboard_nose(){
 }
 
 function drawVertices_nose() {
-	if (onGround_bool == true){
+	
+	if (onGround_bool == true || reception == true){
 		blueMaterial = new THREE.MeshBasicMaterial({ color: darkGrey });
 		yellowMaterial = new THREE.MeshBasicMaterial({ color: darkGrey });
 		blueMaterialBack = new THREE.MeshBasicMaterial({ color: darkGrey });

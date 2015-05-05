@@ -18,7 +18,7 @@ function drawSkateboard_center(){
 
 function drawVertices_center(){
 
-	if (onGround_bool == true){
+	if (onGround_bool == true || reception == true){
 		blueMaterial = new THREE.MeshBasicMaterial({ color: darkGrey });
 		yellowMaterial = new THREE.MeshBasicMaterial({ color: darkGrey });
 		blueMaterialBack = new THREE.MeshBasicMaterial({ color: darkGrey });

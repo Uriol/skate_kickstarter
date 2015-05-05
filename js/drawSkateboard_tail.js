@@ -13,7 +13,8 @@ function drawSkateboard_tail(){
 	// Draw the parts of the skateboard with triangles
 	drawVertices_tail();
 
-	 scene.add(skateboard_tail);
+
+	scene.add(skateboard_tail);
 
 
 }
@@ -21,7 +22,7 @@ function drawSkateboard_tail(){
 
 function drawVertices_tail(){
 
-	if (onGround_bool == true){
+	if (onGround_bool == true || reception == true){
 		blueMaterial = new THREE.MeshBasicMaterial({ color: darkGrey });
 		yellowMaterial = new THREE.MeshBasicMaterial({ color: darkGrey });
 		blueMaterialBack = new THREE.MeshBasicMaterial({ color: darkGrey });
@@ -32,7 +33,7 @@ function drawVertices_tail(){
 		blueMaterialBack = new THREE.MeshBasicMaterial({ color:blue });
 		yellowMaterialBack = new THREE.MeshBasicMaterial({ color:yellow });
 	}
-
+	
 	var skateboard_tail_nose_pivot_geometry = new THREE.Geometry();
 	skateboard_tail_nose_pivot_line = new THREE.Line(skateboard_tail_center_pivot_geometry);
 	skateboard_tail_nose_pivot_line.position.x = 48;

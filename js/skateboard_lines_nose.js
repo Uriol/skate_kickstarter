@@ -1,18 +1,15 @@
 
 function drawLines_nose(){
 
-	if (onGround_bool == false) {
-		// Create colors and materials
-		yellowLine = new THREE.Color("rgb(184, 228, 20)");
-		yellowLineMaterial = new THREE.LineBasicMaterial({ color: yellowLine, linewidth: 1.5 });
-
-		blueLine = new THREE.Color("rgb(0, 200, 255)");
-		blueLineMaterial = new THREE.LineBasicMaterial({ color: blueLine, linewidth: 1.5 });
-
-	} else {
+	if (onGround_bool == true || reception == true) {
 		grey = new THREE.Color("rgb(30, 30, 30)");
 		yellowLineMaterial = new THREE.LineBasicMaterial({ color: grey, linewidth: 1.5 });
 		blueLineMaterial = new THREE.LineBasicMaterial({ color: grey, linewidth: 1.5 });
+	}  else {
+		yellowLine = new THREE.Color("rgb(184, 228, 20)");
+		yellowLineMaterial = new THREE.LineBasicMaterial({ color: yellowLine, linewidth: 1.5 });
+		blueLine = new THREE.Color("rgb(0, 200, 255)");
+		blueLineMaterial = new THREE.LineBasicMaterial({ color: blueLine, linewidth: 1.5 });
 	}
 
 
