@@ -7,26 +7,26 @@ a+"px",m=b,r=0);return b},update:function(){l=this.end()}}};"object"===typeof mo
 
 
 
-var stats = new Stats();
-stats.setMode(0); // 0: fps, 1: ms
+// var stats = new Stats();
+// stats.setMode(0); // 0: fps, 1: ms
 
-// align top-left
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
+// // align top-left
+// stats.domElement.style.position = 'absolute';
+// stats.domElement.style.left = '0px';
+// stats.domElement.style.top = '0px';
 
-document.body.appendChild( stats.domElement );
+// document.body.appendChild( stats.domElement );
 
-var update = function () {
+// var update = function () {
 
-    stats.begin();
+//     stats.begin();
 
-    // monitored code goes here
+//     // monitored code goes here
 
-    stats.end();
+//     stats.end();
 
-    requestAnimationFrame( update );
+//     requestAnimationFrame( update );
 
-};
+// };
 
-requestAnimationFrame( update );
+// requestAnimationFrame( update );
