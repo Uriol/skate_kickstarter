@@ -8,7 +8,7 @@ var particles_1, particles_2, fogs;
 // var blue, blueMaterial, blueMaterialBack;
 // var darkGrey, lightGreyMaterial;
 	// Colors and materials
-	var black = new THREE.Color("rgb(10,10,10)");
+	var black = new THREE.Color("rgb(1,1,1)");
 	var blackMaterial = new THREE.MeshBasicMaterial(  {color: black}  );
 	var blackMaterialBack = new THREE.MeshBasicMaterial(  {color: black}  );
 
@@ -23,7 +23,7 @@ var particles_1, particles_2, fogs;
 	var darkGrey = new THREE.Color("rgb(30, 30, 30)");
 	var darkGreyMaterial = new THREE.MeshBasicMaterial({ color: darkGrey });
 
-	var darkerGrey = new THREE.Color("rgb(10, 10, 10)");
+	var darkerGrey = new THREE.Color("rgb(1, 1, 1)");
 	var floorMaterial = new THREE.MeshBasicMaterial({ color: darkerGrey });
 	// var red = new THREE.Color("rgb(250, 0, 0)");
 	// var redMaterial = new THREE.MeshBasicMaterial({ color: red });
@@ -52,13 +52,13 @@ function init(){
 	// Create camera
 	camera = new THREE.PerspectiveCamera( 45, window.innerWidth/window.innerHeight, 0.1, 2000 );
 	controls = new THREE.OrbitControls( camera );
-	camera.position.set(0,150,200);
+	camera.position.set(0,50,250);
 
 	scene.add(camera);
 
 	// scene background color
 	//var backgroundColor = new THREE.Color("rgb(20,20,20)");
-	var backgroundColor = new THREE.Color("rgb(10,10,10)");
+	var backgroundColor = new THREE.Color("rgb(1,1,1)");
 	renderer.setClearColor( backgroundColor );
 
 	var spriteFloor = THREE.ImageUtils.loadTexture('img/floor_texture2.jpg');
@@ -67,7 +67,7 @@ function init(){
 	var floorGeometry = new THREE.PlaneBufferGeometry(1024, 1024);
 	var floor = new THREE.Mesh(floorGeometry, floorMaterial);
 	floor.rotation.x = -Math.PI / 2;
-	floor.position.y = -3.5;
+	floor.position.y = -23.5;
 	floor.material.side = THREE.DoubleSide;
 	scene.add(floor);
 
@@ -96,7 +96,7 @@ function init(){
 
 function drawBackground(){
 
-	var spriteBackground = THREE.ImageUtils.loadTexture('img/bg_bw.jpg');
+	var spriteBackground = THREE.ImageUtils.loadTexture('img/bg_bw3.jpg');
 	var bgMaterial = new THREE.MeshBasicMaterial({ map: spriteBackground });
 	var bgMaterialBack = new THREE.MeshBasicMaterial({map: spriteBackground});
 
@@ -104,28 +104,28 @@ function drawBackground(){
 	var wallGeometry = new THREE.PlaneBufferGeometry(1024, 459);
 	var wall = new THREE.Mesh(wallGeometry, bgMaterial);
 	wall.position.z = -512;
-	wall.position.y = 229.5-15;
+	wall.position.y = 229.5-35;
 	wall.material.side = THREE.FrontSide;
 	scene.add(wall);
 	// draw wall left
 	var leftWallGeometry = new THREE.PlaneBufferGeometry( 1024, 459);
 	var leftWall = new THREE.Mesh(leftWallGeometry, bgMaterial);
 	leftWall.rotation.y = Math.PI/2;
-	leftWall.position.y = 229.5-15;
+	leftWall.position.y = 229.5-35;
 	leftWall.position.x = -1024/2;
 	scene.add(leftWall);
 	// Draw right wall
 	var rightWallGeometry = new THREE.PlaneBufferGeometry( 1024, 459);
 	var rightWall = new THREE.Mesh(rightWallGeometry, bgMaterialBack);
 	rightWall.rotation.y = Math.PI/2;
-	rightWall.position.y = 229.5-15;
+	rightWall.position.y = 229.5-35;
 	rightWall.position.x = 1024/2;
 	rightWall.material.side = THREE.BackSide;
 	scene.add(rightWall);
 	// Front wall
 	var frontWallGeometry = new THREE.PlaneBufferGeometry( 1024, 459);
 	var frontWall = new THREE.Mesh( frontWallGeometry, bgMaterialBack);
-	frontWall.position.y = 229.5-15;
+	frontWall.position.y = 229.5-35;
 	frontWall.position.z = 512;
 	frontWall.material.side = THREE.BackSide;
 	scene.add(frontWall);
@@ -134,7 +134,7 @@ function drawBackground(){
 
 function drawParticles(){
 
-	var total_particles_1 = 100, total_particles_2 = 100, total_fogs = 2000;
+	var total_particles_1 = 50, total_particles_2 = 50, total_fogs = 2000;
 
 	// Create particles geometries
 	var particle_1_geometry = new THREE.Geometry(),
@@ -148,11 +148,11 @@ function drawParticles(){
 		var pos_negY = Math.random() < 0.5 ? -1 : 1;
 
 		var vertex_particle_1 = new THREE.Vector3();
-		vertex_particle_1.x = (Math.random() * 300 + 0)*pos_negX;
+		vertex_particle_1.x = (Math.random() * 350 + 0)*pos_negX;
 		vertex_particle_1.y = Math.random() * 160 + 30; // always positive. Bellow the floor.
-		vertex_particle_1.z = (Math.random() * 300 + 0)*pos_negY;
+		vertex_particle_1.z = (Math.random() * 350 + 0)*pos_negY;
 
-		if (vertex_particle_1.x < 250 && vertex_particle_1.x > -250 && vertex_particle_1.z < 250 && vertex_particle_1.z > -250) {
+		if (vertex_particle_1.x < 300 && vertex_particle_1.x > -300 && vertex_particle_1.z < 300 && vertex_particle_1.z > -300) {
 
 		} else { particle_1_geometry.vertices.push( vertex_particle_1 ); }
 
@@ -164,11 +164,11 @@ function drawParticles(){
 		var pos_negY = Math.random() < 0.5 ? -1 : 1;
 
 		var vertex_particle_2 = new THREE.Vector3();
-		vertex_particle_2.x = (Math.random() * 300 + 0)*pos_negX;
+		vertex_particle_2.x = (Math.random() * 350 + 0)*pos_negX;
 		vertex_particle_2.y = Math.random() * 170 + 50; // always positive. Bellow the floor.
-		vertex_particle_2.z = (Math.random() * 300 + 0)*pos_negY;
+		vertex_particle_2.z = (Math.random() * 350 + 0)*pos_negY;
 
-		if (vertex_particle_2.x < 250 && vertex_particle_2.x > -250 && vertex_particle_2.z < 250 && vertex_particle_2.z > -250) {
+		if (vertex_particle_2.x < 300 && vertex_particle_2.x > -300 && vertex_particle_2.z < 300 && vertex_particle_2.z > -300) {
 
 		} else { particle_2_geometry.vertices.push( vertex_particle_2 ); }
 
@@ -181,11 +181,11 @@ function drawParticles(){
 		var fog_posY = Math.random() < 0.5 ? -1 : 1;
 
 		var vertex_fog = new THREE.Vector3();
-		vertex_fog.x = (Math.random() * 300 + 0)*fog_posX;
+		vertex_fog.x = (Math.random() * 350 + 0)*fog_posX;
 		vertex_fog.y = Math.random() * 160 + 10;
-		vertex_fog.z = (Math.random() * 300 + 0)*fog_posY;
+		vertex_fog.z = (Math.random() * 350 + 0)*fog_posY;
 
-		if (vertex_fog.x < 250 && vertex_fog.x > -250 && vertex_fog.z < 250 && vertex_fog.z > -250 ) {
+		if (vertex_fog.x < 250 && vertex_fog.x > -200 && vertex_fog.z < 250 && vertex_fog.z > -250 ) {
 
 		} else { fog_geometry.vertices.push( vertex_fog )};
 
@@ -198,8 +198,8 @@ function drawParticles(){
 	particles_1 = new THREE.PointCloud( particle_1_geometry, particle_1_material);
 	scene.add(particles_1);
 
-	var particle_sprite = THREE.ImageUtils.loadTexture( ' img/particle3.png ');
-	var particle_2_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite, blending: THREE.AdditiveBlending, depthTest: true, transparent : true});
+	var particle_sprite_2 = THREE.ImageUtils.loadTexture( ' img/particle4.png ');
+	var particle_2_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_2, blending: THREE.AdditiveBlending, depthTest: true, transparent : true});
 	particles_2 = new THREE.PointCloud( particle_2_geometry, particle_2_material);
 	scene.add(particles_2);
 
