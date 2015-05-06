@@ -52,6 +52,11 @@ var centerYposition = 0;
 // resetValues();
 
 
+// Arrays to modify color
+var before_jump = 0, after_jump = 0, during_jump = 0;
+var $color_state = [];
+var jump_ended = false;
+
 function parseData( data ){
 
 	// Loop throught all the trick data array
@@ -120,7 +125,18 @@ function switchState(){
 // Calculate position when the skate is on the ground
 function onGround(){
 
-
+	if (jump_ended == false) {
+		// before jump
+		//console.log('before jump');
+		before_jump += 1;
+		$color_state.push('before jump')
+		//console.log(before_jump);
+	} else if (jump_ended == true) {
+		// after jump
+		after_jump += 1;
+		$color_state.push('after jump');
+	}
+	
 	elapsed_time_on_air = 0;
 	air_interval = 0;
 	interval += 1;
@@ -174,6 +190,7 @@ var previous_pitch = 0
 
 function onAir(){
 
+	//console.log('air');
 	air_interval += 1;
 	elapsed_time_on_air = air_interval*time;
 
@@ -192,8 +209,13 @@ function onAir(){
 		final_y_onJumping = yPosition;
 		jumpDistance = final_y_onJumping - initial_y_onJumping;
 		$reception.push(1);
+		jump_ended = true;
+		$color_state.push('after jump')
+		after_jump += 1;
 	} else {
 		$reception.push(0);
+		$color_state.push('jump');
+		during_jump += 1;
 	}
 	//console.log(elapsed_time_on_air)
 	// Calculate z position
@@ -229,6 +251,8 @@ function onAir(){
 	$total_yaws.push(total_angle_diff);
 	$total_pitchs.push($pitch[k]*-1);
 	$total_rolls.push($roll[k]*-1);
+
+
 }
 
 function calculateLanding(){
@@ -340,5 +364,9 @@ function resetValues(){
 
 	initialYaw = 0;
 	//centerYposition = 0;
+
+	before_jump = 0, after_jump = 0, during_jump = 0;
+	jump_ended = false;
+	$color_state = [];
 
 }

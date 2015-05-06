@@ -4,13 +4,13 @@ var yellowLine, yellowLineMaterial, blueLine, blueLineMaterial, grey;
 function drawLines_tail(){
 
 	if (onGround_bool == true || reception == true) {
-		grey = new THREE.Color("rgb(30, 30, 30)");
+		//grey = new THREE.Color("rgb(30, 30, 30)");
 		yellowLineMaterial = new THREE.LineBasicMaterial({ color: grey, linewidth: 1.5 });
 		blueLineMaterial = new THREE.LineBasicMaterial({ color: grey, linewidth: 1.5 });
 	}  else {
-		yellowLine = new THREE.Color("rgb(184, 228, 20)");
+		yellowLine = new THREE.Color("rgb(221, 255, 0)");
 		yellowLineMaterial = new THREE.LineBasicMaterial({ color: yellowLine, linewidth: 1.5 });
-		blueLine = new THREE.Color("rgb(0, 200, 255)");
+		blueLine = new THREE.Color("rgb(0, 221, 255)");
 		blueLineMaterial = new THREE.LineBasicMaterial({ color: blueLine, linewidth: 1.5 });
 	}
 
