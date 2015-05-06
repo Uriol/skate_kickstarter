@@ -62,10 +62,10 @@ function init(){
 	renderer.setClearColor( backgroundColor );
 
 	var spriteFloor = THREE.ImageUtils.loadTexture('img/floor_texture2.jpg');
-	var floor_material = new THREE.MeshBasicMaterial({ map: spriteFloor });
+	//var floor_material = new THREE.MeshBasicMaterial({ map: spriteFloor });
 	// draw floor
 	var floorGeometry = new THREE.PlaneBufferGeometry(1024, 1024);
-	var floor = new THREE.Mesh(floorGeometry, floor_material);
+	var floor = new THREE.Mesh(floorGeometry, floorMaterial);
 	floor.rotation.x = -Math.PI / 2;
 	floor.position.y = -3.5;
 	floor.material.side = THREE.DoubleSide;
