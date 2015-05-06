@@ -15,6 +15,7 @@ $(function(){
 
 		//If trick animation going on
 		if (trick_animation == true) {
+			trick_animation = false;
 			clearInterval(animationInterval);
 			console.log('now')
 		}
@@ -38,6 +39,7 @@ $(function(){
 
 		//If trick animation going on
 		if (trick_animation == true) {
+			trick_animation = false;
 			clearInterval(animationInterval);
 			console.log('now')
 		}
@@ -56,5 +58,5 @@ $(function(){
 	})
 
 
-	
+
 });

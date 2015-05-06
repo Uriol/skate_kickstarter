@@ -1,7 +1,7 @@
 var scene, camera, renderer;
 var skateboard;
 
-var particles_1, particles_2, fogs;
+var particles_1, particles_2, particles_3, fogs;
 
 // var black, blackMaterial, blackMaterialBack;
 // var yellow, yellowMaterial, yellowMaterialBack;
@@ -136,11 +136,12 @@ function drawBackground(){
 
 function drawParticles(){
 
-	var total_particles_1 = 80, total_particles_2 = 80, total_fogs = 2500;
+	var total_particles_1 = 80, total_particles_2 = 80, total_particles_3 = 80, total_fogs = 2500;
 
 	// Create particles geometries
 	var particle_1_geometry = new THREE.Geometry(),
 		particle_2_geometry = new THREE.Geometry(),
+		particle_3_geometry = new THREE.Geometry(),
 		fog_geometry = new THREE.Geometry();
 
 	// Add positions for each particle_1
@@ -177,6 +178,22 @@ function drawParticles(){
 	}
 
 
+	for (var i = 0; i < total_particles_3; i++ ) {
+
+		var pos_negX = Math.random() < 0.5 ? -1 : 1;
+		var pos_negY = Math.random() < 0.5 ? -1 : 1;
+
+		var vertex_particle_3 = new THREE.Vector3();
+		vertex_particle_3.x = (Math.random() * 350 + 0)*pos_negX;
+		vertex_particle_3.y = Math.random() * 170 + 50; // always positive. Bellow the floor.
+		vertex_particle_3.z = (Math.random() * 350 + 0)*pos_negY;
+
+		if (vertex_particle_3.x < 300 && vertex_particle_3.x > -300 && vertex_particle_3.z < 300 && vertex_particle_3.z > -300) {
+
+		} else { particle_3_geometry.vertices.push( vertex_particle_3 ); }
+
+	}
+
 	for (var i = 0; i < total_fogs; i++ ) {
 
 		var fog_posX = Math.random() < 0.5 ? -1 : 1;
@@ -205,6 +222,11 @@ function drawParticles(){
 	particles_2 = new THREE.PointCloud( particle_2_geometry, particle_2_material);
 	scene.add(particles_2);
 
+	var particle_sprite_3 = THREE.ImageUtils.loadTexture( ' img/particle2.png ');
+	var particle_3_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_3, blending: THREE.AdditiveBlending, depthTest: true, transparent : true});
+	particles_3 = new THREE.PointCloud( particle_3_geometry, particle_3_material);
+	scene.add(particles_3);
+
 	var fog_sprite = THREE.ImageUtils.loadTexture( 'img/smoke5.png');
 	var fog_material = new THREE.PointCloudMaterial({ size: 256, map: fog_sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true});
 	fogs = new THREE.PointCloud( fog_geometry, fog_material);
@@ -215,6 +237,7 @@ function drawParticles(){
 function animateParticles(){
 	particles_1.rotation.y += 0.00025;
 	particles_2.rotation.y += 0.00035;
+	particles_3.rotation.y += 0.0004;
 	fogs.rotation.y += 0.0004;
 }
 

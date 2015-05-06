@@ -28,8 +28,8 @@ var position_tail = 0, position_center = 0, position_nose = 0;
 
 var grey_gradient_before_jump, grey_value_before_jump = 0, total_grey = 40;
 var grey_gradient_after_jump, grey_value_after_jump = 40;
-var yellow_gradient_during_jump, yellow_value_during_jump = 0, total_yellow = 140, jump_up, jump_down, jump_interval, initial_red, initial_blue;
-var blue_gradient_during_jump, blue_value_during_jump = 0, initial_red_1, initial_blue_2;
+// var yellow_gradient_during_jump, yellow_value_during_jump = 0, total_yellow = 140, jump_up, jump_down, jump_interval, initial_red, initial_blue;
+// var blue_gradient_during_jump, blue_value_during_jump = 0, initial_red_1, initial_blue_2;
 var animationInterval;
 
 
