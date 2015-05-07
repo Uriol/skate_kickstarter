@@ -63,11 +63,11 @@ function init(){
 	var backgroundColor = new THREE.Color("rgb(1,1,1)");
 	renderer.setClearColor( backgroundColor );
 
-	var spriteFloor = THREE.ImageUtils.loadTexture('img/floor_texture2.jpg');
-	//var floor_material = new THREE.MeshBasicMaterial({ map: spriteFloor });
+	var spriteFloor = THREE.ImageUtils.loadTexture('img/floor2.jpg');
+	var floor_material = new THREE.MeshBasicMaterial({ map: spriteFloor });
 	// draw floor
 	var floorGeometry = new THREE.PlaneBufferGeometry(1024, 1024);
-	var floor = new THREE.Mesh(floorGeometry, floorMaterial);
+	var floor = new THREE.Mesh(floorGeometry, floor_material);
 	floor.rotation.x = -Math.PI / 2;
 	floor.position.y = -23.5;
 	floor.material.side = THREE.DoubleSide;
@@ -204,7 +204,7 @@ function drawParticles(){
 		vertex_fog.y = Math.random() * 160 + 10;
 		vertex_fog.z = (Math.random() * 380 + 0)*fog_posY;
 
-		if (vertex_fog.x < 250 && vertex_fog.x > -200 && vertex_fog.z < 250 && vertex_fog.z > -250 ) {
+		if (vertex_fog.x < 200 && vertex_fog.x > -200 && vertex_fog.z < 200 && vertex_fog.z > -200 ) {
 
 		} else { fog_geometry.vertices.push( vertex_fog )};
 

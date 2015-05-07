@@ -3,7 +3,7 @@ var selected_trick = trick_one;
 var trick_speed = 2.5;
 var index;
 var tricks_array = [trick_one, trick_two, trick_three];
-var tricks_speeds = [2.5, 3.5, 2.5];
+var tricks_speeds = [2.5, 3.7, 2.5];
 
 var trick_animation = false;
 
