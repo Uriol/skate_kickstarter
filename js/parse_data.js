@@ -57,8 +57,9 @@ var before_jump = 0, after_jump = 0, during_jump = 0;
 var $color_state = [];
 var jump_ended = false;
 
-function parseData( data ){
+function parseData( data, speed ){
 
+	totalSpeed = speed;
 	// Loop throught all the trick data array
 	// Get y,z, yaw, pitch, roll values
 	for (var i = 0; i < data.length; i++){

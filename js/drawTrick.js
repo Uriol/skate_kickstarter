@@ -35,7 +35,7 @@ var animationInterval;
 
 function drawTrick(){
 	resetValues();
-	parseData(selected_trick);
+	parseData(selected_trick , trick_speed);
 	switchState();
 
 	//Restart values

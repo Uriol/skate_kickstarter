@@ -1,7 +1,9 @@
 
 var selected_trick = trick_one;
+var trick_speed = 2.5;
 var index;
-var tricks_array = [trick_one, trick_two, trick_three]
+var tricks_array = [trick_one, trick_two, trick_three];
+var tricks_speeds = [2.5, 3.5, 2.5];
 
 var trick_animation = false;
 
@@ -31,6 +33,7 @@ $(function(){
 
 		index = $(this).data('index');
 		//console.log(index);
+		trick_speed = tricks_speeds[index];
 		selected_trick = tricks_array[index];
 		drawTrick();
 	})
