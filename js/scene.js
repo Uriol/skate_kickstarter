@@ -227,8 +227,8 @@ function drawParticles(){
 	particles_3 = new THREE.PointCloud( particle_3_geometry, particle_3_material);
 	scene.add(particles_3);
 
-	var fog_sprite = THREE.ImageUtils.loadTexture( 'img/smoke7.png');
-	var fog_material = new THREE.PointCloudMaterial({ size: 256, map: fog_sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true});
+	var fog_sprite = THREE.ImageUtils.loadTexture( 'img/smoke.png');
+	var fog_material = new THREE.PointCloudMaterial({ size: 256, map: fog_sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true, opacity: 0.01});
 	fogs = new THREE.PointCloud( fog_geometry, fog_material);
 	scene.add(fogs);
 
