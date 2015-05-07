@@ -136,7 +136,7 @@ function drawBackground(){
 
 function drawParticles(){
 
-	var total_particles_1 = 80, total_particles_2 = 80, total_particles_3 = 80, total_fogs = 2500;
+	var total_particles_1 = 80, total_particles_2 = 80, total_particles_3 = 80, total_fogs = 2000;
 
 	// Create particles geometries
 	var particle_1_geometry = new THREE.Geometry(),
@@ -227,7 +227,7 @@ function drawParticles(){
 	particles_3 = new THREE.PointCloud( particle_3_geometry, particle_3_material);
 	scene.add(particles_3);
 
-	var fog_sprite = THREE.ImageUtils.loadTexture( 'img/smoke5.png');
+	var fog_sprite = THREE.ImageUtils.loadTexture( 'img/smoke7.png');
 	var fog_material = new THREE.PointCloudMaterial({ size: 256, map: fog_sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true});
 	fogs = new THREE.PointCloud( fog_geometry, fog_material);
 	scene.add(fogs);

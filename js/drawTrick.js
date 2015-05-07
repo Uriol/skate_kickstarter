@@ -26,8 +26,8 @@ var prev_skateboard_tail = new THREE.Vector3(), prev_skateboard_center = new THR
 
 var position_tail = 0, position_center = 0, position_nose = 0;
 
-var grey_gradient_before_jump, grey_value_before_jump = 0, total_grey = 40;
-var grey_gradient_after_jump, grey_value_after_jump = 40;
+var grey_gradient_before_jump, grey_value_before_jump = 0, total_grey = 25;
+var grey_gradient_after_jump, grey_value_after_jump = 25;
 // var yellow_gradient_during_jump, yellow_value_during_jump = 0, total_yellow = 140, jump_up, jump_down, jump_interval, initial_red, initial_blue;
 // var blue_gradient_during_jump, blue_value_during_jump = 0, initial_red_1, initial_blue_2;
 var animationInterval;
@@ -58,7 +58,7 @@ function drawTrick(){
 
 	// Restart color values
 	grey_value_before_jump = 0;
-	grey_value_after_jump = 40;
+	grey_value_after_jump = 25;
 	yellow_value_during_jump = 0;
 
 	// Grey color before jump
