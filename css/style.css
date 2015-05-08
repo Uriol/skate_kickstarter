@@ -35,7 +35,7 @@ canvas { width: 100%; height: 100% }
 }
 
 #trick_name{
-	height: 50px;
+	height: 45px;
 	width: 500px;
 	position: absolute;
 	left: 50%;
