@@ -2,8 +2,9 @@
 var selected_trick = trick_one;
 var trick_speed = 2.5;
 var index;
-var tricks_array = [trick_one, trick_two, trick_three];
-var tricks_speeds = [2.5, 3.7, 2.5];
+var tricks_array = [trick_one, trick_two, trick_three, trick_four, trick_five];
+var tricks_speeds = [2.5, 2.4, 2.5, 2.4, 2.8];
+var tricks_names = ['url(img/nollie_flip.png)', 'url(img/fakie_180_flip.png)','url(img/ollie_180.png)','url(img/kickflip.png)','url(img/180_heelflip.png)']
 
 var trick_animation = false;
 
@@ -32,6 +33,10 @@ $(function(){
 		}
 
 		index = $(this).data('index');
+
+		// Change trick name image
+		$('#trick_name').css('background-image', tricks_names[index]);
+
 		//console.log(index);
 		trick_speed = tricks_speeds[index];
 		selected_trick = tricks_array[index];

@@ -52,9 +52,9 @@ function drawTrick(){
 	previous_y_position = 0;
 	previous_z_position = 0;
 
-	console.log('before_jump: ' + before_jump);
-	console.log('during_jump: ' + during_jump);
-	console.log('after_jump: ' + after_jump);
+	// console.log('before_jump: ' + before_jump);
+	// console.log('during_jump: ' + during_jump);
+	// console.log('after_jump: ' + after_jump);
 
 	// Restart color values
 	grey_value_before_jump = 0;
@@ -69,7 +69,7 @@ function drawTrick(){
 	grey_gradient_after_jump = total_grey/after_jump;
 	grey_gradient_after_jump = grey_gradient_after_jump.toFixed(0);
 	grey_gradient_after_jump = parseInt(grey_gradient_after_jump);
-	console.log('grey increment: ' + grey_gradient_after_jump)
+	//console.log('grey increment: ' + grey_gradient_after_jump)
 	// Yellow Color
 	// jump_up = Math.round(during_jump/2);
 	// jump_down = during_jump-jump_up;

@@ -12,11 +12,11 @@ var particles_1, particles_2, particles_3, fogs;
 	var blackMaterial = new THREE.MeshBasicMaterial(  {color: black}  );
 	var blackMaterialBack = new THREE.MeshBasicMaterial(  {color: black}  );
 
-	var yellow = new THREE.Color("rgb(221, 255, 0)");
+	var yellow = new THREE.Color("rgb(184, 228, 20)");
 	var yellowMaterial = new THREE.MeshBasicMaterial({ color: yellow });
 	var yellowMaterialBack = new THREE.MeshBasicMaterial({ color: yellow });
 
-	var blue = new THREE.Color("rgb(0, 221, 255)");
+	var blue = new THREE.Color("rgb(0, 200, 255)");
 	var blueMaterial = new THREE.MeshBasicMaterial({ color:blue });
 	var blueMaterialBack = new THREE.MeshBasicMaterial({ color:blue });
 
@@ -63,7 +63,7 @@ function init(){
 	var backgroundColor = new THREE.Color("rgb(1,1,1)");
 	renderer.setClearColor( backgroundColor );
 
-	var spriteFloor = THREE.ImageUtils.loadTexture('img/floor2.jpg');
+	var spriteFloor = THREE.ImageUtils.loadTexture('img/floor3.jpg');
 	var floor_material = new THREE.MeshBasicMaterial({ map: spriteFloor });
 	// draw floor
 	var floorGeometry = new THREE.PlaneBufferGeometry(1024, 1024);
@@ -98,7 +98,7 @@ function init(){
 
 function drawBackground(){
 
-	var spriteBackground = THREE.ImageUtils.loadTexture('img/bg_bw2.jpg');
+	var spriteBackground = THREE.ImageUtils.loadTexture('img/bg_black.jpg');
 	var bgMaterial = new THREE.MeshBasicMaterial({ map: spriteBackground });
 	var bgMaterialBack = new THREE.MeshBasicMaterial({map: spriteBackground});
 
@@ -136,7 +136,7 @@ function drawBackground(){
 
 function drawParticles(){
 
-	var total_particles_1 = 80, total_particles_2 = 80, total_particles_3 = 80, total_fogs = 2000;
+	var total_particles_1 = 80, total_particles_2 = 80, total_particles_3 = 80, total_fogs = 500;
 
 	// Create particles geometries
 	var particle_1_geometry = new THREE.Geometry(),
@@ -152,10 +152,10 @@ function drawParticles(){
 
 		var vertex_particle_1 = new THREE.Vector3();
 		vertex_particle_1.x = (Math.random() * 350 + 0)*pos_negX;
-		vertex_particle_1.y = Math.random() * 160 + 30; // always positive. Bellow the floor.
+		vertex_particle_1.y = Math.random() * 160 + 20; // always positive. Bellow the floor.
 		vertex_particle_1.z = (Math.random() * 350 + 0)*pos_negY;
 
-		if (vertex_particle_1.x < 300 && vertex_particle_1.x > -300 && vertex_particle_1.z < 300 && vertex_particle_1.z > -300) {
+		if (vertex_particle_1.x < 320 && vertex_particle_1.x > -320 && vertex_particle_1.z < 320 && vertex_particle_1.z > -320) {
 
 		} else { particle_1_geometry.vertices.push( vertex_particle_1 ); }
 
@@ -168,10 +168,10 @@ function drawParticles(){
 
 		var vertex_particle_2 = new THREE.Vector3();
 		vertex_particle_2.x = (Math.random() * 350 + 0)*pos_negX;
-		vertex_particle_2.y = Math.random() * 170 + 50; // always positive. Bellow the floor.
+		vertex_particle_2.y = Math.random() * 170 + 30; // always positive. Bellow the floor.
 		vertex_particle_2.z = (Math.random() * 350 + 0)*pos_negY;
 
-		if (vertex_particle_2.x < 300 && vertex_particle_2.x > -300 && vertex_particle_2.z < 300 && vertex_particle_2.z > -300) {
+		if (vertex_particle_2.x < 320 && vertex_particle_2.x > -320 && vertex_particle_2.z < 320 && vertex_particle_2.z > -320) {
 
 		} else { particle_2_geometry.vertices.push( vertex_particle_2 ); }
 
@@ -185,10 +185,10 @@ function drawParticles(){
 
 		var vertex_particle_3 = new THREE.Vector3();
 		vertex_particle_3.x = (Math.random() * 350 + 0)*pos_negX;
-		vertex_particle_3.y = Math.random() * 170 + 50; // always positive. Bellow the floor.
+		vertex_particle_3.y = Math.random() * 170 + 30; // always positive. Bellow the floor.
 		vertex_particle_3.z = (Math.random() * 350 + 0)*pos_negY;
 
-		if (vertex_particle_3.x < 300 && vertex_particle_3.x > -300 && vertex_particle_3.z < 300 && vertex_particle_3.z > -300) {
+		if (vertex_particle_3.x < 320 && vertex_particle_3.x > -320 && vertex_particle_3.z < 320 && vertex_particle_3.z > -320) {
 
 		} else { particle_3_geometry.vertices.push( vertex_particle_3 ); }
 
@@ -212,8 +212,8 @@ function drawParticles(){
 
 
 	// Add texture image, material and to scene
-	var particle_sprite = THREE.ImageUtils.loadTexture( ' img/particle3.png ');
-	var particle_1_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite, blending: THREE.AdditiveBlending, depthTest: true, transparent : true});
+	var particle_sprite = THREE.ImageUtils.loadTexture( ' img/particle3_2.png ');
+	var particle_1_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite, blending: THREE.AdditiveBlending, depthTest: true, transparent : true, opacity: 0.5});
 	particles_1 = new THREE.PointCloud( particle_1_geometry, particle_1_material);
 	scene.add(particles_1);
 
@@ -222,13 +222,13 @@ function drawParticles(){
 	particles_2 = new THREE.PointCloud( particle_2_geometry, particle_2_material);
 	scene.add(particles_2);
 
-	var particle_sprite_3 = THREE.ImageUtils.loadTexture( ' img/particle2.png ');
+	var particle_sprite_3 = THREE.ImageUtils.loadTexture( ' img/particle2_2.png ');
 	var particle_3_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_3, blending: THREE.AdditiveBlending, depthTest: true, transparent : true});
 	particles_3 = new THREE.PointCloud( particle_3_geometry, particle_3_material);
 	scene.add(particles_3);
 
 	var fog_sprite = THREE.ImageUtils.loadTexture( 'img/smoke.png');
-	var fog_material = new THREE.PointCloudMaterial({ size: 256, map: fog_sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true, opacity: 0.01});
+	var fog_material = new THREE.PointCloudMaterial({ size: 256, map: fog_sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true, opacity: 0.03});
 	fogs = new THREE.PointCloud( fog_geometry, fog_material);
 	scene.add(fogs);
 
