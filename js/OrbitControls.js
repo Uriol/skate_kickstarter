@@ -16,7 +16,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 	this.center = new THREE.Vector3();
 
-	this.userZoom = true;
+	this.userZoom = false;
 	this.userZoomSpeed = 1.0;
 
 	this.userRotate = true;
@@ -319,6 +319,8 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 		if ( scope.enabled === false ) return;
 		if ( scope.userZoom === false ) return;
+			event.preventDefault();
+    		event.stopPropagation();
 
 		var delta = 0;
 

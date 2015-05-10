@@ -69,22 +69,7 @@ function drawTrick(){
 	grey_gradient_after_jump = total_grey/after_jump;
 	grey_gradient_after_jump = grey_gradient_after_jump.toFixed(0);
 	grey_gradient_after_jump = parseInt(grey_gradient_after_jump);
-	//console.log('grey increment: ' + grey_gradient_after_jump)
-	// Yellow Color
-	// jump_up = Math.round(during_jump/2);
-	// jump_down = during_jump-jump_up;
-	// jump_interval = 0;
-	// yellow_gradient_during_jump = total_yellow/during_jump;
-	// yellow_gradient_during_jump = yellow_gradient_during_jump.toFixed(0);
-	// yellow_gradient_during_jump = parseInt(yellow_gradient_during_jump);
-	// initial_red = 150;
-	// initial_blue = 180;
 
-	// blue_gradient_during_jump = total_yellow/during_jump;
-	// blue_gradient_during_jump = blue_gradient_during_jump.toFixed(0);
-	// blue_gradient_during_jump = parseInt(blue_gradient_during_jump);
-	// initial_blue_1 = 150;
-	// initial_blue_2 = 180;
 
 	// Loop through all positions lengths
 	//for (var i = 0; i < $total_x_positions.length; i++) {
@@ -92,6 +77,7 @@ function drawTrick(){
 		// interval animation
 		var i = 0;
 		animationInterval = setInterval(function(){
+
 		if ($total_x_positions.length == i) {
 				trick_animation = false;
 				clearInterval(animationInterval);
@@ -275,9 +261,9 @@ function drawTrick(){
 
 
 	//}
-
 		}, 20); // interval
-	
+
+
 }
 
 

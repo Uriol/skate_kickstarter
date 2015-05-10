@@ -8,16 +8,31 @@
 	</head>
 	<body>
 
-		<div id='skateVisuals'></div>
-		<div id='replay'></div>
-		<div id='trick_name'></div>
-		<div id='menu'>
-			<div class='menuItem on' data-index='0'></div>
-			<div class='menuItem off' data-index='1'></div>
-			<div class='menuItem off' data-index='2'></div>
-			<div class='menuItem off' data-index='3'></div>
-			<div class='menuItem off' data-index='4'></div>
+		<div id='intro'>
 		</div>
+
+		<div id='visualize'>
+			<div id='skateVisuals'>
+				<div id='replay'></div>
+				<div id='trick_name'></div>
+				<div id='menu'>
+					<div class='menuItem on' data-index='0'></div>
+					<div class='menuItem off' data-index='1'></div>
+					<div class='menuItem off' data-index='2'></div>
+					<div class='menuItem off' data-index='3'></div>
+					<div class='menuItem off' data-index='4'></div>
+				</div>
+			</div>
+		</div>
+
+		<div id='mark'>
+		</div>
+
+
+		<div id='versus'>
+			<div id='versus_3d'></div>
+		</div>
+
 
 		<script src='js/jquery-1.11.2.min.js'></script>
 		<script src='js/three.min.js'></script>
@@ -36,6 +51,19 @@
 		<script src='js/tricks_data.js'></script>
 		<script src='js/parse_data.js'></script>
 		<script src='js/changeTrick.js'></script>
+
+
+		<script src='js/scene_vs.js'></script>
+		<script src='js/drawTrick_vs.js'></script>
+		<script src='js/tricks_data_vs.js'></script>
+		<script src='js/parse_data_vs.js'></script>
+		<script src='js/drawSkateboard_center_vs.js'></script>
+		<script src='js/drawSkateboard_nose_vs.js'></script>
+		<script src='js/drawSkateboard_tail_vs.js'></script>
+		<script src='js/skateboard_lines_center_vs.js'></script>
+		<script src='js/skateboard_lines_nose_vs.js'></script>
+		<script src='js/skateboard_lines_tail_vs.js'></script>
+
 
 	</body>
 </html>
