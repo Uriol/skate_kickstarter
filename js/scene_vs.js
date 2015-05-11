@@ -2,6 +2,8 @@
 var scene_vs, camera_vs, renderer_vs;
 var skateboard_vs;
 
+var scene_2_on = false;
+
 
 	var black_vs = new THREE.Color("rgb(0,0,0)");
 	var blackMaterial_vs = new THREE.MeshBasicMaterial(  {color: black_vs}  );

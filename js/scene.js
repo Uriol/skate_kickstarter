@@ -3,6 +3,8 @@ var skateboard;
 
 var particles_1, particles_2, particles_3, fogs;
 
+var scene_1_on = false;
+
 // var black, blackMaterial, blackMaterialBack;
 // var yellow, yellowMaterial, yellowMaterialBack;
 // var blue, blueMaterial, blueMaterialBack;
@@ -94,7 +96,7 @@ function init(){
 	//drawSkateboard_tail();
 	//drawSkateboard_center();
 	//drawSkateboard_nose();
-	drawTrick();
+	//drawTrick();
 
 	// Resize window
 	window.addEventListener( 'resize', onWindowResize, false );
