@@ -224,7 +224,7 @@ function drawParticles(){
 	scene.add(particles_1);
 
 	var particle_sprite_2 = THREE.ImageUtils.loadTexture( ' img/particle4.png ');
-	var particle_2_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_2, blending: THREE.AdditiveBlending, depthTest: true, transparent : true});
+	var particle_2_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_2, blending: THREE.AdditiveBlending, depthTest: true, transparent : true, });
 	particles_2 = new THREE.PointCloud( particle_2_geometry, particle_2_material);
 	scene.add(particles_2);
 
@@ -234,7 +234,7 @@ function drawParticles(){
 	scene.add(particles_3);
 
 	var fog_sprite = THREE.ImageUtils.loadTexture( 'img/smoke.png');
-	var fog_material = new THREE.PointCloudMaterial({ size: 256, map: fog_sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true, opacity: 0.03});
+	var fog_material = new THREE.PointCloudMaterial({ size: 256, map: fog_sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true, opacity: 0.04});
 	fogs = new THREE.PointCloud( fog_geometry, fog_material);
 	scene.add(fogs);
 
