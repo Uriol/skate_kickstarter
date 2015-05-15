@@ -40,14 +40,14 @@ function init_vs(){
 
 	// Create renderer and add it to the DOM
 	renderer_vs = new THREE.WebGLRenderer({antialias:true});
-	renderer_vs.setSize( window.innerWidth, 650 );
+	renderer_vs.setSize( window.innerWidth, 700 );
 	//document.body.appendChild( renderer.domElement );
 	//$('#skateVisuals').appendChild( renderer.domElement );
 	var container_vs = document.getElementById("versus_3d");
 	container_vs.appendChild(renderer_vs.domElement);
 
 	// Create camera
-	camera_vs = new THREE.PerspectiveCamera( 45, window.innerWidth/650, 0.1, 2000 );
+	camera_vs = new THREE.PerspectiveCamera( 45, window.innerWidth/700, 0.1, 2000 );
 	controls_vs = new THREE.OrbitControls( camera_vs,container_vs );
 	controls_vs.maxPolarAngle = Math.PI/2; 
 	camera_vs.position.set(0,150,300);
@@ -116,7 +116,7 @@ function drawBackground_vs(){
 
 function drawParticles_vs(){
 
-	var total_particles_1 = 80, total_particles_2 = 80, total_particles_3 = 80, total_fogs = 500;
+	var total_particles_1 = 80, total_particles_2 = 80, total_particles_3 = 80, total_fogs = 400;
 
 	// Create particles geometries
 	var particle_1_geometry_vs = new THREE.Geometry(),
@@ -208,7 +208,7 @@ function drawParticles_vs(){
 	scene_vs.add(particles_3_vs);
 
 	var fog_sprite = THREE.ImageUtils.loadTexture( 'img/smoke.png');
-	var fog_material = new THREE.PointCloudMaterial({ size: 256, map: fog_sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true, opacity: 0.04});
+	var fog_material = new THREE.PointCloudMaterial({ size: 256, map: fog_sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true, opacity: 0.035});
 	fogs_vs = new THREE.PointCloud( fog_geometry_vs, fog_material);
 	scene_vs.add(fogs_vs);
 
@@ -226,14 +226,14 @@ function animateParticles_vs(){
 function onWindowResize() {
 
 	// Scene 1
-	camera.aspect = window.innerWidth / 650;
+	camera.aspect = window.innerWidth / 700;
 	camera.updateProjectionMatrix();
-	renderer.setSize( window.innerWidth, 650 );
+	renderer.setSize( window.innerWidth, 700 );
 
 	// Scene 2
-	camera_vs.aspect = window.innerWidth / 650;
+	camera_vs.aspect = window.innerWidth / 700;
 	camera_vs.updateProjectionMatrix();
-	renderer_vs.setSize( window.innerWidth, 650 );
+	renderer_vs.setSize( window.innerWidth, 700 );
 }
 
 

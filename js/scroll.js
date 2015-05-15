@@ -53,7 +53,7 @@ $(function(){
 			console.log('scene 2 on view');
 
 			if (scene_2_on == false){
-				drawTrick_vs(trick_one_vs , 2.6);
+				drawTrick_vs(trick_one_vs , 2.5);
 				drawTrick_vs(trick_two_vs , 2.3);
 				scene_2_on = true;
 			}

@@ -48,14 +48,14 @@ function init(){
 	
 	// Create renderer and add it to the DOM
 	renderer = new THREE.WebGLRenderer({antialias:true});
-	renderer.setSize( window.innerWidth, 650 );
+	renderer.setSize( window.innerWidth, 700 );
 	//document.body.appendChild( renderer.domElement );
 	//$('#skateVisuals').appendChild( renderer.domElement );
 	var container = document.getElementById("skateVisuals");
 	container.appendChild(renderer.domElement);
 
 	// Create camera
-	camera = new THREE.PerspectiveCamera( 45, window.innerWidth/650, 0.1, 2000 );
+	camera = new THREE.PerspectiveCamera( 45, window.innerWidth/700, 0.1, 2000 );
 	controls = new THREE.OrbitControls( camera,container );
 	controls.maxPolarAngle = Math.PI/2; 
 	// controls.maxDistance = 340;
@@ -142,7 +142,7 @@ function drawBackground(){
 
 function drawParticles(){
 
-	var total_particles_1 = 80, total_particles_2 = 80, total_particles_3 = 80, total_fogs = 500;
+	var total_particles_1 = 80, total_particles_2 = 80, total_particles_3 = 80, total_fogs = 400;
 
 	// Create particles geometries
 	var particle_1_geometry = new THREE.Geometry(),
@@ -234,7 +234,7 @@ function drawParticles(){
 	scene.add(particles_3);
 
 	var fog_sprite = THREE.ImageUtils.loadTexture( 'img/smoke.png');
-	var fog_material = new THREE.PointCloudMaterial({ size: 256, map: fog_sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true, opacity: 0.04});
+	var fog_material = new THREE.PointCloudMaterial({ size: 256, map: fog_sprite, blending: THREE.AdditiveBlending, depthTest: false, transparent : true, opacity: 0.035});
 	fogs = new THREE.PointCloud( fog_geometry, fog_material);
 	scene.add(fogs);
 
