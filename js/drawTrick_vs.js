@@ -86,6 +86,13 @@ function drawTrick_vs(selected_trick , trick_speed){
 		this_y_position_vs = $total_y_positions_vs[i];
 		this_z_position_vs = $total_z_positions_vs[i];
 
+		//console.log( this_z_position_vs);
+		//console.log(selected_trick);
+
+		if (this_z_position_vs != 0){
+			console.log(this_y_position_vs);
+		}
+
 		$total_rolls_vs[i] = $total_rolls_vs[i]*pi/180;
 		$total_pitchs_vs[i] = $total_pitchs_vs[i]*pi/180;
 
@@ -131,7 +138,8 @@ function drawTrick_vs(selected_trick , trick_speed){
 
 		increment_x_position_vs = actual_x_position_vs - previous_x_position_vs;
 
-		actual_y_position_vs = this_z_position_vs*pixelMultiplier_vs-20;
+		// actual_y_position_vs = this_z_position_vs*pixelMultiplier_vs-20;
+		actual_y_position_vs = this_z_position_vs*pixelMultiplier_vs;
 		increment_y_position_vs = actual_y_position_vs - previous_y_position_vs;
 
 

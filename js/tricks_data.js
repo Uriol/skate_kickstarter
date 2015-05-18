@@ -150,7 +150,7 @@ var trick_two = [
 ]
 
 // ollie 180: 3 --> speed: 2.4
-var trick_four = [
+var trick_three = [
 // [ 0, 0, -58, 2, 0 ],
 // [ 0, 0, -58, 2, 0 ],
 // [ 0, 0, -58, 2, 0 ],
@@ -863,7 +863,7 @@ var trick_five = [
 
 
 // // niko 180 heel
-var trick_three = [
+var trick_four = [
 [ 0, 0, -121, 0, 0 ],
 [ 0, 0, -121, 0, 0 ],
 [ 0, 0, -121, 0, 0 ],

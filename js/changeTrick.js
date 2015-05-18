@@ -4,7 +4,7 @@ var trick_speed = 2.5;
 var index;
 var tricks_array = [trick_one, trick_two, trick_three, trick_four, trick_five];
 var tricks_speeds = [2.5, 2.4, 2.5, 2.4, 2.8];
-var tricks_names = ['url(img/nollie_flip.png)', 'url(img/fakie_180_flip.png)','url(img/ollie_180.png)','url(img/kickflip.png)','url(img/180_heelflip.png)']
+var tricks_names = ['url(img/fakie_flip.png)', 'url(img/nollie_fs_heelflip.png)','url(img/fs_ollie.png)','url(img/fs_heelflip.png)','url(img/kickflip.png)']
 
 var trick_animation = false;
 
