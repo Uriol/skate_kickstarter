@@ -48,13 +48,82 @@ body {
 	height: 700px;
 	position: absolute;
 }
-/*canvas { width: 100%; height: 720px }*/
+/* Versus data ---------------------------------------- */
+
+/*126 * 5 =  630*/
+/* 80 * 6 = 480 */
+/*total = 1110*/
+
+
+#versus_data {
+	width: 1110px;
+	height: 180px;
+	position: absolute;
+	margin-top: 490px;
+	left: 50%;
+	margin-left: -555px;
+}
+
+#skater_one {
+	width: 264px;
+	height: 180px;
+	position: absolute;
+	background: url('../img/rodriguez.png');
+	background-size: cover;
+	margin-left: 35px;
+	margin-top: 35px;
+}
+
+#skater_two {
+		width: 244px;
+	height: 180px;
+	position: absolute;
+	background: url('../img/houston.png');
+	background-size: cover;
+	right: 35px;
+	margin-top: 35px;
+}
+
+.data_item_vs {
+	width: 126px;
+	height: 180px;
+	float: left;
+	margin-left: 80px;
+}
+
+
+
+#speed {
+	background: url('../img/speed_black_bold.png');
+	background-size: cover;
+}
+
+#airtime {
+
+	background: url('../img/airtime_black_bold.png');
+	background-size: cover;
+}
+
+#jump_height{
+	background: url('../img/jump_height_black_bold.png');
+	background-size: cover;
+}
+
+#jump_distance{
+	background: url('../img/jump_distance_black_bold.png');
+	background-size: cover;
+}
+
+#score{
+	background: url('../img/score_black.png');
+	background-size: cover;
+}
 
 #menu {
 	width: 110px;
 	height: 40px;
 /*	background-color: yellow;*/
-	right: 10px;
+	right: 30px;
 	margin-top: 610px;
 	position: absolute;
 }
@@ -64,7 +133,7 @@ body {
 	height: 40px;
 	background-color: white;
 	position: absolute;
-	left:20px;
+	left:40px;
 	margin-top: 610px;
 	background: url('../img/play40.png');
 	background-repeat: no-repeat;
@@ -80,7 +149,7 @@ body {
 	margin-left: -250px;
 	margin-top: 610px;
 
-	background: url('../img/nollie_flip.png');
+	background: url('../img/fakie_flip.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	/*background-size: cover;*/

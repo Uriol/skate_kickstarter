@@ -69,7 +69,7 @@ function init(){
 	var backgroundColor = new THREE.Color("rgb(1,1,1)");
 	renderer.setClearColor( backgroundColor );
 
-	var spriteFloor = THREE.ImageUtils.loadTexture('img/floor3.jpg');
+	var spriteFloor = THREE.ImageUtils.loadTexture('img/floor_43.jpg');
 	var floor_material = new THREE.MeshBasicMaterial({ map: spriteFloor });
 	// draw floor
 	var floorGeometry = new THREE.PlaneBufferGeometry(1024, 1024);
@@ -142,7 +142,7 @@ function drawBackground(){
 
 function drawParticles(){
 
-	var total_particles_1 = 80, total_particles_2 = 80, total_particles_3 = 80, total_fogs = 400;
+	var total_particles_1 = 100, total_particles_2 = 100, total_particles_3 = 100, total_fogs = 400;
 
 	// Create particles geometries
 	var particle_1_geometry = new THREE.Geometry(),
