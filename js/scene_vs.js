@@ -50,7 +50,7 @@ function init_vs(){
 	camera_vs = new THREE.PerspectiveCamera( 45, window.innerWidth/700, 0.1, 2000 );
 	controls_vs = new THREE.OrbitControls( camera_vs,container_vs );
 	controls_vs.maxPolarAngle = Math.PI/2; 
-	camera_vs.position.set(0,150,300);
+	camera_vs.position.set(150,100,300);
 	scene.add(camera_vs);
 
 	// Scene background
