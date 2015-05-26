@@ -67,19 +67,19 @@ function init(){
 	
 	// Create renderer and add it to the DOM
 	renderer = new THREE.WebGLRenderer({antialias:true});
-	renderer.setSize( window.innerWidth, 700 );
+	renderer.setSize( window.innerWidth, 720 );
 	//document.body.appendChild( renderer.domElement );
 	//$('#skateVisuals').appendChild( renderer.domElement );
 	var container = document.getElementById("skateVisuals");
 	container.appendChild(renderer.domElement);
 
 	// Create camera
-	camera = new THREE.PerspectiveCamera( 45, window.innerWidth/700, 0.1, 2000 );
+	camera = new THREE.PerspectiveCamera( 45, window.innerWidth/720, 0.1, 2000 );
 	controls = new THREE.OrbitControls( camera,container );
 	controls.maxPolarAngle = Math.PI/2; 
 	// controls.maxDistance = 340;
 	// controls.minDistance = 200;
-	camera.position.set(0,50,300);
+	camera.position.set(0,70,260);
 
 	scene.add(camera);
 

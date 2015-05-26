@@ -40,14 +40,14 @@ function init_vs(){
 
 	// Create renderer and add it to the DOM
 	renderer_vs = new THREE.WebGLRenderer({antialias:true});
-	renderer_vs.setSize( window.innerWidth, 700 );
+	renderer_vs.setSize( window.innerWidth, 720 );
 	//document.body.appendChild( renderer.domElement );
 	//$('#skateVisuals').appendChild( renderer.domElement );
 	var container_vs = document.getElementById("versus_3d");
 	container_vs.appendChild(renderer_vs.domElement);
 
 	// Create camera
-	camera_vs = new THREE.PerspectiveCamera( 45, window.innerWidth/700, 0.1, 2000 );
+	camera_vs = new THREE.PerspectiveCamera( 45, window.innerWidth/720, 0.1, 2000 );
 	controls_vs = new THREE.OrbitControls( camera_vs,container_vs );
 	controls_vs.maxPolarAngle = Math.PI/2; 
 	camera_vs.position.set(150,100,300);
@@ -226,14 +226,14 @@ function animateParticles_vs(){
 function onWindowResize() {
 
 	// Scene 1
-	camera.aspect = window.innerWidth / 700;
+	camera.aspect = window.innerWidth / 720;
 	camera.updateProjectionMatrix();
-	renderer.setSize( window.innerWidth, 700 );
+	renderer.setSize( window.innerWidth, 720 );
 
 	// Scene 2
-	camera_vs.aspect = window.innerWidth / 700;
+	camera_vs.aspect = window.innerWidth / 720;
 	camera_vs.updateProjectionMatrix();
-	renderer_vs.setSize( window.innerWidth, 700 );
+	renderer_vs.setSize( window.innerWidth, 720 );
 }
 
 

@@ -84,7 +84,7 @@ body {
 	width: 1110px;
 	height: 180px;
 	position: absolute;
-	margin-top: 490px;
+	margin-top: 500px;
 	left: 50%;
 	margin-left: -555px;
 }
@@ -225,11 +225,30 @@ body {
 	position: relative;
 }
 
+.description_left{
+	width: 400px;
+	top: 20px;
+	margin-left: 40px;
+	position: relative;
+}
+
+
+
 h1 {
 	font-family: tradeGothic;
 	font-size: 35px;
 	text-align: center;
 }
+
+h1.left {
+	font-family: tradeGothic;
+	font-size: 35px;
+	text-align: left;
+	margin-left: 40px;
+	margin-top: 80px;
+}
+
+
 
 p {
 	font-family: Helvetica, sans-serif;
@@ -280,7 +299,19 @@ p {
 	background-repeat: no-repeat;
 }
 
+.text_left{
+	width: 500px;
+	height: 360px;
+	float: left;
+}
 
+.image_right {
+	width: 640px;
+	height: 360px;
+	float: left;
+	background: url('../img/sensor_540.png');
+	background-size: cover;
+}
 
 /* Tablets*/
 @media only screen
