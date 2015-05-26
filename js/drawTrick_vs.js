@@ -90,7 +90,7 @@ function drawTrick_vs(selected_trick , trick_speed){
 		//console.log(selected_trick);
 
 		if (this_z_position_vs != 0){
-			console.log(this_y_position_vs);
+			//console.log(this_y_position_vs);
 		}
 
 		$total_rolls_vs[i] = $total_rolls_vs[i]*pi/180;
@@ -113,7 +113,7 @@ function drawTrick_vs(selected_trick , trick_speed){
 
 		// detect what trick
 		if(selected_trick == trick_one_vs){
-			console.log('trick one')
+			//console.log('trick one')
 			actual_z_position_vs = (this_x_position_vs*pixelMultiplier_vs)-50;
 			increment_z_position_vs = actual_z_position_vs - previous_z_position_vs;
 			blue_vs = new THREE.Color("rgb(255, 255, 255)");

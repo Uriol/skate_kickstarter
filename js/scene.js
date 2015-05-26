@@ -33,7 +33,26 @@ var scene_1_on = false;
 
 
 $(document).ready(function(){
-	init();
+	
+	// If mobile
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ 		console.log('mobile');
+	} else {
+
+		window.addEventListener( 'scroll', onScroll, false );
+	 	init();
+	 	init_vs();
+		render_vs();
+		
+		// If chrome
+		if(navigator.userAgent.indexOf("Chrome") != -1 ) {
+
+		 } else {
+		 	console.log('not chrome');
+		 }
+		 
+	}
+	//init();
 	//render();
 })
 

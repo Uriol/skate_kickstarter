@@ -28,10 +28,10 @@ var scene_2_on = false;
 
 var particles_1_vs, particles_2_vs, particles_3_vs, fogs_vs;
 
-$(document).ready(function(){
-	init_vs();
-	render_vs();
-})
+// $(document).ready(function(){
+// 	init_vs();
+// 	render_vs();
+// })
 
 
 function init_vs(){
@@ -51,7 +51,7 @@ function init_vs(){
 	controls_vs = new THREE.OrbitControls( camera_vs,container_vs );
 	controls_vs.maxPolarAngle = Math.PI/2; 
 	camera_vs.position.set(150,100,300);
-	scene.add(camera_vs);
+	scene_vs.add(camera_vs);
 
 	// Scene background
 	var backgroundColor = new THREE.Color("rgb(1,1,1)");

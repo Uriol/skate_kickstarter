@@ -1,6 +1,6 @@
-$(function(){
+//$(function(){
 
-	window.addEventListener( 'scroll', onScroll, false );
+	// window.addEventListener( 'scroll', onScroll, false );
 
 	function onScroll(){
 		//console.log('scrolling');
@@ -27,7 +27,7 @@ $(function(){
 		if ((bottom_view >= scene_1_bottom && top_view <= scene_1_bottom) ||
 			(bottom_view >= scene_1_top.top && top_view <= scene_1_top.top) ||
 			(bottom_view <= scene_1_bottom && top_view >= scene_1_top.top)) {
-			console.log('scene 1 on view');
+			//console.log('scene 1 on view');
 			if (scene_1_on == false) {
 
 				//If trick animation going on
@@ -40,7 +40,7 @@ $(function(){
 				scene_1_on = true;
 			}
 		} else if (scene_1_on == true) {
-			console.log('scene 1 on not in view');
+			//console.log('scene 1 on not in view');
 			delete_scene_1();
 			scene_1_on = false;
 		}
@@ -50,7 +50,7 @@ $(function(){
 		if ((bottom_view >= scene_2_bottom && top_view <= scene_2_bottom) ||
 			(bottom_view >= scene_2_top.top && top_view <= scene_2_top.top) ||
 			(bottom_view <= scene_2_bottom && top_view >= scene_2_top.top)) {
-			console.log('scene 2 on view');
+			//console.log('scene 2 on view');
 
 			if (scene_2_on == false){
 				drawTrick_vs(trick_one_vs , 2.5);
@@ -59,7 +59,7 @@ $(function(){
 			}
 			
 		} else if (scene_1_on == true) {
-			console.log('scene 2 on not in view');
+			//console.log('scene 2 on not in view');
 			delete_scene_2();
 			scene_2_on = false;
 
@@ -90,7 +90,7 @@ $(function(){
 		    }
 		}
 	}
-})
+//})
 
 
 
