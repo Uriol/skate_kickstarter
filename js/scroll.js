@@ -20,7 +20,7 @@
 		var scene_2 = $('#versus_3d');
 		var scene_2_top = scene_2.offset();
 		var scene_2_height = scene_2.outerHeight();
-		var scene_2_bottom = scene_2_top + scene_2_height;
+		var scene_2_bottom = scene_2_top.top + scene_2_height;
 
 
 		// If scene 1 is one view

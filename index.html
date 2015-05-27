@@ -19,6 +19,11 @@
 			<div class='description'>
 				<p>Lorem ipsum dolor sit amet, affert munere vituperata duo no. Alienum periculis an vim, vis graece mollis at, id nam recteque conceptam contentiones. Pro numquam blandit mediocritatem at, iriure epicurei periculis eu duo, vix exerci verear perfecto ne. Ad facer adipiscing has, ei nonumy definiebas elaboraret mea, eum in diam molestie. Et per aeque delicata, id iisque fabellas recteque cum. Nec velit latine at.</p>
 			</div>
+
+			<!-- <div id='skateVisuals_mobile'> -->
+				<div id='visuals_imgs'></div>
+			<!-- </div> -->
+
 			<div id='skateVisuals'>
 				<div id='replay'></div>
 				<div id='trick_name'></div>
@@ -46,34 +51,33 @@
 				<div id='skater_one'></div>
 				<div id='skater_two'></div>
 				<div id='versus_data'>
-					<div id='speed' class='data_item_vs'></div>
-					<div id='airtime' class='data_item_vs'></div>
-					<div id='jump_height' class='data_item_vs'></div>
-					<div id='jump_distance' class='data_item_vs'></div>
-					<div id='score' class='data_item_vs'></div>
+						<div id='speed' class='data_item_vs on'></div>
+						<div id='airtime' class='data_item_vs on'></div>
+						<div id='jump_height' class='data_item_vs on'></div>
+						<div id='jump_distance' class='data_item_vs_2 off'></div>
+						<div id='score' class='data_item_vs off'></div>
 				</div>
+			</div>
+
+			<div id='vs_data_menu'>
+				<div id='vs_menu_one' class='vs_data_menu_item vs_on' data-index='0'></div>
+				<div id='vs_menu_two' class='vs_data_menu_item vs_off' data-index='1'></div>
 			</div>
 		</div>
 
-		<div id='sensor'>
 
-			<div class='image_right'>
-			</div>
-			
-			<div class='text_left'>
-				<h1 class='left'>THE SENSOR</h1>
-				<div class='description_left'>
-					<p>Lorem ipsum dolor sit amet, affert munere vituperata duo no. Alienum periculis an vim, vis graece mollis at, id nam recteque conceptam contentiones. Pro numquam blandit mediocritatem at, iriure epicurei periculis eu duo, vix exerci verear perfecto ne.</p>
+		<div id='sensor'>
+			<div id='sensor_wrapper'>
+				<div class='text_left'>
+					<h1 class='left'>THE SENSOR</h1>
+					<div class='description_left'>
+						<p>Lorem ipsum dolor sit amet, affert munere vituperata duo no. Alienum periculis an vim, vis graece mollis at, id nam recteque conceptam contentiones. Pro numquam blandit mediocritatem at, iriure epicurei periculis eu duo, vix exerci verear perfecto ne.</p>
+					</div>
+				</div>
+				<div class='sensor_image_wrapper'>
+					<div id='sensor_image'></div>
 				</div>
 			</div>
-
-
-			<!-- <h1>THE SENSOR</h1>
-
-			<div class='description'>
-				<p>Lorem ipsum dolor sit amet, affert munere vituperata duo no. Alienum periculis an vim, vis graece mollis at, id nam recteque conceptam contentiones. Pro numquam blandit mediocritatem at, iriure epicurei periculis eu duo, vix exerci verear perfecto ne. Ad facer adipiscing has, ei nonumy definiebas elaboraret mea, eum in diam molestie. Et per aeque delicata, id iisque fabellas recteque cum. Nec velit latine at.</p>
-			</div> -->
-			<!-- <div id='sensor_image'></div> -->
 		</div>
 
 		<div id='contact'></div>
@@ -111,6 +115,8 @@
 		<script src='js/skateboard_lines_center_vs.js'></script>
 		<script src='js/skateboard_lines_nose_vs.js'></script>
 		<script src='js/skateboard_lines_tail_vs.js'></script>
+
+		<script src='js/laptop_responsive.js'></script>
 
 
 	</body>
