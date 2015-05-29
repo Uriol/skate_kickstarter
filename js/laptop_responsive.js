@@ -1,3 +1,17 @@
+// Resize img to keep aspect ratio
+function mobile_img_height(){
+
+	var mobile_width = window.innerWidth;
+	console.log(mobile_width);
+
+	var image_height = (mobile_width/16)*9;
+	console.log(image_height);
+
+	$('#visuals_imgs').css('height', image_height + 'px');
+	$('#sensor_image').css('height', image_height + 'px');
+}
+
+
 $(function(){
 
 	var vs_index;
@@ -35,3 +49,6 @@ $(function(){
 		}
 	})
 })
+
+
+

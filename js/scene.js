@@ -37,6 +37,7 @@ $(document).ready(function(){
 	// If mobile
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  		console.log('mobile');
+ 		mobile_img_height();
 	} else {
 
 		window.addEventListener( 'scroll', onScroll, false );
@@ -79,7 +80,7 @@ function init(){
 	controls.maxPolarAngle = Math.PI/2; 
 	// controls.maxDistance = 340;
 	// controls.minDistance = 200;
-	camera.position.set(0,70,260);
+	camera.position.set(0,80,260);
 
 	scene.add(camera);
 
@@ -88,7 +89,7 @@ function init(){
 	var backgroundColor = new THREE.Color("rgb(1,1,1)");
 	renderer.setClearColor( backgroundColor );
 
-	var spriteFloor = THREE.ImageUtils.loadTexture('img/floor_43.jpg');
+	var spriteFloor = THREE.ImageUtils.loadTexture('img/floor_44_light.jpg');
 	var floor_material = new THREE.MeshBasicMaterial({ map: spriteFloor });
 	// draw floor
 	var floorGeometry = new THREE.PlaneBufferGeometry(1024, 1024);
@@ -243,12 +244,12 @@ function drawParticles(){
 	scene.add(particles_1);
 
 	var particle_sprite_2 = THREE.ImageUtils.loadTexture( ' img/particle4.png ');
-	var particle_2_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_2, blending: THREE.AdditiveBlending, depthTest: true, transparent : true, });
+	var particle_2_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_2, blending: THREE.AdditiveBlending, depthTest: true, transparent : true, opacity: 0.5});
 	particles_2 = new THREE.PointCloud( particle_2_geometry, particle_2_material);
 	scene.add(particles_2);
 
 	var particle_sprite_3 = THREE.ImageUtils.loadTexture( ' img/particle2_2.png ');
-	var particle_3_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_3, blending: THREE.AdditiveBlending, depthTest: true, transparent : true});
+	var particle_3_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_3, blending: THREE.AdditiveBlending, depthTest: true, transparent : true, opacity: 0.5});
 	particles_3 = new THREE.PointCloud( particle_3_geometry, particle_3_material);
 	scene.add(particles_3);
 
