@@ -95,17 +95,17 @@ body {
 	width: 264px;
 	height: 180px;
 	position: absolute;
-	background: url('../img/rodriguez.png');
+	background: url('../img/rodriguez_final_2.png');
 	background-size: cover;
 	margin-left: 35px;
 	margin-top: 35px;
 }
 
 #skater_two {
-		width: 244px;
+		width: 264px;
 	height: 180px;
 	position: absolute;
-	background: url('../img/houston.png');
+	background: url('../img/huston_final_2.png');
 	background-size: cover;
 	right: 35px;
 	margin-top: 35px;
@@ -144,28 +144,28 @@ body {
 }
 
 #speed {
-	background: url('../img/speed_final.png');
+	background: url('../img/speed_final_2.png');
 	background-size: cover;
 }
 
 #airtime {
 
-	background: url('../img/airtime_final.png');
+	background: url('../img/airtime_final_2.png');
 	background-size: cover;
 }
 
 #jump_height{
-	background: url('../img/jump_height_final.png');
+	background: url('../img/jump_height_final_2.png');
 	background-size: cover;
 }
 
 #jump_distance{
-	background: url('../img/jump_distance_final.png');
+	background: url('../img/jump_distance_final_2.png');
 	background-size: cover;
 }
 
 #score{
-	background: url('../img/score_black.png');
+	background: url('../img/score_final_2.png');
 	background-size: cover;
 }
 
@@ -280,15 +280,19 @@ body {
 h1 {
 	font-family: tradeGothic;
 	font-size: 35px;
+	letter-spacing: -1;
 	text-align: center;
+	word-spacing: 7px;
 }
 
 h1.left {
 	font-family: tradeGothic;
 	font-size: 35px;
+	letter-spacing: -1;
 	text-align: left;
 	margin-left: 40px;
 	margin-top: 80px;
+	word-spacing: 7px;
 }
 
 
@@ -353,7 +357,7 @@ p {
 
 .text_left{
 	width: 500px;
-	height: 360px;
+	/*height: 360px;*/
 	float: right;
 }
 
@@ -393,7 +397,7 @@ and (max-width: 1115px){
 
 	.text_left{
 		width: 100%;
-		height: 150px;
+		/*height: 150px;*/
 		position: relative;
 
 	}
@@ -417,6 +421,7 @@ and (max-width: 1115px){
 	.sensor_image_wrapper {
 		width: 100%;
 		height: 360px;
+		top: 60px;
 		position: relative;
 	}
 
@@ -599,6 +604,14 @@ and (max-device-width : 767px) {
 		position: relative;
 	}
 
+	.text_left{
+		width: 100%;
+		/*height: 150px;*/
+		position: relative;
+
+	}
+
+
 	.description_left {
 		width: 80%;
 		top: 20px;
@@ -635,7 +648,7 @@ and (max-device-width : 767px) {
 		position: relative;
 		margin:  0 auto;
 		
-		background: url('../img/skateboardSensor_big2.jpg');
+		background: url('../img/sensor_540.png');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;

@@ -198,12 +198,12 @@ function drawParticles_vs(){
 	scene_vs.add(particles_1_vs);
 
 	var particle_sprite_2 = THREE.ImageUtils.loadTexture( ' img/particle4.png ');
-	var particle_2_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_2, blending: THREE.AdditiveBlending, depthTest: true, transparent : true});
+	var particle_2_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_2, blending: THREE.AdditiveBlending, depthTest: true, transparent : true, opacity: 0.5});
 	particles_2_vs = new THREE.PointCloud( particle_2_geometry_vs, particle_2_material);
 	scene_vs.add(particles_2_vs);
 
 	var particle_sprite_3 = THREE.ImageUtils.loadTexture( ' img/particle2_2.png ');
-	var particle_3_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_3, blending: THREE.AdditiveBlending, depthTest: true, transparent : true});
+	var particle_3_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_3, blending: THREE.AdditiveBlending, depthTest: true, transparent : true, opacity: 0.5});
 	particles_3_vs = new THREE.PointCloud( particle_3_geometry_vs, particle_3_material);
 	scene_vs.add(particles_3_vs);
 

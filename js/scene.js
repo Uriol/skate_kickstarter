@@ -37,7 +37,9 @@ $(document).ready(function(){
 	// If mobile
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  		console.log('mobile');
+ 		window.addEventListener( 'resize', mobile_img_height, false );
  		mobile_img_height();
+
 	} else {
 
 		window.addEventListener( 'scroll', onScroll, false );
@@ -230,7 +232,7 @@ function drawParticles(){
 		vertex_fog.y = Math.random() * 160 + 10;
 		vertex_fog.z = (Math.random() * 380 + 0)*fog_posY;
 
-		if (vertex_fog.x < 180 && vertex_fog.x > -180 && vertex_fog.z < 180 && vertex_fog.z > -180 ) {
+		if (vertex_fog.x < 80 && vertex_fog.x > -80 && vertex_fog.z < 80 && vertex_fog.z > -80 ) {
 
 		} else { fog_geometry.vertices.push( vertex_fog )};
 
