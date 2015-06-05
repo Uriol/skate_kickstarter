@@ -1,0 +1,170 @@
+/* PHONES */
+@media only screen
+and (max-device-width : 767px) {
+
+	html {
+		width: 100%;
+		height: 100%;
+
+	}
+	body {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		-webkit-text-size-adjust: 100%;
+	}
+
+
+	#intro {
+		width: 100%;
+		height: 450px;
+		position: relative;
+
+	}
+
+
+	/* Sections general classes ------------------------------------------------ */
+
+	.text_right{
+		width: 100%;
+		/*height: 150px;*/
+		position: relative;
+
+	}
+
+
+	.description_right {
+		width: 80%;
+		top: 20px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	h1 {
+		font-family: tradeGothic;
+		font-size: 35px;
+		text-align: center;
+	}
+
+	p {
+		font-family: Helvetica, sans-serif;
+		font-size: 13px;
+		line-height: 18px;
+		color: #808080   ;
+	}
+
+
+
+	/* Section 1: Visualize ----------------------------------------------- */
+	#skateVisuals{
+		display: none;
+	}
+
+
+	#skateVisuals_mobile{
+		width: 100%;
+		position: relative;
+		display: block;
+		top: 30px;
+	}
+
+	.visuals_imgs{
+		width: 100%;
+		position:relative;
+		margin-top: 20px;
+		background: url('../img_mobile/test.png');
+		background-size: contain;
+	}
+
+
+	/* Section 3: Score ----------------------------------------------- */
+	#score_section {
+		width: 100%;
+		height: 1250px;
+		position: relative;
+	}
+
+	.score_image_wrapper {
+		width: 100%;
+		height: 1034px;
+		position: relative;
+		top: 200px;
+/*		background-color: red;*/
+	}
+
+	#score_image {
+		width: 288px;
+		height: 512px;
+		float: none;
+		position: relative;
+		margin: 0 auto;
+		top: 0px;
+		background: url('../img/score_3.png');
+		background-size: cover;
+	}
+
+	#score_image_2 {
+		width: 288px;
+		height: 512px;
+		float: none;
+		position: relative;
+		margin: 0 auto;
+		top: 20px;
+		background: url('../img/score_3.png');
+		background-size: cover;
+	}
+
+	/* Section 4: Versus ----------------------------------------------- */
+
+	#versus_3d {
+		display: none;
+	}
+
+	#vs_data_menu{
+		display: none;
+	}
+
+	.description {
+		/*width: 250px;*/
+		width: 80%;
+		top: 20px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	#versus_mobile{
+		width: 100%;
+		position: relative;
+		display: block;
+		top: 50px;
+		background-color: black;
+	}
+
+
+	/* Section 5: Sensor ----------------------------------------------- */
+
+	.sensor_image_wrapper {
+		width: 100%;
+		/*height: 360px;*/
+		position: relative;
+		top: 50px;
+	}
+
+	#sensor_image{
+		width: 100%;
+		position: relative;
+		margin:  0 auto;
+		background: url('../img/sensor_540.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: red;
+	}
+
+
+	#sensor_wrapper {
+		width: 100%;
+		position: relative;
+
+	}
+}

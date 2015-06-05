@@ -1,0 +1,134 @@
+/* Computer window smaller than 1115px */
+@media only screen
+and (max-width: 1140px){
+
+	html {
+		width: 100%;
+		height: 100%;
+	}
+	/* Sections general -------------------------------------------------------- */
+	#score_section {
+		height: 680px;
+	}
+
+
+	/* Sections general classes ------------------------------------------------ */
+
+	h1.left {
+		font-family: tradeGothic;
+		font-size: 35px;
+		text-align: center;
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+
+	.description_right{
+		width: 600px;
+		top: 20px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.text_right{
+		width: 100%;
+		/*height: 150px;*/
+		position: relative;
+	}
+
+	/* Section 3: Score ------------------------------------------------------- */
+	#score_text{
+		margin-top: 0px;
+	}
+
+
+	#score_wrapper {
+		width: 100%;
+		height: 510px;
+		position: relative;
+	}
+
+	.score_image_wrapper {
+		width: 596px;
+		height: 512px;
+		position: relative;
+		margin: 0 auto;
+		top: 60px;
+	}
+	
+	/* Section 4: Versus ------------------------------------------------------ */
+
+	#versus_data {
+		width: 698px;
+		height: 180px;
+		position: absolute;
+		margin-top: 500px;
+		left: 50%;
+		margin-left: -349px;
+	}
+
+	.data_item_vs.on {
+		display: block;
+	}
+	.data_item_vs.off {
+		display: none;
+	}
+	.data_item_vs_2.on {
+		display: block;
+	}
+	.data_item_vs_2.off {
+		display: none;
+	}
+
+	.data_item_vs_2 {
+		width: 126px;
+		height: 180px;
+		float: left;
+		margin-left: 166px;
+	}
+
+	#vs_data_menu {
+		width: 80px;
+		height: 10px;
+		position: relative;
+		margin:  0 auto;
+		top: 20px;
+		display: block;
+	}
+
+	.vs_data_menu_item{
+		width: 10px;
+		height: 10px;
+		/*position: absolute;*/
+		cursor: pointer;
+		border-radius: 50%;
+		float: left;
+		margin-left: 20px;
+	}
+
+	.vs_data_menu_item.vs_on{
+		background-color: #202020;
+	}
+
+	.vs_data_menu_item.vs_off{
+		background-color: #808080;
+	}
+
+	/* Section 5: Sensor -------------------------------------------------------- */
+	#sensor_wrapper {
+		width: 100%;
+		height: 510px;
+		position: relative;
+	}
+
+	.sensor_image_wrapper {
+		width: 100%;
+		height: 360px;
+		top: 60px;
+		position: relative;
+	}
+
+
+
+
+	
+}

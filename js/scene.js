@@ -164,7 +164,7 @@ function drawBackground(){
 
 function drawParticles(){
 
-	var total_particles_1 = 100, total_particles_2 = 100, total_particles_3 = 100, total_fogs = 400;
+	var total_particles_1 = 100, total_particles_2 = 100, total_particles_3 = 100, total_fogs = 200;
 
 	// Create particles geometries
 	var particle_1_geometry = new THREE.Geometry(),
@@ -232,7 +232,7 @@ function drawParticles(){
 		vertex_fog.y = Math.random() * 160 + 10;
 		vertex_fog.z = (Math.random() * 380 + 0)*fog_posY;
 
-		if (vertex_fog.x < 80 && vertex_fog.x > -80 && vertex_fog.z < 80 && vertex_fog.z > -80 ) {
+		if (vertex_fog.x < 90 && vertex_fog.x > -90 && vertex_fog.z < 80 && vertex_fog.z > -90 ) {
 
 		} else { fog_geometry.vertices.push( vertex_fog )};
 

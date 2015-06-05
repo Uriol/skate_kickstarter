@@ -1,0 +1,50 @@
+/* Tablets*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+
+	html {
+		width: 100%;
+		height: 100%;
+	}
+
+	body {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+
+	#skateVisuals{
+		display: none;
+	}
+
+	#versus_3d {
+		display: none;
+	}
+
+
+	.description {
+		width: 600px;
+		top: 20px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	h1 {
+		font-family: tradeGothic;
+		font-size: 35px;
+		text-align: center;
+	}
+
+	p {
+		font-family: Helvetica, sans-serif;
+		font-size: 15px;
+		line-height: 18px;
+		color: #808080   ;
+	}
+
+	#sensor_wrapper {
+		display: none;
+	}
+
+}

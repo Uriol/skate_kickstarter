@@ -9,7 +9,9 @@ var tricks_names_text = ['FAKIE FLIP', 'NOLLIE FS HEELFLIP', 'FS OLLIE', 'FS HEE
 
 var trick_animation = false;
 
+
 $(function(){
+
 
 	$('.menuItem').on('click', function(){
 
@@ -70,3 +72,4 @@ $(function(){
 
 
 });
+
