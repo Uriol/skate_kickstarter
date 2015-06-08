@@ -1,0 +1,23 @@
+Each spot has a history. 
+Be part of it.
+
+Improve your skills, get creative, compete for the best 
+tricks in each spot and build your personal skate history.
+
+
+Visualize your tricks
+
+A sensor attached to the skateboard tracks the board’s motion and visualise its movement in 3D. The visuals create a sequence of the skater’s run, showing its curve in the air and how it flows, creating at the same time, a visual breakdown of all the steps involved during that trick. Skaters can see exactly what’s going on during their tricks and what they can do to improve their technique.
+
+
+Leave your mark
+
+Skaters see the world with a unique creative perspective. They look at a spot’s architecture thinking and imagining all the different ways the can skate it. By combining the visuals with a photo of the spot skaters can share their unique point of view with the skateboarding community, leaving their personal mark in the spots they go.
+
+Get your score
+The sensor tracks a lot of different data coming from the skateboard. This data can be used to create an score of your tricks so you can keep track of your progress and see what aspects of your skateboarding need more improvement. 
+
+Score: The score is created based on two parameters: the trick difficulty and the trick performance. The performance of a trick is based on how you executed it, like how fast or how big the trick was. As there is not a good way to rate style for the sensor, this could judged by the community.
+
+Leaderboard: 
+Each spot has a history of all the tricks skaters have done there.  
