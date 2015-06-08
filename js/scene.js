@@ -82,7 +82,7 @@ function init(){
 	controls.maxPolarAngle = Math.PI/2; 
 	// controls.maxDistance = 340;
 	// controls.minDistance = 200;
-	camera.position.set(0,80,260);
+	camera.position.set(150,80,260);
 
 	scene.add(camera);
 
