@@ -148,7 +148,8 @@ p {
 	font-family: Helvetica, sans-serif;
 	font-size: 15px;
 	line-height: 18px;
-	color: #808080   ;
+	/*color: #808080   ;*/
+	color: black;
 }
 
 
@@ -278,7 +279,7 @@ p {
 	float: right;
 	/*float: left;
 	margin-left: 10px;*/
-	background: url('../img/score_3.png');
+	background: url('../img/leaderboard.png');
 	background-size: cover;
 }
 
