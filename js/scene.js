@@ -34,29 +34,36 @@ var scene_1_on = false;
 
 $(document).ready(function(){
 	
-	// If mobile
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- 		console.log('mobile');
- 		window.addEventListener( 'resize', mobile_img_height, false );
+	var md = new MobileDetect(window.navigator.userAgent);
+
+	  if(md.mobile() || md.tablet()){
+	  	// Phone
+	  	window.addEventListener( 'resize', mobile_img_height, false );
  		mobile_img_height();
 
-	} else {
+ 		if (md.tablet()) {
+ 			// Tablet
+	  		$('#sensor_image').css('height', 360 + 'px');
+ 		}
 
-		window.addEventListener( 'scroll', onScroll, false );
+	  } else {
+
+	  	// Computers
+	    window.addEventListener( 'scroll', onScroll, false );
 	 	init();
 	 	init_vs();
 		render_vs();
 		
 		// If chrome
 		if(navigator.userAgent.indexOf("Chrome") != -1 ) {
+			// Chrome
 
 		 } else {
-		 	console.log('not chrome');
+		 	// Not chrome
 		 }
-		 
-	}
-	//init();
-	//render();
+	  }
+	
+
 })
 
 
@@ -82,7 +89,9 @@ function init(){
 	controls.maxPolarAngle = Math.PI/2; 
 	// controls.maxDistance = 340;
 	// controls.minDistance = 200;
-	camera.position.set(150,80,260);
+	// camera.position.set(150,80,230);
+	camera.position.set(100, 80, 220);
+
 
 	scene.add(camera);
 

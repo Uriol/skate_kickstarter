@@ -8,7 +8,8 @@ and (max-width: 1140px){
 	}
 	/* Sections general -------------------------------------------------------- */
 	#score_section {
-		height: 680px;
+		height: 780px;
+
 	}
 
 
@@ -35,7 +36,19 @@ and (max-width: 1140px){
 		position: relative;
 	}
 
+	p.left {
+		text-align: center;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
 	/* Section 3: Score ------------------------------------------------------- */
+	h1#h1_score{
+		margin-top: 0px;
+	}
+
 	#score_text{
 		margin-top: 0px;
 	}

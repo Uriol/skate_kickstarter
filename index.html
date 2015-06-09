@@ -20,7 +20,7 @@
 			<div id='intro_text'>
 				<h1>EACH SPOT HAS A HISTORY.</br>
 					BE PART OF IT.</h1>
-				<p>Improve your skills, get creative, compete for the best tricks in each spot and build your personal skate history.</p>
+				<p class='p_intro'>Improve your skills, get creative, compete for the best tricks in each spot and build your personal skate history.</p>
 			</div>
 		</div>
 
@@ -29,7 +29,7 @@
 			<h1>VISUALIZE YOUR TRICKS</h1>
 
 			<div class='description'>
-				<p>A sensor attached to the skateboard tracks the board’s motion and visualize its movement in 3D. The visuals create a sequence of the skater’s run, showing its curve in the air and how it flows, creating at the same time, a visual breakdown of all the steps involved during that trick. Skaters can see exactly what’s going on during their tricks and what they can do to improve their technique.</p>
+				<p>A sensor attached to the skateboard tracks the board’s motion and visualise its movement in 3D. The visuals create a sequence of the skater’s run, showing its curve in the air and how it flows, creating at the same time a visual breakdown of all the steps involved during that trick. Skaters can see exactly what’s going on during their tricks and what they can do to improve their technique.</p>
 			</div>
 
 			<div id='skateVisuals_mobile'>
@@ -64,9 +64,17 @@
 		<div id='score_section'>
 			<div id='score_wrapper'>
 				<div class='text_right' id='score_text'>
-					<h1 class='left'>GET YOUR SCORE</h1>
+					<h1 id='h1_score' class='left'>GET YOUR SCORE</h1>
 					<div class='description_right'>
-						<p>The sensor tracks a lot of different data coming from the skateboard. The data is used to create an score of your tricks so you can keep track of your progress and see what aspects of your skateboarding need more improvement. </p>
+						<p class='left'>The data calculated by the sensor is used to create a score of your tricks so you can keep track of your progress and see what aspects of your skateboarding need more improvement. The score is created based on two parameters: the trick difficulty and the trick performance. The performance of a trick is based on how you executed it, like how fast or how big the trick was. Each spot will have a history of all the tricks done there. There will be different leaderboards based on score, trick difficulty or air time. Compete with skaters for the best tricks in each spot!</p>
+						</br>
+						<!-- <h2>SCORE</h2> -->
+						
+						<!-- <p class='left'>The score is created based on two parameters: the trick difficulty and the trick performance. The performance of a trick is based on how you executed it, like how fast or how big the trick was.</p>
+						</br> -->
+						<!-- <h2>LEADERBOARD</h2> -->
+						
+						<!-- <p class='left'>Each spot will have a history of all the tricks done there. There will be different leaderboards based on score, trick difficulty or air time. Compete with skaters for the best tricks in each spot!</p> -->
 					</div>
 				</div>
 				<div class='score_image_wrapper'>
@@ -80,7 +88,7 @@
 		<div id='versus'>
 			<h1>COMPARE YOUR TRICKS</h1>
 			<div class='description'>
-				<p>Lorem ipsum dolor sit amet, affert munere vituperata duo no. Alienum periculis an vim, vis graece mollis at, id nam recteque conceptam contentiones. Pro numquam blandit mediocritatem at, iriure epicurei periculis eu duo, vix exerci verear perfecto ne.</p>
+				<p>Sharing your tricks is a way to give back to the skateboarding community, as other skaters can use your tricks data in order to get inspired or to improve their technique by comparing their tricks to yours and understanding what they need to do to get better. Skaters can go to any spot, pick a trick from a PRO or any other skater, and try to learn it. They can also challenge their friends over a trick to see who gets the highest score.</p>
 			</div>
 
 			<div id='versus_mobile'>
@@ -113,7 +121,7 @@
 				<div class='text_right'>
 					<h1 class='left'>THE SENSOR</h1>
 					<div class='description_right'>
-						<p>Lorem ipsum dolor sit amet, affert munere vituperata duo no. Alienum periculis an vim, vis graece mollis at, id nam recteque conceptam contentiones. Pro numquam blandit mediocritatem at, iriure epicurei periculis eu duo, vix exerci verear perfecto ne.</p>
+						<p class='left'>The sensor is made of an arduino board, a nine-axis IMU (accelerometer, gyroscope and magnetometer), a bluetooth module and a battery. It is a prototype version, but proves that the technology works. The final version of the sensor will be small enough to not disturb the skateboarding experience.</p>
 					</div>
 				</div>
 				<div class='sensor_image_wrapper'>
@@ -129,6 +137,7 @@
 		<script src='js/three.min.js'></script>
 		<script src='js/stats.js'></script>
 		<script src='js/OrbitControls.js'></script>
+		<script src='js/mobile-detect.min.js'></script>
 
 		<script src='js/scroll.js'></script>
 

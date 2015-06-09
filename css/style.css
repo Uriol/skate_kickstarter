@@ -70,7 +70,7 @@ h1#loading_text {
 #mark {
 	width: 100%;
 	height: 650px;
-	background-color: #888888;
+	/*background-color: #888888;*/
 	position: relative;
 
 }
@@ -114,7 +114,8 @@ h1#loading_text {
 }
 
 .description_right{
-	width: 400px;
+	
+	width: 450px;
 	top: 20px;
 	margin-left: 40px;
 	position: relative;
@@ -144,15 +145,36 @@ h1.left {
 	word-spacing: 7px;
 }
 
-
+h1#h1_score{
+	margin-top: 120px;
+}
 
 p {
 	font-family: Helvetica, sans-serif;
 	font-size: 15px;
-	line-height: 20px;
+	line-height: 22px;
+	font-weight: 100;
+	text-align: center;
 	/*color: #808080   ;*/
 	/*color: black;*/
 	color: #888888;
+}
+
+p.left {
+	text-align: left;
+}
+
+p.p_intro{
+	text-align: left;
+}
+
+h2 {
+
+	font-family: Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: bold;
+	color: black;
 }
 
 p.grey_p{
@@ -284,7 +306,7 @@ p.grey_p{
 }
 
 #score_text {
-	margin-top: 70px;
+	margin-top: 0px;
 }
 
 .score_image_wrapper {

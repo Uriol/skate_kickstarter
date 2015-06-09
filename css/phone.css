@@ -51,8 +51,18 @@ and (max-device-width : 767px) {
 		font-size: 13px;
 		line-height: 18px;
 		color: #808080   ;
+		text-align: left;
 	}
 
+	p.left{
+		text-align: left;
+	}
+
+	/* Intro --------------------------------------- */
+
+	#intro_text {
+		display: none;
+	}
 
 
 	/* Section 1: Visualize ----------------------------------------------- */
@@ -80,7 +90,7 @@ and (max-device-width : 767px) {
 	/* Section 3: Score ----------------------------------------------- */
 	#score_section {
 		width: 100%;
-		height: 1250px;
+		height: 1350px;
 		position: relative;
 	}
 
@@ -88,7 +98,7 @@ and (max-device-width : 767px) {
 		width: 100%;
 		height: 1034px;
 		position: relative;
-		top: 200px;
+		top: 300px;
 /*		background-color: red;*/
 	}
 
@@ -115,6 +125,10 @@ and (max-device-width : 767px) {
 	}
 
 	/* Section 4: Versus ----------------------------------------------- */
+
+	#versus {
+		height: 530px;
+	}
 
 	#versus_3d {
 		display: none;
