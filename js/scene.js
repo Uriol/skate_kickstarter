@@ -27,28 +27,26 @@ var scene_1_on = false;
 
 	var darkerGrey = new THREE.Color("rgb(0, 0, 0)");
 	var floorMaterial = new THREE.MeshBasicMaterial({ color: darkerGrey });
-	// var red = new THREE.Color("rgb(250, 0, 0)");
-	// var redMaterial = new THREE.MeshBasicMaterial({ color: red });
-	// var redMaterial2 = new THREE.MeshBasicMaterial({ color: red });
 
 
 $(document).ready(function(){
 	
 	var md = new MobileDetect(window.navigator.userAgent);
 
-	  if(md.mobile() || md.tablet()){
-	  	// Phone
-	  	window.addEventListener( 'resize', mobile_img_height, false );
- 		mobile_img_height();
+	// Phone
+	if(md.mobile() || md.tablet()){
+		
+		window.addEventListener( 'resize', mobile_img_height, false );
+		mobile_img_height();
 
- 		if (md.tablet()) {
- 			// Tablet
- 			tablet_img_height();
+		// Tablet
+		if (md.tablet()) {
 
-	  		$('#sensor_image').css('height', 360 + 'px');
- 		}
+			tablet_img_height();
+			$('#sensor_image').css('height', 360 + 'px');
+		}
 
-	  } else {
+	} else {
 
 	  	// Computers
 	    window.addEventListener( 'scroll', onScroll, false );

@@ -2,29 +2,26 @@
 function mobile_img_height(){
 
 	var mobile_width = window.innerWidth;
-	console.log(mobile_width);
 
 	var image_height = (mobile_width/4)*3;
 	var tablet_height_AR_16 = (mobile_width/16*9);
-	console.log(image_height);
+
 
 	$('.visuals_imgs').css('height', image_height + 'px');
 	$('#sensor_image').css('height', image_height + 'px');
 	$('#versus_mobile').css('height', image_height + 'px');
 	$('#intro').css('height', image_height + 'px');
 	$('.mark_image_phone').css('height', image_height + 'px');
-
-	// Phone landscape
 	$('#skateVisuals_tablet').css('height', tablet_height_AR_16 + 'px');
-	//$('#intro').css('height', tablet_height_AR_16 + 'px');
 
+	// if landscape
 	if (mobile_width >= 400) {
 		$('#intro').css('height', tablet_height_AR_16 + 'px');
 		$('#mark_images').css('height', tablet_height_AR_16 + 'px');
 		$('#versus_mobile').css('height', tablet_height_AR_16 + 'px');
 		$('#sensor_image').css('height', tablet_height_AR_16 + 'px');
-	} else {
-		$('#intro').css('height', image_height + 'px');
+
+		$('#skateVisuals_tablet_menu').css('top', tablet_height_AR_16-40 + 'px');
 	}
 
 }
@@ -38,6 +35,9 @@ function tablet_img_height(){
 	$('#skateVisuals_tablet').css('height', tablet_height_AR_16 + 'px');
 	$('#versus_mobile').css('height', tablet_height_AR_16 + 'px');
 	$('#intro').css('height', tablet_height_AR_16 + 'px');
+
+	// Add menus top
+	$('#skateVisuals_tablet_menu').css('top', tablet_height_AR_16-50 + 'px');
 
 
 

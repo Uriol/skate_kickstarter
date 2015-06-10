@@ -304,20 +304,29 @@ and (orientation : landscape)  {
 		display: none;
 	}
 
-	/*#skateVisuals_mobile{
-		width: 100%;
+	#skateVisuals_tablet_menu {
 		position: relative;
-		display: block;
-		top: 30px;
+		width: 290px;
+		height: 10px;
+		margin: 0 auto;	
 	}
 
-	.visuals_imgs{
-		width: 100%;
-		position:relative;
-		margin-top: 20px;
-		background: url('../img_mobile/test.png');
-		background-size: contain;
-	}*/
+	.skateVisuals_tablet_menu_item {
+		float: left;
+		margin-left: 40px;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		
+	}
+
+	.skateVisuals_tablet_menu_item.on {
+		background-color: white;
+	}
+
+	.skateVisuals_tablet_menu_item.off {
+		background-color: #202020;
+	}
 
 	/* Section 3: Score ----------------------------------------------------- */
 	#score_section {
