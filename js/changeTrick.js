@@ -70,6 +70,17 @@ $(function(){
 	})
 
 
+	// Change trick visual on tablet
+	$('.skateVisuals_tablet_menu_item').on('click', function(){
+		// Update css classes
+		$('.skateVisuals_tablet_menu_item').removeClass('on').addClass('off');
+		$(this).removeClass('off').addClass('on');
+
+		// get right image
+		index = $(this).data('index');
+		console.log(index);
+	})	
+
 
 });
 

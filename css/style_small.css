@@ -44,6 +44,16 @@ and (max-width: 1140px){
 		text-align: center;
 	}
 
+	/* Section 2: Mark ---------------------------------------------------------------------- */
+
+	#mark_images {
+		position: relative;
+		width: 100%;
+		height: 641px;
+		background-color: black;
+		margin-top: 60px;
+	}
+
 	/* Section 3: Score ------------------------------------------------------- */
 	h1#h1_score{
 		margin-top: 0px;
