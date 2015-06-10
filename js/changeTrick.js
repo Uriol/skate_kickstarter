@@ -7,6 +7,8 @@ var tricks_speeds = [2.5, 2.4, 2.5, 2.4, 2.8];
 var tricks_names = ['url(img/fakie_flip.png)', 'url(img/nollie_fs_heelflip.png)','url(img/fs_ollie.png)','url(img/fs_heelflip.png)','url(img/kickflip.png)']
 var tricks_names_text = ['FAKIE FLIP', 'NOLLIE FS HEELFLIP', 'FS OLLIE', 'FS HEELFLIP', 'KICKFLIP'];
 
+var tricks_tablet = ['url(img_tablet/trick1.png)', 'url(img_tablet/trick2.png)','url(img_tablet/trick3.png)','url(img_tablet/trick4.png)','url(img_tablet/trick5.png)']
+
 var trick_animation = false;
 
 
@@ -79,6 +81,9 @@ $(function(){
 		// get right image
 		index = $(this).data('index');
 		console.log(index);
+
+		var tablet_trick = tricks_tablet[index];
+		$('#skateVisuals_tablet').css('background-image', tablet_trick);
 	})	
 
 

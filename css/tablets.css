@@ -63,7 +63,9 @@ and (max-device-width : 1024px) {
 		position: relative;
 		display: block;
 		top: 60px;
-		background-color: black;
+
+		background: url('../img_tablet/trick1.png') black;
+		background-size: cover;
 	}
 
 	#skateVisuals_mobile{
@@ -130,7 +132,8 @@ and (max-device-width : 1024px) {
 		position: relative;
 		display: block;
 		top: 50px;
-		background-color: black;
+		background: url('../img_tablet/versus.png');
+		background-size: cover;
 	}
 
 

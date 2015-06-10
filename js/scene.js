@@ -60,6 +60,7 @@ $(document).ready(function(){
 
 		 } else {
 		 	// Not chrome
+		 	$('#chrome').removeClass('off').addClass('on');
 		 }
 	  }
 	

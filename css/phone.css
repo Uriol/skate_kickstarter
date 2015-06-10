@@ -103,11 +103,29 @@ and (orientation : portrait)  {
 		width: 100%;
 		position:relative;
 		margin-top: 20px;
-		/*background: url('../img_mobile/test.png');
-		background-size: contain;*/
-		background-color: red;
 	}
 
+
+	#trick_one.visuals_imgs {
+		background: url('../img_mobile/trick1.png');
+		background-size: cover;
+	}
+	#trick_two.visuals_imgs {
+		background: url('../img_mobile/trick2.png');
+		background-size: cover;
+	}
+	#trick_three.visuals_imgs {
+		background: url('../img_mobile/trick3.png');
+		background-size: cover;
+	}
+	#trick_four.visuals_imgs {
+		background: url('../img_mobile/trick4.png');
+		background-size: cover;
+	}
+	#trick_five.visuals_imgs {
+		background: url('../img_mobile/trick5.png');
+		background-size: cover;
+	}
 
 	/* Section 2: Mark ---------------------------------------------------------------------- */
 
@@ -193,7 +211,8 @@ and (orientation : portrait)  {
 		position: relative;
 		display: block;
 		top: 50px;
-		background-color: black;
+		background: url('../img_mobile/versus.png');
+		background-size: cover;
 	}
 
 
@@ -293,7 +312,8 @@ and (orientation : landscape)  {
 		position: relative;
 		display: block;
 		top: 60px;
-		background-color: black;
+		background: url('../img_tablet/trick1.png') black;
+		background-size: cover;
 	}
 
 	#skateVisuals_mobile{
@@ -345,7 +365,8 @@ and (orientation : landscape)  {
 		position: relative;
 		display: block;
 		top: 50px;
-		background-color: black;
+		background: url('../img_tablet/versus.png');
+		background-size: cover;
 	}
 
 
