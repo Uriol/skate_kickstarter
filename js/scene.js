@@ -43,6 +43,8 @@ $(document).ready(function(){
 
  		if (md.tablet()) {
  			// Tablet
+ 			tablet_img_height();
+
 	  		$('#sensor_image').css('height', 360 + 'px');
  		}
 
