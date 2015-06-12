@@ -340,6 +340,33 @@ p.grey_p{
 	background-color: black;
 	margin: 0 auto;
 	margin-top: 60px;
+	background-size: cover;
+}
+
+#mark_images_menu{
+	position: relative;
+	width: 290px;
+	height: 10px;
+	margin: 0 auto;	
+	top: 591px;
+
+}
+
+.mark_images_menu_item {
+	float: left;
+	margin-left: 40px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.mark_images_menu_item.on {
+	background-color: white;
+}
+
+.mark_images_menu_item.off {
+	background-color: #202020;
 }
 
 #mark_images_phone {

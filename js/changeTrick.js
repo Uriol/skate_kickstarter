@@ -87,5 +87,18 @@ $(function(){
 	})	
 
 
+	// Change leave your mark tricks
+	$('.mark_images_menu_item').on('click', function() {
+		// Update css classes
+		$('.mark_images_menu_item').removeClass('on').addClass('off');
+		$(this).removeClass('off').addClass('on');
+
+		// Get right image
+		index = $(this).data('index');
+
+		var mark_trick = tricks_tablet[index];
+		$('#mark_images').css('background-image', mark_trick);
+	})
+
 });
 

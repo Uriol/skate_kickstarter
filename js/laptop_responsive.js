@@ -35,10 +35,11 @@ function tablet_img_height(){
 	$('#skateVisuals_tablet').css('height', tablet_height_AR_16 + 'px');
 	$('#versus_mobile').css('height', tablet_height_AR_16 + 'px');
 	$('#intro').css('height', tablet_height_AR_16 + 'px');
+	$('#mark_images').css('height', tablet_height_AR_16 + 'px');
 
 	// Add menus top
 	$('#skateVisuals_tablet_menu').css('top', tablet_height_AR_16-50 + 'px');
-
+	$('#mark_images_menu').css('top', tablet_height_AR_16-50 + 'px');
 
 
 

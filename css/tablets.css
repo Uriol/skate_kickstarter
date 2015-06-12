@@ -111,6 +111,24 @@ and (max-device-width : 1024px) {
 		margin-top: 60px;
 	}
 
+	#mark_images_menu{
+		position: relative;
+		width: 290px;
+		height: 10px;
+		margin: 0 auto;	
+
+	}
+
+	.mark_images_menu_item {
+		float: left;
+		margin-left: 40px;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+	}
+
+
+
 	#mark_images_phone {
 		display: none;
 	}
