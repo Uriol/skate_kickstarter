@@ -46,7 +46,7 @@
 		}
 
 
-		// If scene 1 is one view
+		// If scene 2 is one view
 		if ((bottom_view >= scene_2_bottom && top_view <= scene_2_bottom) ||
 			(bottom_view >= scene_2_top.top && top_view <= scene_2_top.top) ||
 			(bottom_view <= scene_2_bottom && top_view >= scene_2_top.top)) {
@@ -58,11 +58,15 @@
 				scene_2_on = true;
 			}
 			
-		} else if (scene_1_on == true) {
-			//console.log('scene 2 on not in view');
-			delete_scene_2();
-			scene_2_on = false;
+		// } else if (scene_1_on == true) {
+		// 	//console.log('scene 2 on not in view');
+		// 	delete_scene_2();
+		// 	scene_2_on = false;
 
+		// }
+		} else {
+			delete_scene_2();
+		 	scene_2_on = false;
 		}
 
 
