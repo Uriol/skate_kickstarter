@@ -15,7 +15,7 @@ var $total_x_positions = [];
 var $total_y_positions = [];
 var $total_z_positions = [];
 
-var $reception = [];
+// var $reception = [];
 
 // Booleans for 180
 var plus180 = false;

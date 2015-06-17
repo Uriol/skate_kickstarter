@@ -102,9 +102,14 @@ and (max-device-width : 1024px) {
 
 	/* Section 2: Mark ---------------------------------------------------------------------- */
 
+	#mark_canvas {
+		display: none;
+	}
+
 	#mark_images {
 		position: relative;
 		width: 100%;
+		display: block;
 /*		height: 0px;*/
 		background-color: black;
 		margin: 0 auto;
