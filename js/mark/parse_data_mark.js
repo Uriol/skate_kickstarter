@@ -43,7 +43,7 @@ var pixelMultiplier_z_mark = 80;
 // Position variables
 var xSpeed_mark, xPosition_mark = 0, xPreviousPosition_mark = 0;
 var ySpeed_mark, yPosition_mark = 0, yPreviousPosition_mark = 0;
-var zPosition_mark;
+
 
 var centerYposition_mark = 0;
 // Call functions
@@ -57,8 +57,15 @@ var before_jump_mark = 0, after_jump_mark = 0, during_jump_mark = 0;
 var $color_state_mark = [];
 var jump_ended_mark = false;
 
+var zPosition_mark = 0;
+var zInitialPosition_mark = 0;
+var zPosition_increment = 0.40;
+
 function parseData_mark( data , speed ){
 	
+	zPosition_mark = 0.40, zInitialPosition_mark = 0.40;
+
+
 	totalSpeed_mark = speed ;
 	// Loop throught all the trick data array
 	// Get y,z, yaw, pitch, roll values
@@ -98,6 +105,8 @@ function parseData_mark( data , speed ){
 	airSpeed_mark = 0.5*gravity_mark*total_time_on_air_mark;
 	console.log('airSpeed_mark ' + airSpeed_mark);
 	// Run
+
+	console.log('zPosition_mark: ' + zPosition_mark)
 	
 }
 
@@ -165,7 +174,8 @@ function onGround_mark(){
   	yPreviousPosition_mark = yPosition_mark;
 
   	// Update z: is always 0 on ground
-  	zPosition_mark = 0;
+  	zPosition_mark = zPosition_mark;
+  	console.log('zPosition_mark: ' + zPosition_mark)
   	// Update pitch: is always 0 on ground
   	$pitch_mark[k] = 0;
 
@@ -218,9 +228,14 @@ function onAir_mark(){
 		$color_state_mark.push('jump');
 		during_jump_mark += 1;
 	}
-	//console.log(elapsed_time_on_air)
+
 	// Calculate z position
-	zPosition_mark = airSpeed_mark*elapsed_time_on_air_mark-0.5*gravity_mark*elapsed_time_on_air_mark*elapsed_time_on_air_mark;
+	//zPosition_mark = airSpeed_mark*elapsed_time_on_air_mark-0.5*gravity_mark*elapsed_time_on_air_mark*elapsed_time_on_air_mark;
+	var z_speed_mark = 3;
+   	zPosition_mark = zInitialPosition_mark + z_speed_mark*elapsed_time_on_air_mark - 0.5*9.8*elapsed_time_on_air_mark*elapsed_time_on_air_mark ;
+   	//zPosition_mark = zPosition_mark+zPosition_increment;
+   	console.log('zPosition_mark: ' + zPosition_mark)
+
 	//console.log(zPosition)
 	// Calculate x position: keeps constant
 	xPosition_mark = xPreviousPosition_mark + xSpeed_mark*time_mark;
