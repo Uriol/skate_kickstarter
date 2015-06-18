@@ -97,43 +97,6 @@ function drawTrick(){
 			if (grey_value_after_jump < 0) { grey_value_after_jump = 0; }
 			darkGrey = new THREE.Color('rgb(' + grey_value_after_jump + ', ' + grey_value_after_jump + ', ' + grey_value_after_jump +')');
 			grey = new THREE.Color('rgb(' + grey_value_after_jump + ', ' + grey_value_after_jump + ', ' + grey_value_after_jump +')');
-		} else {
-			// jump_interval += 1;
-			// if (jump_interval <= jump_up) {
-			// 	console.log('going up');
-			// 	initial_red += yellow_gradient_during_jump;
-			// 	initial_blue += yellow_gradient_during_jump;
-			// 	// console.log('red: ' + initial_red);
-			// 	// console.log('blue: ' + initial_blue)
-				
-			// 	initial_blue_1 += yellow_gradient_during_jump;
-			// 	initial_blue_2 += yellow_gradient_during_jump;
-			// 	//yellow = new THREE.Color("rgb(0, 200, 255)");
-			// 	yellow =  new THREE.Color('rgb(' + initial_red + ', ' + initial_blue + ', 0)');
-			// 	yellowLine =  new THREE.Color('rgb(' + initial_red + ', ' + initial_blue + ', 0)');
-				
-			// 	blue =  new THREE.Color('rgb(0,' + initial_blue_1 + ', ' + initial_blue_2 + ')');
-			// 	blueLine =  new THREE.Color('rgb(0,' + initial_blue_1 + ', ' + initial_blue_2 + ')');
-			// 	console.log(initial_blue_1);
-			// 	console.log(initial_blue_2);
-
-			// } else {
-			// 	console.log('going down');
-			// 	initial_red -= yellow_gradient_during_jump;
-			// 	initial_blue -= yellow_gradient_during_jump;
-			// 	// console.log('red: ' + initial_red);
-			// 	// console.log('blue: ' + initial_blue)
-				
-			// 	// initial_blue_1 -= yellow_gradient_during_jump;
-			// 	// initial_blue_2 -= yellow_gradient_during_jump;
-			// 	//yellow = new THREE.Color("rgb(0, 200, 255)");
-			// 	yellow =  new THREE.Color('rgb(' + initial_red + ', ' + initial_blue + ', 0)');
-			// 	yellowLine =  new THREE.Color('rgb(' + initial_red + ', ' + initial_blue + ', 0)');
-			// 	blue = new THREE.Color('rgb( 0,' + initial_blue_1 + ', ' + initial_blue_2 + ')');
-			// 	blueLine = new THREE.Color('rgb( 0,' + initial_blue_1 + ', ' + initial_blue_2 + ')');
-			// 	blue =  new THREE.Color('rgb(0,' + initial_blue_1 + ', ' + initial_blue_2 + ')');
-			// 	blueLine =  new THREE.Color('rgb(0,' + initial_blue_1 + ', ' + initial_blue_2 + ')');
-			// }
 		}
 
 

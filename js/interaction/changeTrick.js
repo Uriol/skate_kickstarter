@@ -15,7 +15,7 @@ var trick_animation_mark = false;
 // Mark tricks
 var selected_trick_mark = halfcab;
 var tricks_mark_array = [halfcab, ollieStairs,  nikoFlip, ollie180stairs ];
-var tricks_mark_speeds = [3.5, 2.4, 2.5, 2.4, 2.8];
+var tricks_mark_speeds = [4, 2.4, 2.5, 2.4, 2.8];
 var trick_speed_mark = tricks_mark_speeds[0];
 var trick_center_y = 0;
 

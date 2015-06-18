@@ -255,6 +255,7 @@ function onAir_mark(){
 		jumpHeight_mark = zPosition_mark;
 		centerYposition_mark = yPosition_mark*pixelMultiplier_mark*-1;
 		console.log('center position on parse data ' + centerYposition_mark)
+		
 		console.log('y pos: ' + yPosition_mark)
 	}
 

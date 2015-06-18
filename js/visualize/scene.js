@@ -53,6 +53,11 @@ $(document).ready(function(){
 	 	init();
 	 	init_vs();
 		render_vs();
+
+		// mark
+		init_mark();
+		drawPark();
+		render_mark();
 		
 		// If chrome
 		if(navigator.userAgent.indexOf("Chrome") != -1 ) {
@@ -255,6 +260,7 @@ function drawParticles(){
 	particles_1 = new THREE.PointCloud( particle_1_geometry, particle_1_material);
 	scene.add(particles_1);
 
+
 	var particle_sprite_2 = THREE.ImageUtils.loadTexture( ' img/particle4.png ');
 	var particle_2_material = new THREE.PointCloudMaterial({ size: 128, map: particle_sprite_2, blending: THREE.AdditiveBlending, depthTest: true, transparent : true, opacity: 0.5});
 	particles_2 = new THREE.PointCloud( particle_2_geometry, particle_2_material);
@@ -279,18 +285,3 @@ function animateParticles(){
 	fogs.rotation.y += 0.0004;
 }
 
-
-// resize
-// function onWindowResize() {
-// 	camera.aspect = window.innerWidth / 600;
-// 	camera.updateProjectionMatrix();
-// 	renderer.setSize( window.innerWidth, 600 );
-// }
-
-
-// function render() {
-// 	requestAnimationFrame( render );
-// 	controls.update();
-// 	renderer.render(scene, camera);
-// 	animateParticles();
-// };
