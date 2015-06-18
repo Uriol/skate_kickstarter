@@ -31,9 +31,9 @@ function toArray(result){
 			z_ = 10;
 		}
 
-		yaw_ = result.data[i].yaw;
-		pitch_ = result.data[i].pitch;
-		roll_ = result.data[i].roll;
+		yaw_ = Math.round(result.data[i].yaw);
+		pitch_ = Math.round(result.data[i].pitch);
+		roll_ = Math.round(result.data[i].roll);
 
 		
 
@@ -43,7 +43,8 @@ function toArray(result){
 		trick_row[1] =  z_;
 		trick_row[2] =  yaw_ ;
 		trick_row[3] =  pitch_ ;
-		trick_row[4] =  roll_ + ']';
+		trick_row[4] =  roll_ + ']/';
+
 
 		trick_data.push(trick_row);
 
@@ -53,7 +54,10 @@ function toArray(result){
 	
 
 	var trick = Papa.unparse(trick_data);
+
 	 console.log(trick);
+
+
 
 
 }

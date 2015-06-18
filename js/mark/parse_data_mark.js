@@ -63,7 +63,7 @@ var zPosition_increment = 0.40;
 
 function parseData_mark( data , speed ){
 	
-	zPosition_mark = 0.40, zInitialPosition_mark = 0.40;
+	zPosition_mark = 0.10, zInitialPosition_mark = 0.10;
 
 
 	totalSpeed_mark = speed ;
@@ -94,7 +94,8 @@ function parseData_mark( data , speed ){
 		$roll_mark.push(data_row_mark[4]);
 
 	} // end of loop
-	console.log('end loop')
+	
+	//console.log('end loop')
 	// Round air/ground values
 	// Push air time value
 	calculateAverage_mark();
@@ -103,10 +104,10 @@ function parseData_mark( data , speed ){
 	total_time_on_air_mark = airtime_mark*0.02;
 	// Calculate speed in the air
 	airSpeed_mark = 0.5*gravity_mark*total_time_on_air_mark;
-	console.log('airSpeed_mark ' + airSpeed_mark);
+	//console.log('airSpeed_mark ' + airSpeed_mark);
 	// Run
 
-	console.log('zPosition_mark: ' + zPosition_mark)
+	//console.log('zPosition_mark: ' + zPosition_mark)
 	
 }
 
@@ -175,7 +176,7 @@ function onGround_mark(){
 
   	// Update z: is always 0 on ground
   	zPosition_mark = zPosition_mark;
-  	console.log('zPosition_mark: ' + zPosition_mark)
+  	//console.log('zPosition_mark: ' + zPosition_mark)
   	// Update pitch: is always 0 on ground
   	$pitch_mark[k] = 0;
 
@@ -234,7 +235,7 @@ function onAir_mark(){
 	var z_speed_mark = 3;
    	zPosition_mark = zInitialPosition_mark + z_speed_mark*elapsed_time_on_air_mark - 0.5*9.8*elapsed_time_on_air_mark*elapsed_time_on_air_mark ;
    	//zPosition_mark = zPosition_mark+zPosition_increment;
-   	console.log('zPosition_mark: ' + zPosition_mark)
+   	//console.log('zPosition_mark: ' + zPosition_mark)
 
 	//console.log(zPosition)
 	// Calculate x position: keeps constant
@@ -253,7 +254,8 @@ function onAir_mark(){
 		halfJump_mark = true;
 		jumpHeight_mark = zPosition_mark;
 		centerYposition_mark = yPosition_mark*pixelMultiplier_mark*-1;
-		// console.log('center position on parse data ' + centerYposition)
+		console.log('center position on parse data ' + centerYposition_mark)
+		console.log('y pos: ' + yPosition_mark)
 	}
 
 	// Calculate total angle dif to rads
@@ -267,7 +269,7 @@ function onAir_mark(){
 	$total_yaws_mark.push(total_angle_diff_mark);
 	$total_pitchs_mark.push($pitch_mark[k]*-1);
 	$total_rolls_mark.push($roll_mark[k]*-1);
-
+	//console.log('center position on parse data ' + centerYposition)
 
 }
 

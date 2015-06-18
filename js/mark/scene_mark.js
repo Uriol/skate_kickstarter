@@ -1,6 +1,8 @@
 
 var scene_mark, camera_mark, renderer_mark;
 
+var elements_center_y = -30;
+
 var scene_2_on = false;
 
 
@@ -39,8 +41,8 @@ function init_mark(){
 	// Create camera
 	camera_mark = new THREE.PerspectiveCamera( 45, window.innerWidth/720, 0.1, 2000 );
 	controls_mark = new THREE.OrbitControls( camera_mark,container_mark );
-	controls_mark.maxPolarAngle = Math.PI/2; 
-	camera_mark.position.set(0,200,400);
+	controls_mark.maxPolarAngle = Math.PI/2.5; 
+	camera_mark.position.set(120, 120, 240);
 	scene_mark.add(camera_mark);
 
 	// Scene background
@@ -73,15 +75,15 @@ function drawPark(){
 	var floorGeometry = new THREE.PlaneBufferGeometry(1024, 1024);
 	var floor = new THREE.Mesh(floorGeometry, white_100_material);
 	floor.rotation.x = -Math.PI / 2;
-	floor.position.y = -23.5;
+	floor.position.y = -23.5+elements_center_y;
 	floor.material.side = THREE.DoubleSide;
 	scene_mark.add(floor);
 
 	// top level
 	var top_level_geometry = new THREE.PlaneBufferGeometry(512, 1024);
-	var top_level = new THREE.Mesh(top_level_geometry, white_200_material);
+	var top_level = new THREE.Mesh(top_level_geometry, white_100_material);
 	top_level.rotation.x = -Math.PI / 2;
-	top_level.position.y = 40-23.5;
+	top_level.position.y = 40-23.5+elements_center_y;
 	top_level.position.x = -512/2;
 	scene_mark.add(top_level);
 
@@ -91,7 +93,7 @@ function drawPark(){
 	edge_left.rotation.x = -Math.PI / 2;
 	edge_left.rotation.y = -Math.PI / 2;
 	edge_left.material.side = THREE.DoubleSide;
-	edge_left.position.y = 60-23.5;
+	edge_left.position.y = 60-23.5+elements_center_y;
 	edge_left.position.x = -20;
 	scene_mark.add(edge_left);
 
@@ -99,7 +101,7 @@ function drawPark(){
 	var edge_top_geometry = new THREE.PlaneBufferGeometry(40, 1024);
 	var edge_top = new THREE.Mesh(edge_top_geometry, white_150_material);
 	edge_top.rotation.x = -Math.PI / 2;
-	edge_top.position.y = 80-23.5;
+	edge_top.position.y = 80-23.5+elements_center_y;;
 	scene_mark.add(edge_top);
 
 	// edge right wall
@@ -108,7 +110,7 @@ function drawPark(){
 	edge_right.rotation.x = -Math.PI / 2;
 	edge_right.rotation.y = -Math.PI / 2;
 	edge_right.material.side = THREE.DoubleSide;
-	edge_right.position.y = 40-23.5;
+	edge_right.position.y = 40-23.5+elements_center_y;
 	edge_right.position.x = 20;
 	scene_mark.add(edge_right);
 

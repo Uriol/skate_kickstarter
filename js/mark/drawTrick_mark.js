@@ -36,7 +36,7 @@ var animationInterval_mark;
 function drawTrick_mark(){
 
 	resetValues_mark();
-	parseData_mark(selected_trick , trick_speed);
+	parseData_mark(selected_trick_mark , trick_speed_mark);
 	switchState_mark();
 
 	//Restart values
@@ -161,7 +161,7 @@ function drawTrick_mark(){
 		} else { reception_mark = false; }
 		//yellow = new THREE.Color("rgb(0, 0, 200)");
 
-
+		//console.log('center y pos: ' + centerYposition_mark)
 		// Calculate x pos increment
 		actual_x_position_mark = (this_y_position_mark*pixelMultiplier_mark)-centerYposition_mark*-1;
 		//console.log(' actual xpos: ' + actual_x_position);

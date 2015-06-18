@@ -341,6 +341,88 @@ p.grey_p{
 	position: relative;
 }
 
+#menu_mark {
+	width: 110px;
+	height: 40px;
+/*	background-color: yellow;*/
+	right: 30px;
+	margin-top: 630px;
+	position: absolute;
+}
+
+.menuItem_mark{
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin-left: 10px;
+	border-radius: 50%;
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+.menuItem_mark.on {
+	background-color: white ;
+}
+
+.menuItem_mark.off{
+		background-color: #202020;
+}
+
+#replay_mark {
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	position: absolute;
+	left:40px;
+	margin-top: 630px;
+	background: url('../img/play40.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+#trick_name_mark{
+	height: 40px;
+	width: 500px;
+	position: absolute;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: 630px;
+	text-align: center;
+}
+
+#trick_name_mark h1{
+	color: white;
+	letter-spacing: 1px;
+	font-size: 40px;
+	word-spacing: 10px;
+}
+
+#spot_name {
+/*	width: 200px;
+	height: 50px;*/
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	/*background-color: red;*/
+}
+
+#spot_name h1{
+	color: white;
+	letter-spacing: 1px;
+	font-size: 40px;
+	word-spacing: 10px;
+}
+
+#spot_name h2 {
+	font-family: Helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 22px;
+	font-weight: 100;
+	text-align: center;
+	color: #888888;
+}
+
 
 
 #mark_images {

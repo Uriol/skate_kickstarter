@@ -12,9 +12,17 @@ var tricks_tablet = ['url(img_tablet/trick1.png)', 'url(img_tablet/trick2.png)',
 var trick_animation = false;
 var trick_animation_mark = false;
 
+// Mark tricks
+var selected_trick_mark = halfcab;
+var tricks_mark_array = [halfcab, ollieStairs,  nikoFlip, ollie180stairs ];
+var tricks_mark_speeds = [3.5, 2.4, 2.5, 2.4, 2.8];
+var trick_speed_mark = tricks_mark_speeds[0];
+var trick_center_y = 0;
+
+
 $(function(){
 
-
+	// Visualize menu 
 	$('.menuItem').on('click', function(){
 
 		// Update css classes
@@ -49,6 +57,7 @@ $(function(){
 		drawTrick();
 	})
 
+	// Visualize replay
 	$('#replay').on('click', function(){
 
 		//If trick animation going on
@@ -71,6 +80,58 @@ $(function(){
 
 	})
 
+
+	// Mark menu
+	$('.menuItem_mark').on('click', function(){
+
+		// Update css classes
+		$('.menuItem_mark').removeClass('on').addClass('off');
+		$(this).removeClass('off').addClass('on');
+
+		//If trick animation going on
+		if (trick_animation_mark == true) {
+			trick_animation_mark = false;
+			clearInterval(animationInterval_mark);
+			console.log('now')
+		}
+
+		// Remove previous skateboard objects
+		var obj, i;
+		for ( i = scene_mark.children.length - 1; i >= 0 ; i -- ) {
+		    obj = scene_mark.children[ i ];
+		    if ( obj.name == 'skateboardObject_mark') {
+		        scene_mark.remove(obj);
+		    }
+		}
+
+		index = $(this).data('index');
+		$('#trick_name_mark h1').text(tricks_names_text[index]);
+
+		trick_speed_mark = tricks_mark_speeds[index];
+		selected_trick_mark = tricks_mark_array[index];
+		drawTrick_mark();
+	})
+
+
+	// Visualize replay
+	$('#replay_mark').on('click', function(){
+
+		//If trick animation going on
+		if (trick_animation_mark == true) {
+			trick_animation_mark = false;
+			clearInterval(animationInterval_mark);
+		}
+
+		// Remove previous skateboard objects
+		var obj, i;
+		for ( i = scene_mark.children.length - 1; i >= 0 ; i -- ) {
+		    obj = scene_mark.children[ i ];
+		    if ( obj.name == 'skateboardObject_mark') {
+		        scene_mark.remove(obj);
+		    }
+		}
+		drawTrick_mark();
+	})
 
 	// Change trick visual on tablet
 	$('.skateVisuals_tablet_menu_item').on('click', function(){

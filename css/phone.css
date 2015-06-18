@@ -129,6 +129,10 @@ and (orientation : portrait)  {
 
 	/* Section 2: Mark ---------------------------------------------------------------------- */
 
+	#mark_canvas {
+		display: none;
+	}
+
 	#mark_images {
 		display: none;
 	}
