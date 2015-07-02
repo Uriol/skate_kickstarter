@@ -52,9 +52,8 @@ function toArray(result){
 	}
 
 	
-
+	// to json
 	var trick = Papa.unparse(trick_data);
-
 	 console.log(trick);
 
 
@@ -62,8 +61,3 @@ function toArray(result){
 
 }
 
-// to Array format
-// function toArray(result){
-// 	var array = Papa.unparse(result);
-// 	console.log(array);
-// }

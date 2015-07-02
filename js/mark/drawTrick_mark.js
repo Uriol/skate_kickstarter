@@ -82,7 +82,6 @@ function drawTrick_mark(){
 		if ($total_x_positions_mark.length == i) {
 				trick_animation_mark = false;
 				clearInterval(animationInterval_mark);
-				console.log('interval cleaned');
 			}
 		trick_animation_mark = true;	
 		i++;
@@ -163,12 +162,17 @@ function drawTrick_mark(){
 
 		//console.log('center y pos: ' + centerYposition_mark)
 		// Calculate x pos increment
-		actual_x_position_mark = (this_y_position_mark*pixelMultiplier_mark)-centerYposition_mark*-1;
+		//actual_x_position_mark = (this_y_position_mark*pixelMultiplier_mark)-centerYposition_mark*-1;
+		actual_x_position_mark = (this_y_position_mark*pixelMultiplier_mark)-tricks_marck_customCenterY*-1;
+
 		//console.log(' actual xpos: ' + actual_x_position);
 		increment_x_position_mark = actual_x_position_mark - previous_x_position_mark;
 		//console.log('increment xpos: ' + increment_x_position);
 		// Caclculate y pos increment
 		actual_y_position_mark = this_z_position_mark*pixelMultiplier_mark-20;
+
+		//console.log(actual_y_position_mark)
+
 		increment_y_position_mark = actual_y_position_mark - previous_y_position_mark;
 		// Calculate z pos increment
 		actual_z_position_mark = this_x_position_mark*pixelMultiplier_mark;

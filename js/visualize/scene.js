@@ -58,6 +58,10 @@ $(document).ready(function(){
 		init_mark();
 		drawPark();
 		render_mark();
+
+		// intro
+		init_intro();
+		render_intro();
 		
 		// If chrome
 		if(navigator.userAgent.indexOf("Chrome") != -1 ) {

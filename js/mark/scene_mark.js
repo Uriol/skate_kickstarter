@@ -1,7 +1,7 @@
 
 var scene_mark, camera_mark, renderer_mark;
 
-var elements_center_y = -30;
+var elements_center_y = -62;
 
 var scene_2_on = false;
 
@@ -45,7 +45,7 @@ function init_mark(){
 	camera_mark = new THREE.PerspectiveCamera( 45, window.innerWidth/720, 0.1, 2000 );
 	controls_mark = new THREE.OrbitControls( camera_mark,container_mark );
 	controls_mark.maxPolarAngle = Math.PI/2.3; 
-	camera_mark.position.set(120, 120, 240);
+	camera_mark.position.set(120, 120, 350);
 	scene_mark.add(camera_mark);
 
 	// Scene background
@@ -61,7 +61,11 @@ function init_mark(){
 
 
 function drawPark(){
+	// small edge --> 40
+	// big edge --> 102
+	// widht --> 87
 
+	// Landing position z --> 79
 
 	var white_100 = new THREE.Color("rgb(100, 100, 100)");
 	var white_100_material = new THREE.MeshBasicMaterial({ color: white_100 });
@@ -75,47 +79,67 @@ function drawPark(){
 	var white_250 = new THREE.Color("rgb(250, 250, 250)"); 
 	var white_250_material = new THREE.MeshBasicMaterial({ color: white_250 });
 
+	var spriteFloor_mark = THREE.ImageUtils.loadTexture('img/textures/v2/100-1-1.png');
+	var floor_material_mark = new THREE.MeshBasicMaterial({ map: spriteFloor_mark });
+
+	var spriteFloor2_mark = THREE.ImageUtils.loadTexture('img/textures/v2/100-2-1.png');
+	var floor2_material_mark = new THREE.MeshBasicMaterial({ map: spriteFloor2_mark });
+
+	var spriteleftEdge_mark = THREE.ImageUtils.loadTexture('img/textures/v2/40-2.png');
+	var spriteleftEdge_mark_material = new THREE.MeshBasicMaterial({ map: spriteleftEdge_mark });
+
+	var spriteTopEdge_mark = THREE.ImageUtils.loadTexture('img/textures/v2/87-2.png');
+	var spriteTopEdge_mark_material = new THREE.MeshBasicMaterial({ map: spriteTopEdge_mark });
+
+	var spriteRightEdge_mark = THREE.ImageUtils.loadTexture('img/textures/v2/102-2.png');
+	var spriteRightEdge_mark_material = new THREE.MeshBasicMaterial({ map: spriteRightEdge_mark });
+
+
+
+
 	// floor
-	var floorGeometry = new THREE.PlaneBufferGeometry(1024, 1024);
-	var floor = new THREE.Mesh(floorGeometry, white_100_material);
+	var floorGeometry = new THREE.PlaneBufferGeometry(100, 1024);
+	var floor = new THREE.Mesh(floorGeometry, floor2_material_mark);
 	floor.rotation.x = -Math.PI / 2;
 	floor.position.y = -23.5+elements_center_y;
+	floor.position.x = 93.5;
 	//floor.material.side = THREE.DoubleSide;
 	scene_mark.add(floor);
 
-	// top level
-	var top_level_geometry = new THREE.PlaneBufferGeometry(512, 1024);
-	var top_level = new THREE.Mesh(top_level_geometry, white_100_material);
+	//top level
+	var top_level_geometry = new THREE.PlaneBufferGeometry(100, 1024);
+	var top_level = new THREE.Mesh(top_level_geometry, floor_material_mark);
 	top_level.rotation.x = -Math.PI / 2;
-	top_level.position.y = 40-23.5+elements_center_y;
-	top_level.position.x = -512/2;
+	top_level.position.y = 62-23.5+elements_center_y;
+	top_level.position.x = -93.5;
 	scene_mark.add(top_level);
 
-	// edge left wall
+	//edge left wall
 	var edge_left_geometry = new THREE.PlaneBufferGeometry(40, 1024);
-	var edge_left = new THREE.Mesh(edge_left_geometry, white_250_material);
+	var edge_left = new THREE.Mesh(edge_left_geometry, spriteleftEdge_mark_material);
 	edge_left.rotation.x = -Math.PI / 2;
 	edge_left.rotation.y = -Math.PI / 2;
 	edge_left.material.side = THREE.DoubleSide;
-	edge_left.position.y = 60-23.5+elements_center_y;
-	edge_left.position.x = -20;
+	edge_left.position.y = 82-23.5+elements_center_y;
+	edge_left.position.x = -43.5;
 	scene_mark.add(edge_left);
 
-	// edge top wall
-	var edge_top_geometry = new THREE.PlaneBufferGeometry(40, 1024);
-	var edge_top = new THREE.Mesh(edge_top_geometry, white_150_material);
+	//edge top wall
+	var edge_top_geometry = new THREE.PlaneBufferGeometry(87, 1024);
+	var edge_top = new THREE.Mesh(edge_top_geometry, spriteTopEdge_mark_material);
 	edge_top.rotation.x = -Math.PI / 2;
-	edge_top.position.y = 80-23.5+elements_center_y;;
+	edge_top.position.y = 102-23.5+elements_center_y;
+
 	scene_mark.add(edge_top);
 
 	// edge right wall
-	var edge_right_geometry = new THREE.PlaneBufferGeometry(80, 1024);
-	var edge_right = new THREE.Mesh(edge_right_geometry, white_200_material);
+	var edge_right_geometry = new THREE.PlaneBufferGeometry(102, 1024);
+	var edge_right = new THREE.Mesh(edge_right_geometry, spriteRightEdge_mark_material);
 	edge_right.rotation.x = -Math.PI / 2;
 	edge_right.rotation.y = -Math.PI / 2;
 	edge_right.material.side = THREE.DoubleSide;
-	edge_right.position.y = 40-23.5+elements_center_y;
-	edge_right.position.x = 20;
+	edge_right.position.y = 51-23.5+elements_center_y;
+	edge_right.position.x = 43.5;
 	scene_mark.add(edge_right);
 
 }

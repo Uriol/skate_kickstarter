@@ -232,7 +232,8 @@ function onAir_mark(){
 
 	// Calculate z position
 	//zPosition_mark = airSpeed_mark*elapsed_time_on_air_mark-0.5*gravity_mark*elapsed_time_on_air_mark*elapsed_time_on_air_mark;
-	var z_speed_mark = 3;
+	//var z_speed_mark = 3.3;
+	var z_speed_mark = trick_mark_zSpeed;
    	zPosition_mark = zInitialPosition_mark + z_speed_mark*elapsed_time_on_air_mark - 0.5*9.8*elapsed_time_on_air_mark*elapsed_time_on_air_mark ;
    	//zPosition_mark = zPosition_mark+zPosition_increment;
    	//console.log('zPosition_mark: ' + zPosition_mark)
@@ -262,6 +263,8 @@ function onAir_mark(){
 	// Calculate total angle dif to rads
 	total_angle_diff_mark = $yaw_mark[k] - initialYaw_mark;
 	total_angle_diff_mark = total_angle_diff_mark*pi/180;
+
+	//console.log('zPosition_mark: ' + zPosition_mark)
 
 	// Push yaw, pitch, roll / x, y, z positions
 	$total_x_positions_mark.push(xPosition_mark);

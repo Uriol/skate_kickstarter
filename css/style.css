@@ -80,10 +80,11 @@ h1#loading_text {
 
 #intro {
 	width: 100%;
-	height: 670px;
+	height: 550px;
 	position: relative;
-	/*background: url('../img_tablet/trick2.png');*/
+	/*background: url('../img/intro/macba_08.jpg');*/
 	background-color: black;
+	background-position: center; 
 	background-size: cover;
 
 }
@@ -197,7 +198,7 @@ p.left {
 }
 
 p.p_intro{
-	text-align: left;
+	text-align: center;
 }
 
 h2 {
@@ -218,9 +219,9 @@ p.grey_p{
 	width: 380px;
 
 	position: relative;
-	
-	margin: 0 auto;
-	top: 250px;
+	left: 10%;
+	/*margin: 0 auto;*/
+	top: 200px;
 /*	background-color: yellow;*/
 }
 
@@ -235,6 +236,13 @@ p.grey_p{
 #intro_text p{
 	margin-top: 20px;
 	color: white;
+}
+
+#intro_canvas {
+	width: 100%;
+	height: 550px;
+	position: absolute;
+	top: 0px;
 }
 
 /* Section 1: skate visuals -------------------------------------------------------- */
