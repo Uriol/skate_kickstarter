@@ -1,11 +1,11 @@
 
 var selected_trick = trick_one;
 var trick_speed = 2.5;
-var index;
-var tricks_array = [trick_one, trick_two, trick_three, trick_four, trick_five];
-var tricks_speeds = [2.5, 2.4, 2.5, 2.4, 2.8];
+var index = 0;
+var tricks_array = [trick_one, trick_four, trick_two, trick_three,  trick_five];
+var tricks_speeds = [2.5, 2.4, 2.4, 2.5, 2.8];
 var tricks_names = ['url(img/fakie_flip.png)', 'url(img/nollie_fs_heelflip.png)','url(img/fs_ollie.png)','url(img/fs_heelflip.png)','url(img/kickflip.png)']
-var tricks_names_text = ['FAKIE FLIP', 'NOLLIE FS HEELFLIP', 'FS OLLIE', 'FS HEELFLIP', 'KICKFLIP'];
+var tricks_names_text = ['FAKIE FLIP', 'FS HEELFLIP', 'NOLLIE FS HEELFLIP', 'FS OLLIE', 'KICKFLIP'];
 
 var tricks_tablet = ['url(img_tablet/trick1.png)', 'url(img_tablet/trick2.png)','url(img_tablet/trick3.png)','url(img_tablet/trick4.png)','url(img_tablet/trick5.png)']
 
@@ -14,17 +14,19 @@ var trick_animation_mark = false;
 
 // Mark tricks
 var selected_trick_mark = halfcab;
-var tricks_mark_array = [halfcab, ollieStairs,  nikoFlip, ollie180stairs ];
-var tricks_mark_centerY_array = [-215, -265, -265, -265, -265];
+var tricks_mark_array = [halfcab, ollie180stairs, ollieStairs,  nikoFlip ];
+var tricks_mark_centerY_array = [-240, -225, -205, -265, -265];
 var tricks_marck_customCenterY = tricks_mark_centerY_array[0]
 
-var tricks_mark_speeds = [4, 2.4, 2.5, 2.4, 2.8];
+var tricks_mark_speeds = [3.6, 3.5, 3.4, 2.4, 2.8];
 var trick_speed_mark = tricks_mark_speeds[0];
 
-var tricks_mark_z_speeds = [3.3, 3.3, 3.3, 3.3, 3.3];
+var tricks_mark_z_speeds = [3.38, 3.25, 3.4, 3.3, 3.3];
 var trick_mark_zSpeed = tricks_mark_z_speeds[0];
 var trick_center_y = 0;
 
+var video_sources = ['video/fakieFlip960.mp4', 'video/heel180_960.mp4']
+var video, source;
 
 $(function(){
 
@@ -61,6 +63,8 @@ $(function(){
 		trick_speed = tricks_speeds[index];
 		selected_trick = tricks_array[index];
 		drawTrick();
+		console.log(video_sources[index])
+		playVideo();
 	})
 
 	// Visualize replay
@@ -115,6 +119,8 @@ $(function(){
 
 		trick_speed_mark = tricks_mark_speeds[index];
 		selected_trick_mark = tricks_mark_array[index];
+		trick_mark_zSpeed = tricks_mark_z_speeds[index];
+		tricks_marck_customCenterY = tricks_mark_centerY_array[index];
 		drawTrick_mark();
 	})
 
@@ -166,6 +172,26 @@ $(function(){
 		var mark_trick = tricks_tablet[index];
 		$('#mark_images').css('background-image', mark_trick);
 	})
+
+	declareVideo();
+	// declare video
+	function declareVideo(){
+		video = document.getElementById('video');
+		source = document.createElement('source');
+	}
+
+	playVideo();
+	// Play videos of tricks
+	function playVideo(){
+		
+		source.setAttribute('src', video_sources[index]);
+		video.appendChild(source);
+		video.loop = true;
+		video.load();
+		video.play();
+
+	}
+
 
 });
 

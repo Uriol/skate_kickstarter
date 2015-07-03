@@ -171,7 +171,7 @@ function drawTrick_mark(){
 		// Caclculate y pos increment
 		actual_y_position_mark = this_z_position_mark*pixelMultiplier_mark-20;
 
-		//console.log(actual_y_position_mark)
+		console.log(actual_y_position_mark)
 
 		increment_y_position_mark = actual_y_position_mark - previous_y_position_mark;
 		// Calculate z pos increment

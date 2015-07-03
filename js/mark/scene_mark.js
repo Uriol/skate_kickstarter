@@ -45,7 +45,7 @@ function init_mark(){
 	camera_mark = new THREE.PerspectiveCamera( 45, window.innerWidth/720, 0.1, 2000 );
 	controls_mark = new THREE.OrbitControls( camera_mark,container_mark );
 	controls_mark.maxPolarAngle = Math.PI/2.3; 
-	camera_mark.position.set(120, 120, 350);
+	camera_mark.position.set(120, 120, 300);
 	scene_mark.add(camera_mark);
 
 	// Scene background

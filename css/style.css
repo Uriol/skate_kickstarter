@@ -254,6 +254,18 @@ p.grey_p{
 	position: relative;
 }
 
+#trick_video {
+	width: 320px;
+	height: 180px;
+	background-color: black;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+/*	right: 10px;
+	top: 10px;*/
+}
+
+
 #skateVisuals_mobile{
 	display: none;
 }
