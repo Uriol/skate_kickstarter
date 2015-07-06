@@ -22,6 +22,7 @@ function mobile_img_height(){
 		$('#sensor_image').css('height', tablet_height_AR_16 + 'px');
 
 		$('#skateVisuals_tablet_menu').css('top', tablet_height_AR_16-40 + 'px');
+		$('#mark_images_menu').css('top', tablet_height_AR_16-50 + 'px');
 	}
 
 }

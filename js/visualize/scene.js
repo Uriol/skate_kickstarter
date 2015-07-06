@@ -68,7 +68,7 @@ $(document).ready(function(){
 			// Chrome
 
 		 } else {
-		 	// Not chrome
+		 	alert('For the full WebGL experience use Chrome.')
 		 	$('#chrome').removeClass('off').addClass('on');
 		 }
 	  }

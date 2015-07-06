@@ -2,12 +2,13 @@
 var selected_trick = trick_one;
 var trick_speed = 2.5;
 var index = 0;
-var tricks_array = [trick_one, trick_four, trick_two, trick_three,  trick_five];
-var tricks_speeds = [2.5, 2.4, 2.4, 2.5, 2.8];
+var tricks_array = [trick_one, trick_four, trick_five, trick_two, trick_three];
+var tricks_speeds = [2.5, 2.4, 2.8, 2.4, 2.5];
 var tricks_names = ['url(img/fakie_flip.png)', 'url(img/nollie_fs_heelflip.png)','url(img/fs_ollie.png)','url(img/fs_heelflip.png)','url(img/kickflip.png)']
-var tricks_names_text = ['FAKIE FLIP', 'FS HEELFLIP', 'NOLLIE FS HEELFLIP', 'FS OLLIE', 'KICKFLIP'];
+var tricks_names_text = ['FAKIE FLIP', 'FS HEELFLIP', 'KICKFLIP', 'NOLLIE FS HEELFLIP', 'FS OLLIE'];
 
 var tricks_tablet = ['url(img_tablet/trick1.png)', 'url(img_tablet/trick2.png)','url(img_tablet/trick3.png)','url(img_tablet/trick4.png)','url(img_tablet/trick5.png)']
+var mark_tricks_tablet = ['url(img_tablet/mark1.png)', 'url(img_tablet/mark2.png)', 'url(img_tablet/mark3.png)']
 
 var trick_animation = false;
 var trick_animation_mark = false;
@@ -15,18 +16,23 @@ var trick_animation_mark = false;
 // Mark tricks
 var selected_trick_mark = halfcab;
 var tricks_mark_array = [halfcab, ollie180stairs, ollieStairs,  nikoFlip ];
-var tricks_mark_centerY_array = [-240, -225, -205, -265, -265];
+var tricks_mark_centerY_array = [-240, -225, -205];
 var tricks_marck_customCenterY = tricks_mark_centerY_array[0]
 
-var tricks_mark_speeds = [3.6, 3.5, 3.4, 2.4, 2.8];
+var tricks_mark_speeds = [3.5, 3.5, 3.4];
 var trick_speed_mark = tricks_mark_speeds[0];
 
-var tricks_mark_z_speeds = [3.38, 3.25, 3.4, 3.3, 3.3];
+var tricks_mark_z_speeds = [3.38, 3.25, 3.4];
 var trick_mark_zSpeed = tricks_mark_z_speeds[0];
 var trick_center_y = 0;
 
+var tricks_names_mark = ['FAKIE FS HEELFLIP', 'FS 180', 'KICKFLIP'];
+var trick_name_mark = tricks_names_mark[0];
+
 var video_sources = ['video/fakieFlip960.mp4', 'video/heel180_960.mp4']
 var video, source;
+
+var video_playing = false;
 
 $(function(){
 
@@ -63,7 +69,7 @@ $(function(){
 		trick_speed = tricks_speeds[index];
 		selected_trick = tricks_array[index];
 		drawTrick();
-		console.log(video_sources[index])
+		
 		playVideo();
 	})
 
@@ -115,7 +121,7 @@ $(function(){
 		}
 
 		index = $(this).data('index');
-		$('#trick_name_mark h1').text(tricks_names_text[index]);
+		$('#trick_name_mark h1').text(tricks_names_mark[index]);
 
 		trick_speed_mark = tricks_mark_speeds[index];
 		selected_trick_mark = tricks_mark_array[index];
@@ -169,7 +175,7 @@ $(function(){
 		// Get right image
 		index = $(this).data('index');
 
-		var mark_trick = tricks_tablet[index];
+		var mark_trick = mark_tricks_tablet[index];
 		$('#mark_images').css('background-image', mark_trick);
 	})
 
@@ -180,15 +186,36 @@ $(function(){
 		source = document.createElement('source');
 	}
 
+	
+	
 	playVideo();
 	// Play videos of tricks
 	function playVideo(){
 		
-		source.setAttribute('src', video_sources[index]);
-		video.appendChild(source);
-		video.loop = true;
-		video.load();
-		video.play();
+		
+
+		console.log(video_sources[index]);
+
+		if (video_sources[index] == undefined) {
+			$('#trick_video').hide();
+			//console.log('no video for this trick')
+			if (video_playing == true) {
+				video.pause();
+				video_playing = false;
+				//console.log('video stopped')
+			} 
+		} else {
+			$('#trick_video').show();
+			//console.log('video for this trick')
+			source.setAttribute('src', video_sources[index]);
+			video.appendChild(source);
+			video.loop = true;
+			video.load();
+			video.play();
+			video_playing = true;
+		}
+
+		
 
 	}
 

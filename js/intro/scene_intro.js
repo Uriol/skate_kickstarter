@@ -16,7 +16,8 @@ function init_intro(){
 	camera_intro = new THREE.PerspectiveCamera( 45, window.innerWidth/550, 0.1, 2000 );
 	controls_intro = new THREE.OrbitControls( camera_intro,container_intro );
 	controls_intro.maxPolarAngle = Math.PI/2.3; 
-	camera_intro.position.set(120, 120, 350);
+	camera_intro.position.set(300, 150, 100);
+	controls_intro.userRotate = false;
 	scene_intro.add(camera_intro);
 
 	// Scene background
@@ -34,6 +35,9 @@ function drawParticles_intro(){
 
 	var total_particles_1_intro = 100, total_particles_2_intro = 100, total_particles_3_intro = 100, total_fogs_intro = 200;
 
+	var far_pos = 350;
+
+
 	// Create particles geometries
 	var particle_1_geometry_intro = new THREE.Geometry(),
 		particle_2_geometry_intro = new THREE.Geometry(),
@@ -47,11 +51,11 @@ function drawParticles_intro(){
 		var pos_negY = Math.random() < 0.5 ? -1 : 1;
 
 		var vertex_particle_1_intro = new THREE.Vector3();
-		vertex_particle_1_intro.x = (Math.random() * 350 + 0)*pos_negX;
+		vertex_particle_1_intro.x = (Math.random() * 400 + 0)*pos_negX;
 		vertex_particle_1_intro.y = Math.random() * 160 + 20; // always positive. Bellow the floor.
-		vertex_particle_1_intro.z = (Math.random() * 350 + 0)*pos_negY;
+		vertex_particle_1_intro.z = (Math.random() * 400 + 0)*pos_negY;
 
-		if (vertex_particle_1_intro.x < 320 && vertex_particle_1_intro.x > -320 && vertex_particle_1_intro.z < 320 && vertex_particle_1_intro.z > -320) {
+		if (vertex_particle_1_intro.x < far_pos && vertex_particle_1_intro.x > -far_pos && vertex_particle_1_intro.z < far_pos && vertex_particle_1_intro.z > -far_pos) {
 
 		} else { particle_1_geometry_intro.vertices.push( vertex_particle_1_intro ); }
 
@@ -63,11 +67,11 @@ function drawParticles_intro(){
 		var pos_negY = Math.random() < 0.5 ? -1 : 1;
 
 		var vertex_particle_2_intro = new THREE.Vector3();
-		vertex_particle_2_intro.x = (Math.random() * 350 + 0)*pos_negX;
+		vertex_particle_2_intro.x = (Math.random() * 400 + 0)*pos_negX;
 		vertex_particle_2_intro.y = Math.random() * 170 + 30; // always positive. Bellow the floor.
-		vertex_particle_2_intro.z = (Math.random() * 350 + 0)*pos_negY;
+		vertex_particle_2_intro.z = (Math.random() * 400 + 0)*pos_negY;
 
-		if (vertex_particle_2_intro.x < 320 && vertex_particle_2_intro.x > -320 && vertex_particle_2_intro.z < 320 && vertex_particle_2_intro.z > -320) {
+		if (vertex_particle_2_intro.x < far_pos && vertex_particle_2_intro.x > -far_pos && vertex_particle_2_intro.z < far_pos && vertex_particle_2_intro.z > -far_pos) {
 
 		} else { particle_2_geometry_intro.vertices.push( vertex_particle_2_intro ); }
 
@@ -79,11 +83,11 @@ function drawParticles_intro(){
 		var pos_negY = Math.random() < 0.5 ? -1 : 1;
 
 		var vertex_particle_3_intro = new THREE.Vector3();
-		vertex_particle_3_intro.x = (Math.random() * 350 + 0)*pos_negX;
+		vertex_particle_3_intro.x = (Math.random() * 400 + 0)*pos_negX;
 		vertex_particle_3_intro.y = Math.random() * 170 + 30; // always positive. Bellow the floor.
-		vertex_particle_3_intro.z = (Math.random() * 350 + 0)*pos_negY;
+		vertex_particle_3_intro.z = (Math.random() * 400 + 0)*pos_negY;
 
-		if (vertex_particle_3_intro.x < 320 && vertex_particle_3_intro.x > -320 && vertex_particle_3_intro.z < 320 && vertex_particle_3_intro.z > -320) {
+		if (vertex_particle_3_intro.x < far_pos && vertex_particle_3_intro.x > -far_pos && vertex_particle_3_intro.z < far_pos && vertex_particle_3_intro.z > -far_pos) {
 
 		} else { particle_3_geometry_intro.vertices.push( vertex_particle_3_intro ); }
 
@@ -95,11 +99,11 @@ function drawParticles_intro(){
 		var fog_posY = Math.random() < 0.5 ? -1 : 1;
 
 		var vertex_fog_intro = new THREE.Vector3();
-		vertex_fog_intro.x = (Math.random() * 380 + 0)*fog_posX;
+		vertex_fog_intro.x = (Math.random() * 180 + 0)*fog_posX;
 		vertex_fog_intro.y = Math.random() * 160 + 10;
-		vertex_fog_intro.z = (Math.random() * 380 + 0)*fog_posY;
+		vertex_fog_intro.z = (Math.random() * 180 + 0)*fog_posY;
 
-		if (vertex_fog_intro.x < 90 && vertex_fog_intro.x > -90 && vertex_fog_intro.z < 80 && vertex_fog_intro.z > -90 ) {
+		if (vertex_fog_intro.x < 150 && vertex_fog_intro.x > -150 && vertex_fog_intro.z < 150 && vertex_fog_intro.z > -150 ) {
 
 		} else { fog_geometry_intro.vertices.push( vertex_fog_intro )};
 
@@ -165,14 +169,15 @@ function drawPark_intro(){
 	var spriteRightEdge_intro_material = new THREE.MeshBasicMaterial({ map: spriteRightEdge_intro });
 
 
-
+	var elements_center_y_intro = -50;
 
 	// floor
 	var floorGeometry = new THREE.PlaneBufferGeometry(100, 1024);
 	var floor = new THREE.Mesh(floorGeometry, floor2_material_intro);
 	floor.rotation.x = -Math.PI / 2;
-	floor.position.y = -23.5+elements_center_y;
+	floor.position.y = -23.5+elements_center_y_intro;
 	floor.position.x = 93.5;
+	floor.position.z = -150;
 	//floor.material.side = THREE.DoubleSide;
 	scene_intro.add(floor);
 
@@ -180,8 +185,9 @@ function drawPark_intro(){
 	var top_level_geometry = new THREE.PlaneBufferGeometry(100, 1024);
 	var top_level = new THREE.Mesh(top_level_geometry, floor_material_intro);
 	top_level.rotation.x = -Math.PI / 2;
-	top_level.position.y = 62-23.5+elements_center_y;
+	top_level.position.y = 62-23.5+elements_center_y_intro;
 	top_level.position.x = -93.5;
+	top_level.position.z = -150;
 	scene_intro.add(top_level);
 
 	//edge left wall
@@ -190,16 +196,17 @@ function drawPark_intro(){
 	edge_left.rotation.x = -Math.PI / 2;
 	edge_left.rotation.y = -Math.PI / 2;
 	edge_left.material.side = THREE.DoubleSide;
-	edge_left.position.y = 82-23.5+elements_center_y;
+	edge_left.position.y = 82-23.5+elements_center_y_intro;
 	edge_left.position.x = -43.5;
+	edge_left.position.z = -150;
 	scene_intro.add(edge_left);
 
 	//edge top wall
 	var edge_top_geometry = new THREE.PlaneBufferGeometry(87, 1024);
 	var edge_top = new THREE.Mesh(edge_top_geometry, spriteTopEdge_intro_material);
 	edge_top.rotation.x = -Math.PI / 2;
-	edge_top.position.y = 102-23.5+elements_center_y;
-
+	edge_top.position.y = 102-23.5+elements_center_y_intro;
+	edge_top.position.z = -150;
 	scene_intro.add(edge_top);
 
 	// edge right wall
@@ -208,8 +215,9 @@ function drawPark_intro(){
 	edge_right.rotation.x = -Math.PI / 2;
 	edge_right.rotation.y = -Math.PI / 2;
 	edge_right.material.side = THREE.DoubleSide;
-	edge_right.position.y = 51-23.5+elements_center_y;
+	edge_right.position.y = 51-23.5+elements_center_y_intro;
 	edge_right.position.x = 43.5;
+	edge_right.position.z = -150;
 	scene_intro.add(edge_right);
 
 }
