@@ -15,19 +15,30 @@ function init_intro(){
 	// Create camera
 	camera_intro = new THREE.PerspectiveCamera( 45, window.innerWidth/550, 0.1, 2000 );
 	controls_intro = new THREE.OrbitControls( camera_intro,container_intro );
-	controls_intro.maxPolarAngle = Math.PI/2.3; 
-	camera_intro.position.set(300, 150, 100);
-	controls_intro.userRotate = false;
+	//controls_intro.maxPolarAngle = Math.PI/2.3; 
+	//camera_intro.position.set(300, 150, 100);
+	// camera_intro.position.set(550, 200, 0);
+	camera_intro.position.set(242, 147, 0);
+	controls_intro.userRotate = true;
+	controls_intro.userZoom = true;
 	scene_intro.add(camera_intro);
-
 	// Scene background
 	var backgroundColor = new THREE.Color("rgb(1,1,1)");
+	//var backgroundColor = new THREE.Color("rgb(100,100,100)");
 	renderer_intro.setClearColor( backgroundColor );
 
 	drawParticles_intro();
 	drawPark_intro();
 
+	drawSkate_intro()
+
 	window.addEventListener( 'resize', onWindowResize_intro, false );
+}
+
+// Draw skateboard intro
+function drawSkate_intro(){
+
+
 }
 
 // Draw particles
@@ -99,13 +110,17 @@ function drawParticles_intro(){
 		var fog_posY = Math.random() < 0.5 ? -1 : 1;
 
 		var vertex_fog_intro = new THREE.Vector3();
-		vertex_fog_intro.x = (Math.random() * 180 + 0)*fog_posX;
+		vertex_fog_intro.x = (Math.random() * 100 + 0)*fog_posX;
 		vertex_fog_intro.y = Math.random() * 160 + 10;
 		vertex_fog_intro.z = (Math.random() * 180 + 0)*fog_posY;
 
 		if (vertex_fog_intro.x < 150 && vertex_fog_intro.x > -150 && vertex_fog_intro.z < 150 && vertex_fog_intro.z > -150 ) {
 
 		} else { fog_geometry_intro.vertices.push( vertex_fog_intro )};
+
+		// if (vertex_fog_intro.x < 100 && vertex_fog_intro.x > -100 && vertex_fog_intro.z < 100 && vertex_fog_intro.z > -100 ) {
+
+		// } else { fog_geometry_intro.vertices.push( vertex_fog_intro )};
 
 	}
 
@@ -195,6 +210,7 @@ function drawPark_intro(){
 	var edge_left = new THREE.Mesh(edge_left_geometry, spriteleftEdge_intro_material);
 	edge_left.rotation.x = -Math.PI / 2;
 	edge_left.rotation.y = -Math.PI / 2;
+	//edge_left.rotation.z = -Math.PI / 2;
 	edge_left.material.side = THREE.DoubleSide;
 	edge_left.position.y = 82-23.5+elements_center_y_intro;
 	edge_left.position.x = -43.5;
@@ -230,6 +246,10 @@ function animateParticles_intro(){
 }
 
 
+$('#intro_canvas').on('click', function(){
+	console.log(camera_intro)
+})
+
 // resize
 function onWindowResize_intro() {
 
@@ -246,5 +266,7 @@ function render_intro() {
 	controls_intro.update();
 	renderer_intro.render(scene_intro, camera_intro);
 	animateParticles_intro();
+
+	// console.log(camera_intro)
 
 };
